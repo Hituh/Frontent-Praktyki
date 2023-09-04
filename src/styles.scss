@@ -1,0 +1,118 @@
+// styles.scss
+//Colours
+$background-color: #f7f7f7;
+$product-color: #3126ff;
+$text-color: #000000;
+$secondary-color: #01ffcb;
+
+//Paddings
+$px-small: 10px;
+$psmall: 20px;
+$pbase: 30px;
+$pmedium: 40px;
+$plarge: 60px;
+$px-large: 90px;
+$pxx-large: 120px;
+
+body {
+	background-color: $background-color;
+}
+
+h2 {
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	color: $text-color;
+	font-size: 30px;
+	line-height: 40px;
+}
+
+h3 {
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	color: $text-color;
+	font-size: 19px;
+	line-height: 26px;
+}
+
+h4 {
+	font-family: "Roboto", sans-serif;
+	color: $text-color;
+	font-size: 17px;
+}
+
+p {
+	font-family: "Roboto", sans-serif;
+	font-weight: lighter;
+	color: $text-color;
+	font-size: 17px;
+	line-height: 25px;
+}
+
+.big-headline-text {
+	color: $product-color;
+	font-size: 70px;
+	line-height: 80px;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+}
+
+.headline-text {
+	color: $product-color;
+	font-size: 70px;
+	line-height: 80px;
+	font-family: "Poppins", sans-serif;
+}
+
+.description-text {
+	color: $text-color;
+	font-size: 30px;
+	line-height: 40px;
+	font-family: "Roboto", sans-serif;
+}
+
+.lang-dropdown {
+	display: block;
+}
+
+.navbar {
+	background-color: white;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	height: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+
+    &-logo {
+        padding: $pbase;
+    }
+	&-upper {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&-lower {
+		display: flex;
+		flex-direction: row;
+	}
+
+    a {
+        cursor: pointer;
+        margin-left: 20px;
+    }
+}
+
+.get-app {
+}
+
+.overview-card {
+	background-color: white;
+	padding: 60px;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+}
+// Add more SASS/SCSS code as needed
