@@ -63,18 +63,11 @@ window.addEventListener('scroll', () => {
         scrollYold = window.scrollY;
         navbarlower.style.zIndex = 101;
         navbarlower.style.top = "0px";
-        navbarupper.style.top = "80px";
     } else {
 
         scrollYold = window.scrollY;
         navbarlower.style.zIndex = 99;
         navbarlower.style.top = "70px";
-        navbarupper.style.top = "0px";
-        if (langclicked) {
-            langclicked = false;
-            langBarcontainer.style.top = "-80px";
-            langBarcontainer.style.opacity = "0"; // Fade out the language bar
-        }
     }
 });
 
@@ -164,4 +157,16 @@ function endDrag() {
     isDragging = false;
     prevTranslate = currentTranslate;
     slider.style.cursor = "grab";
+}
+
+//Accordion
+function accordionDropdown (id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+
+
 }
