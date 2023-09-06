@@ -45,10 +45,6 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
-.lang-dropdown {
-  display: block;
-}
-
 /* Style the navbar */
 .navbar-lang-container {
   position: fixed;
@@ -60,7 +56,8 @@ p {
   flex-direction: row;
   top: -80px;
   z-index: 10000;
-  transition: opacity 0.5s ease; /* Add transitions for smooth animation */
+  transition: opacity 1s linear, z-index 0.5s ease; /* Transitions for smooth animation */
+  user-select: none; /* Disable text selection */
 }
 .navbar-lang {
   display: flex;
@@ -129,12 +126,12 @@ p {
   font-size: 17px;
   font-family: "Roboto", sans-serif;
   width: 100%;
-  padding-left: 350px;
+  padding-left: 15vw;
   height: 70px;
   flex-direction: row;
   align-items: center;
   z-index: 99;
-  transition: top 0.3s ease, bottom 0.3s ease, z-index ease;
+  transition: top 0.3s ease, bottom 0.3s ease, z-index 0.3s ease;
 }
 .navbar-lower-content {
   display: flex;
@@ -174,28 +171,66 @@ p {
   user-select: none;
 }
 
-.overview-descriptions {
-  display: flex;
-  flex-direction: row;
-  width: 1368px;
-  justify-content: space-between;
+@media (max-width: 768px) {
+  .overview-descriptions {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: space-between;
+  }
+  .overview-descriptions-card {
+    word-wrap: normal;
+    text-align: left;
+    padding-right: 100px;
+    width: 100%;
+  }
 }
-.overview-descriptions-card {
-  text-align: left;
-  padding-right: 100px;
-  width: 456px;
+@media (min-width: 769px) {
+  .overview-descriptions {
+    display: flex;
+    flex-direction: row;
+    width: 1368px;
+    justify-content: space-between;
+  }
+  .overview-descriptions-card {
+    text-align: left;
+    padding-right: 100px;
+    width: 456px;
+  }
 }
-
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .overview-head {
+    flex-direction: column;
+    flex-wrap: wrap; /* Change to column layout on smaller screens */
+  }
+  .overview-head-right {
+    /* Move right content below left content */
+    order: 2;
+    max-width: 100%; /* Allow full width */
+  }
+  .overview-head-left {
+    flex-basis: 50%;
+    max-width: 100%; /* Allow full width */
+  }
+  /* Reset absolute positioning for images */
+  #desks {
+    position: static;
+    height: auto;
+  }
+  #hands {
+    position: static;
+    margin-left: 0;
+    height: auto;
+  }
+  /* Additional styling as needed for smaller screens */
+}
+/* Larger screens (min-width: 769px) */
 .overview-head {
   text-align: left;
   display: flex;
   flex-direction: row;
   height: auto;
-}
-@media (max-width: 768px) {
-  .overview-head {
-    flex-direction: column;
-  }
 }
 .overview-head-left {
   min-height: 716px;
@@ -298,8 +333,6 @@ p {
   flex-wrap: nowrap;
   transition: transform ease;
   user-select: none; /* Disable text selection */
-  -webkit-user-select: none; /* For older browsers */
-  -ms-user-select: none; /* For Microsoft Edge */
   cursor: grab; /* Change cursor when dragging */
 }
 
@@ -315,7 +348,6 @@ p {
 .slider img {
   width: 205px;
   -webkit-user-drag: none;
-  pointer-events: none;
 }
 
 /* Add these styles to change cursor when hovering over slider content */
@@ -351,5 +383,69 @@ p {
   border: none;
   cursor: pointer;
 }
+
+.image-slider-container {
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden; /* Hide overflow content */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.image-slider-content {
+  flex-direction: column;
+  max-width: 100%;
+  width: 100%;
+  text-align: left;
+}
+
+.image-slider-image {
+  display: inline-block;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  vertical-align: middle;
+}
+.image-slider-image picture img {
+  max-width: none; /* Remove the maximum width to allow scaling */
+  height: 516px; /* Maintain the original image height */
+  transform-origin: top; /* Set the transformation origin to the top */
+  transition: transform 0.3s; /* Add a smooth transition for the transformation */
+  /* Adjust the scale factor as needed to control the zoom level */
+  transform: scale(1); /* Initial scale (100%) */
+}
+
+.image-slider-content-phone {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 0px;
+}
+
+.image-slider-content-phone-left {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .image-slider-content-phone-right-image {
+    position: absolute;
+    top: -50vh;
+    margin-left: 200px;
+  }
+  .image-slider-content-phone-right-image img {
+    height: 70vh;
+  }
+}
+.image-slider-content-phone-right-image {
+  position: relative;
+  top: -50vh;
+  margin-left: 200px;
+}
+.image-slider-content-phone-right-image img {
+  height: 70vh;
+}
+
+/* Additional styles for other content in the slider as needed */
 
 /*# sourceMappingURL=styles.css.map */

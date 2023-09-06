@@ -63,10 +63,6 @@ p {
 	font-family: "Roboto", sans-serif;
 }
 
-.lang-dropdown {
-	display: block;
-}
-
 /* Style the navbar */
 .navbar {
 	&-lang-container {
@@ -79,15 +75,17 @@ p {
 		flex-direction: row;
 		top: -80px;
 		z-index: 10000;
-		transition: opacity 0.5s ease; /* Add transitions for smooth animation */
+		transition: opacity 1s linear, z-index 0.5s ease; /* Transitions for smooth animation */
+		user-select: none; /* Disable text selection */
 	}
-	
+
 	&-lang {
 		display: flex;
 		flex-direction: row;
 		gap: 20px;
 		justify-content: center;
 	}
+
 	&-upper {
 		font-family: "Roboto", sans-serif;
 		display: flex;
@@ -155,20 +153,23 @@ p {
 			font-size: 17px;
 			font-family: "Roboto", sans-serif;
 			width: 100%;
-			padding-left: 350px;
+			padding-left: 15vw;
 			height: 70px;
 			flex-direction: row;
 			align-items: center;
 			z-index: 99;
-			transition: top 0.3s ease, bottom 0.3s ease, z-index ease;
+			transition: top 0.3s ease, bottom 0.3s ease, z-index 0.3s ease;
 		}
+
 		&-content {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
+
 			p {
 				margin-right: 20px;
 			}
+
 			a {
 				background-position: 100px 100%;
 				margin-right: 20px;
@@ -176,6 +177,7 @@ p {
 				color: #000000;
 				transition: font-weight 0.3s, background-position 0.3s;
 			}
+
 			a:active {
 				font-weight: bold;
 				background-image: linear-gradient(
@@ -190,6 +192,8 @@ p {
 		}
 	}
 }
+
+//Language dropdown arrow
 .dropdownarrow {
 	border-style: solid;
 	border-color: black;
@@ -204,35 +208,86 @@ p {
 	margin-bottom: 4px;
 	user-select: none;
 }
-.overview {
-	&-descriptions {
-		display: flex;
-		flex-direction: row;
-		width: 1368px;
-		justify-content: space-between; // Add this to evenly space the cards
 
-		&-card {
-			text-align: left;
-			padding-right: 100px; // Add margin between cards
-			width: 456px;
+@media (max-width: 768px) {
+	.overview {
+		&-descriptions {
+			display: flex;
+			flex-direction: column;
+			width: 100vw;
+			justify-content: space-between; // Add this to evenly space the cards
+
+			&-card {
+				word-wrap: normal;
+
+				text-align: left;
+				padding-right: 100px; // Add margin between cards
+				width: 100%;
+			}
 		}
 	}
 }
 
+@media (min-width: 769px) {
+	.overview {
+		&-descriptions {
+			display: flex;
+			flex-direction: row;
+			width: 1368px;
+			justify-content: space-between; // Add this to evenly space the cards
+
+			&-card {
+				text-align: left;
+				padding-right: 100px; // Add margin between cards
+				width: 456px;
+			}
+		}
+	}
+}
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+	.overview-head {
+		flex-direction: column;
+		flex-wrap: wrap; /* Change to column layout on smaller screens */
+	}
+
+	.overview-head-right {
+		/* Move right content below left content */
+		order: 2;
+		max-width: 100%; /* Allow full width */
+	}
+
+	.overview-head-left {
+		flex-basis: 50%;
+		max-width: 100%; /* Allow full width */
+	}
+
+	/* Reset absolute positioning for images */
+	#desks {
+		position: static;
+		height: auto;
+	}
+
+	#hands {
+		position: static;
+		margin-left: 0;
+		height: auto;
+	}
+
+	/* Additional styling as needed for smaller screens */
+}
+
+/* Larger screens (min-width: 769px) */
 .overview-head {
 	text-align: left;
 	display: flex;
 	flex-direction: row;
 	height: auto;
 
-	@media (max-width: 768px) {
-		flex-direction: column; // Change to column layout on smaller screens
-	}
-
 	&-left {
 		min-height: 716px;
-		flex: 1; // Use flex-grow to allow left to shrink
-		max-width: 50%; // Limit max width to 50%
+		flex: 1;
+		max-width: 50%;
 	}
 
 	&-left-bottomimages {
@@ -248,8 +303,8 @@ p {
 	&-right {
 		position: relative;
 		min-height: 100%;
-		flex: 1; // Use flex-grow to allow right to shrink
-		max-width: 50%; // Limit max width to 50%
+		flex: 1;
+		max-width: 50%;
 
 		#desks {
 			height: 500px;
@@ -339,8 +394,6 @@ p {
 	flex-wrap: nowrap;
 	transition: transform ease;
 	user-select: none; /* Disable text selection */
-	-webkit-user-select: none; /* For older browsers */
-	-ms-user-select: none; /* For Microsoft Edge */
 	cursor: grab; /* Change cursor when dragging */
 }
 
@@ -356,7 +409,6 @@ p {
 .slider img {
 	width: 205px;
 	-webkit-user-drag: none;
-	pointer-events: none;
 }
 
 /* Add these styles to change cursor when hovering over slider content */
@@ -392,3 +444,69 @@ p {
 	border: none;
 	cursor: pointer;
 }
+
+.image-slider-container {
+	max-width: 100%;
+	width: 100%;
+	overflow: hidden; /* Hide overflow content */
+	display: flex;
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+}
+
+.image-slider-content {
+	flex-direction: column;
+	max-width: 100%;
+	width: 100%;
+	text-align: left;
+}
+
+.image-slider-image {
+	display: inline-block;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+	vertical-align: middle;
+	picture {
+		img {
+			max-width: none; /* Remove the maximum width to allow scaling */
+			height: 516px; /* Maintain the original image height */
+			transform-origin: top; /* Set the transformation origin to the top */
+			transition: transform 0.3s; /* Add a smooth transition for the transformation */
+
+			/* Adjust the scale factor as needed to control the zoom level */
+			transform: scale(1); /* Initial scale (100%) */
+		}
+	}
+}
+
+.image-slider-content-phone {
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	height: 0px;
+}
+.image-slider-content-phone-left {
+	width: 50%;
+}
+.image-slider-content-phone-right {
+	@media (max-width: 768px) {
+		&-image {
+			position: absolute;
+			top: -50vh;
+			margin-left: 200px;
+			img {
+				height: 70vh;
+			}
+		}
+	}
+	&-image {
+		position: relative;
+		top: -50vh;
+		margin-left: 200px;
+		img {
+			height: 70vh;
+		}
+	}
+}
+/* Additional styles for other content in the slider as needed */

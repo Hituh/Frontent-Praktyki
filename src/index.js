@@ -23,7 +23,7 @@ window.addEventListener("scroll", () => {
     sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
 
-        if (rect.top <= 100 && rect.bottom >= 100) {
+        if (rect.top <= 180 && rect.bottom >= 100) {
             currentSection = section.id;
         }
     });
@@ -50,14 +50,18 @@ window.addEventListener("scroll", () => {
 const navbarlower = document.getElementById("navbar-lower");
 const navbarupper = document.getElementById("navbar-upper");
 
+let scrollYold = window.scrollY;
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
+
+    if (window.scrollY > scrollYold) {
+        scrollYold = window.scrollY;
         navbarlower.style.zIndex = 101;
         navbarlower.style.top = "0px";
         navbarupper.style.top = "80px";
     } else {
 
+        scrollYold = window.scrollY;
         navbarlower.style.zIndex = 99;
         navbarlower.style.top = "70px";
         navbarupper.style.top = "0px";
@@ -73,12 +77,11 @@ let clicked = false;
 langDiv.addEventListener('click', (e) => {
     e.preventDefault();
     const rect = langDiv.getBoundingClientRect();
-    console.log(rect);
-    console.log(rect.left)
+
     if (!clicked) {
         clicked = true;
         langBarcontainer.style.top = "60px";
-        langBar.style.paddingLeft = `${rect.left}px`;
+        langBar.style.paddingLeft = `${rect.left}px`; // Use backticks for template strings
         langBarcontainer.style.opacity = "1"; // Fade in the language bar
     } else {
         clicked = false;
@@ -86,6 +89,7 @@ langDiv.addEventListener('click', (e) => {
         langBarcontainer.style.opacity = "0"; // Fade out the language bar
     }
 });
+
 
 
 
@@ -101,12 +105,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetElement = document.getElementById(targetId); // Get the target section element
 
             if (targetElement) {
-                // Scroll to the target section smoothly
-                targetElement.scrollIntoView({ behavior: "smooth" });
+                // Scroll to the target section smoothly with a 200px offset from the top of the screen
+                targetElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
             }
         });
     });
 });
+
 
 //slider
 
