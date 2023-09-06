@@ -47,6 +47,13 @@ p {
 	line-height: 1.47; // Changed from 25px
 }
 
+h2 .accordion-text-active {
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	font-size: 19;
+	line-height: 26;
+	color: #000000;
+}
 .big-headline-text,
 .headline-text {
 	color: $product-color;
@@ -215,12 +222,11 @@ p {
 		&-descriptions {
 			display: flex;
 			flex-direction: column;
-			width: 100vw;
+			width: 80vw;
 			justify-content: space-between; // Add this to evenly space the cards
 
 			&-card {
 				word-wrap: normal;
-
 				text-align: left;
 				padding-right: 100px; // Add margin between cards
 				width: 100%;
@@ -491,16 +497,6 @@ p {
 	width: 50%;
 }
 .image-slider-content-phone-right {
-	@media (max-width: 768px) {
-		&-image {
-			position: absolute;
-			top: -50vh;
-			margin-left: 200px;
-			img {
-				height: 70vh;
-			}
-		}
-	}
 	&-image {
 		position: relative;
 		top: -480px;
@@ -509,13 +505,23 @@ p {
 			height: 600px;
 		}
 	}
+	@media (max-width: 768px) {
+		&-image {
+			position: relative;
+			top: -50vh;
+			margin-left: 200px;
+			img {
+				height: 70vh;
+			}
+		}
+	}
 }
 .image-slider-description {
 	display: flex;
 	flex-direction: column;
 	background-color: $product-color;
 	margin-top: -5px;
-	
+
 	padding-left: $leftpadding;
 	padding-right: $leftpadding;
 }
@@ -544,12 +550,112 @@ p {
 }
 
 .image-slider-description-lower {
-    text-align: center; /* Center the text horizontally */
-    border-top: 0px dotted white; /* Add a dotted border only above the text */
-    padding-top: 10px; /* Add some padding above the text to separate it from the border */
+	text-align: center; /* Center the text horizontally */
+	border-top: 0px dotted white; /* Add a dotted border only above the text */
+	padding-top: 10px; /* Add some padding above the text to separate it from the border */
 
+	max-width: $content-width;
+	width: $content-width;
 	p {
 		color: white;
 	}
 }
-/* Additional styles for other content in the slider as needed */
+
+.room-booking-container {
+	margin: 0;
+	width: 100%;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.room-booking-content {
+	padding-top: 5vh;
+	max-width: $content-width;
+	width: $content-width;
+	margin: 0 auto 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+
+.room-booking-row1 {
+	text-align: left;
+	width: 40%;
+}
+
+.room-booking-row2 {
+	width: 40%;
+}
+
+.room-booking-row3 {
+	text-align: left;
+	width: 20%;
+}
+
+@media only screen and (max-width: 768px) {
+	.room-booking-content {
+		max-width: 100vw;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.room-booking-row1,
+	.room-booking-row2,
+	.room-booking-row3 {
+		width: 100%; /* Make all rows full width */
+	}
+
+	.room-booking-row3 {
+		order: 2;
+		position: absolute;
+		top: -400px;
+		left: 350px;
+	}
+}
+
+.accordion-container {
+	margin: 0;
+	width: 100%;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.accordion-content {
+	padding-top: 5vh;
+	max-width: $content-width;
+	width: $content-width;
+	margin: 0 auto 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+.accordion-item-container {
+	width: 100%;
+	text-align: left;
+	padding: 2px;
+	font-weight: bold;
+	display: flex;;
+}
+
+.list-item-title {
+	transition: font-size 0.3s  ease, color 0.3s ease;
+}
+.list-item-title:hover{ 
+	color:$product-color;
+}
+.list-item-title:active{
+	font-size: 26px;
+}
+.list-item-title-arrow {
+	    width: 8px;
+    height: 8px;
+    display: block;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    margin-right: 30px;
+    position: relative;
+    top: 9px;
+}
