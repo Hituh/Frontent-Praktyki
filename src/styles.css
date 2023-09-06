@@ -240,10 +240,11 @@ body {
 }
 .overview-head-right #hand {
   margin-left: 100px;
-  height: 700px;
+  height: 600px;
   width: auto;
   position: absolute;
   overflow: hidden;
+  transition: top 0.3s ease;
 }
 .overview-descriptions {
   display: flex;

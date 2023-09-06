@@ -95,7 +95,23 @@ langDiv.addEventListener('click', (e) => {
 
 //*Overview section hand animation
 //TODO: This
-const hand = document.getElementById("hand");
+// Get a reference to the "hands" element
+const handsElement = document.getElementById("hand");
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset < 200) {
+        handsElement.style.top = `${200}px`;
+    }
+    else {
+        handsElement.style.top = `${window.pageYOffset}px`;
+    }
+});
+
+// Attach an event listener to the scroll event
+window.addEventListener("scroll", toggleElementVisibility);
+
+// Call the function initially to set the initial state
+toggleElementVisibility();
 
 //*slider
 //TODO: Make it work lmao
