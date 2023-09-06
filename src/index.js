@@ -1,18 +1,25 @@
-document.querySelectorAll('navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+//* Smooth navigation to correct section from navbar
+//TODO: Fix wrong scrolling. It moves to correct section but a bit too low
 
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".navbar-lower-container a[href^='#']");
 
-        window.scrollTo({
-            top: targetElement.offsetTop - document.querySelector('navbar').offsetHeight,
-            behavior: 'smooth'
+    links.forEach(function (link) {
+        link.addEventListener("click", function (e) {
+            e.preventDefault(); // Prevent the default behavior of the link
+            const targetId = this.getAttribute("href").substring(1); // Get the target section's ID
+            const targetElement = document.getElementById(targetId); // Get the target section element
+
+            if (targetElement) {
+                // Scroll to the target section smoothly with a 200px offset from the top of the screen
+                targetElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            }
         });
     });
 });
 
-
+//* Navbar visible section highlighting
+//TODO: Needs a bit of pixel perfect fix
 const sections = document.querySelectorAll("section"); // Assuming you have sections with IDs like "overview", "features", etc.
 const navLinks = document.querySelectorAll(".navbar-lower-content a");
 
@@ -42,19 +49,15 @@ window.addEventListener("scroll", () => {
     }
 });
 
-
-
-
-//Navbar hiding
-
+//*Navbar hiding
+//TODO: If visible, also hide language selection bar
 const langDiv = document.getElementById("menuarrow");
 const langBarcontainer = document.querySelector(".navbar-lang-container");
 const langBar = document.querySelector(".navbar-lang");
 const navbarlower = document.getElementById("navbar-lower");
 const navbarupper = document.getElementById("navbar-upper");
 
-let langclicked = false;
-
+let langclicked = false
 let scrollYold = window.scrollY;
 
 window.addEventListener('scroll', () => {
@@ -71,8 +74,9 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Language menu arrow
 
+//*Language selection dropdown bar for desktop
+//TODO: Probably make it also work on mobile
 langDiv.addEventListener('click', (e) => {
     e.preventDefault();
     const rect = langDiv.getBoundingClientRect();
@@ -89,30 +93,12 @@ langDiv.addEventListener('click', (e) => {
     }
 });
 
+//*Overview section hand animation
+//TODO: This
+const hand = document.getElementById("hand");
 
-
-
-//Navbar smooth scrolling to anchored item
-
-document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".navbar-lower-container a[href^='#']");
-
-    links.forEach(function (link) {
-        link.addEventListener("click", function (e) {
-            e.preventDefault(); // Prevent the default behavior of the link
-            const targetId = this.getAttribute("href").substring(1); // Get the target section's ID
-            const targetElement = document.getElementById(targetId); // Get the target section element
-
-            if (targetElement) {
-                // Scroll to the target section smoothly with a 200px offset from the top of the screen
-                targetElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-            }
-        });
-    });
-});
-
-
-//slider
+//*slider
+//TODO: Make it work lmao
 
 const slider = document.getElementById("content-slider");
 let isDragging = false;
@@ -159,14 +145,13 @@ function endDrag() {
     slider.style.cursor = "grab";
 }
 
-//Accordion
-function accordionDropdown (id) {
+//*Accordion
+//TODO: Make it work lmao
+function accordionDropdown(id) {
     var x = document.getElementById(id);
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
     } else {
         x.className = x.className.replace(" w3-show", "");
     }
-
-
 }
