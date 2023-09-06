@@ -13,6 +13,7 @@ $px-large: 90px;
 $pxx-large: 120px;
 
 $content-width: 1366px;
+$leftpadding: 15vw;
 
 // styles.scss
 
@@ -153,7 +154,7 @@ p {
 			font-size: 17px;
 			font-family: "Roboto", sans-serif;
 			width: 100%;
-			padding-left: 15vw;
+			padding-left: $leftpadding;
 			height: 70px;
 			flex-direction: row;
 			align-items: center;
@@ -502,11 +503,53 @@ p {
 	}
 	&-image {
 		position: relative;
-		top: -50vh;
+		top: -480px;
 		margin-left: 200px;
 		img {
-			height: 70vh;
+			height: 600px;
 		}
+	}
+}
+.image-slider-description {
+	display: flex;
+	flex-direction: column;
+	background-color: $product-color;
+	margin-top: -5px;
+	
+	padding-left: $leftpadding;
+	padding-right: $leftpadding;
+}
+
+.image-slider-description-upper {
+	display: flex;
+	flex-direction: row;
+	gap: 5vw;
+}
+
+.image-slider-description-upper-left {
+	width: 50%;
+	padding: $pbase;
+	h1 {
+		font-size: 60px;
+		color: white;
+	}
+}
+.image-slider-description-upper-right {
+	padding: $pbase;
+	width: 50%;
+	padding-top: 150px;
+	p {
+		color: white;
+	}
+}
+
+.image-slider-description-lower {
+    text-align: center; /* Center the text horizontally */
+    border-top: 0px dotted white; /* Add a dotted border only above the text */
+    padding-top: 10px; /* Add some padding above the text to separate it from the border */
+
+	p {
+		color: white;
 	}
 }
 /* Additional styles for other content in the slider as needed */

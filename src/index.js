@@ -47,8 +47,13 @@ window.addEventListener("scroll", () => {
 
 //Navbar hiding
 
+const langDiv = document.getElementById("menuarrow");
+const langBarcontainer = document.querySelector(".navbar-lang-container");
+const langBar = document.querySelector(".navbar-lang");
 const navbarlower = document.getElementById("navbar-lower");
 const navbarupper = document.getElementById("navbar-upper");
+
+let langclicked = false;
 
 let scrollYold = window.scrollY;
 
@@ -65,26 +70,27 @@ window.addEventListener('scroll', () => {
         navbarlower.style.zIndex = 99;
         navbarlower.style.top = "70px";
         navbarupper.style.top = "0px";
+        if (langclicked) {
+            langclicked = false;
+            langBarcontainer.style.top = "-80px";
+            langBarcontainer.style.opacity = "0"; // Fade out the language bar
+        }
     }
 });
 
 // Language menu arrow
-const langDiv = document.getElementById("menuarrow");
-const langBarcontainer = document.querySelector(".navbar-lang-container");
-const langBar = document.querySelector(".navbar-lang");
-let clicked = false;
 
 langDiv.addEventListener('click', (e) => {
     e.preventDefault();
     const rect = langDiv.getBoundingClientRect();
 
-    if (!clicked) {
-        clicked = true;
+    if (!langclicked) {
+        langclicked = true;
         langBarcontainer.style.top = "60px";
         langBar.style.paddingLeft = `${rect.left}px`; // Use backticks for template strings
         langBarcontainer.style.opacity = "1"; // Fade in the language bar
     } else {
-        clicked = false;
+        langclicked = false;
         langBarcontainer.style.top = "-80px";
         langBarcontainer.style.opacity = "0"; // Fade out the language bar
     }
