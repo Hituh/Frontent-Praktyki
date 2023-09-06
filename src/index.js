@@ -64,16 +64,29 @@ window.addEventListener('scroll', () => {
     }
 });
 
-//Language menu arrow
-const langdiv = document.getElementById("menuarrow");
-const langbar = document.querySelector(".navbar-lang"); // Use querySelector to select the first element with the class name
+// Language menu arrow
+const langDiv = document.getElementById("menuarrow");
+const langBarcontainer = document.querySelector(".navbar-lang-container");
+const langBar = document.querySelector(".navbar-lang");
+let clicked = false;
 
-langdiv.addEventListener('click', (e) => {
+langDiv.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log("clicked");
-    
-    langbar.style.top = "80px";
+    const rect = langDiv.getBoundingClientRect();
+    console.log(rect);
+    console.log(rect.left)
+    if (!clicked) {
+        clicked = true;
+        langBarcontainer.style.top = "60px";
+        langBar.style.paddingLeft = `${rect.left}px`;
+        langBarcontainer.style.opacity = "1"; // Fade in the language bar
+    } else {
+        clicked = false;
+        langBarcontainer.style.top = "-80px";
+        langBarcontainer.style.opacity = "0"; // Fade out the language bar
+    }
 });
+
 
 
 //Navbar smooth scrolling to anchored item
@@ -95,11 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// JavaScript to make the slider draggable with mouse
-
-// JavaScript to make the slider draggable within the viewport
-
-// JavaScript to make the slider draggable within page boundaries
+//slider
 
 const slider = document.getElementById("content-slider");
 let isDragging = false;
