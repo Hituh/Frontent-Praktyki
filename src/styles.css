@@ -439,11 +439,53 @@ p {
 }
 .image-slider-content-phone-right-image {
   position: relative;
-  top: -50vh;
+  top: -480px;
   margin-left: 200px;
 }
 .image-slider-content-phone-right-image img {
-  height: 70vh;
+  height: 600px;
+}
+
+.image-slider-description {
+  display: flex;
+  flex-direction: column;
+  background-color: #3126ff;
+  margin-top: -5px;
+  padding-left: 15vw;
+  padding-right: 15vw;
+}
+
+.image-slider-description-upper {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+}
+
+.image-slider-description-upper-left {
+  width: 50%;
+  padding: 30px;
+}
+.image-slider-description-upper-left h1 {
+  font-size: 60px;
+  color: white;
+}
+
+.image-slider-description-upper-right {
+  padding: 30px;
+  width: 50%;
+  padding-top: 150px;
+}
+.image-slider-description-upper-right p {
+  color: white;
+}
+
+.image-slider-description-lower {
+  text-align: center; /* Center the text horizontally */
+  border-top: 0px dotted white; /* Add a dotted border only above the text */
+  padding-top: 10px; /* Add some padding above the text to separate it from the border */
+}
+.image-slider-description-lower p {
+  color: white;
 }
 
 /* Additional styles for other content in the slider as needed */
