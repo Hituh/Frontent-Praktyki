@@ -9,10 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault(); // Prevent the default behavior of the link
             const targetId = this.getAttribute("href").substring(1); // Get the target section's ID
             const targetElement = document.getElementById(targetId); // Get the target section element
-
+            var offset = 100;
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const targetElementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = targetElementPosition - bodyRect - offset;
             if (targetElement) {
                 // Scroll to the target section smoothly with a 200px offset from the top of the screen
-                targetElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                })
+
             }
         });
     });
@@ -94,8 +101,6 @@ langDiv.addEventListener('click', (e) => {
 });
 
 //*Overview section hand animation
-//TODO: This
-// Get a reference to the "hands" element
 const handsElement = document.getElementById("hand");
 
 window.addEventListener('scroll', () => {
@@ -107,11 +112,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Attach an event listener to the scroll event
-window.addEventListener("scroll", toggleElementVisibility);
-
-// Call the function initially to set the initial state
-toggleElementVisibility();
 
 //*slider
 //TODO: Make it work lmao
