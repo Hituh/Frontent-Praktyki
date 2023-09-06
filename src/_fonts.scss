@@ -1,0 +1,51 @@
+/* Main fonts related file */   
+@import '_variables.scss';
+
+h2,
+h3 {
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	color: $text-color;
+	font-size: 30px;
+	line-height: 1.33;
+}
+
+h3 {
+	font-size: 19px;
+	line-height: 1.37;
+}
+
+h4,
+p {
+	font-family: "Roboto", sans-serif;
+	color: $text-color;
+	font-size: 17px;
+	line-height: 1.47;
+}
+
+h2 .accordion-text-active {
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 26px;
+	color: #000000;
+}
+
+.big-headline-text,
+.headline-text {
+	font-size: 70px;
+	line-height: 1.14;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+}
+.big-headline-text {
+	color: $product-color;
+}
+
+.description-text {
+	color: $text-color;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 1.33;
+	font-family: "Roboto", sans-serif;
+}

@@ -1,20 +1,6 @@
-// _variables.scss (Separate variables into a dedicated file)
-$background-color: #f7f7f7;
-$product-color: #3126ff;
-$text-color: #000000;
-$secondary-color: #01ffcb;
-
-$spacing-unit-small: 10px;
-$spacing-unit-medium: 20px;
-$spacing-unit-base: 30px;
-$spacing-unit-large: 40px;
-$spacing-unit-x-large: 60px;
-$spacing-unit-xx-large: 90px;
-
-$content-width: 1366px;
-$left-padding: 15vw;
-
-// styles.scss
+@import "_variables.scss";
+@import "_fonts.scss";
+@import "_common-styles.scss";
 
 * {
 	text-align: left;
@@ -28,78 +14,9 @@ body {
 	left: 0;
 }
 
-h2,
-h3 {
-	font-family: "Poppins", sans-serif;
-	font-weight: bold;
-	color: $text-color;
-	font-size: 30px;
-	line-height: 1.33;
-}
-
-h3 {
-	font-size: 19px;
-	line-height: 1.37;
-}
-
-h4,
-p {
-	font-family: "Roboto", sans-serif;
-	color: $text-color;
-	font-size: 17px;
-	line-height: 1.47;
-}
-
-h2 .accordion-text-active {
-	font-family: "Poppins", sans-serif;
-	font-weight: bold;
-	font-size: 19px;
-	line-height: 26px;
-	color: #000000;
-}
-
-.big-headline-text,
-.headline-text {
-	font-size: 70px;
-	line-height: 1.14;
-	font-family: "Poppins", sans-serif;
-	font-weight: bold;
-}
-.big-headline-text {
-	color: $product-color;
-}
-
-.description-text {
-	color: $text-color;
-	font-weight: 400;
-	font-size: 30px;
-	line-height: 1.33;
-	font-family: "Roboto", sans-serif;
-}
-
-/* Style the navbar */
+//*Navbar
+//TODO: Make it work on mobiles
 .navbar {
-	&-lang-container {
-		position: fixed;
-		height: 80px;
-		font-family: "Roboto", sans-serif;
-		display: flex;
-		width: 100%;
-		background-color: white;
-		flex-direction: row;
-		top: -80px;
-		z-index: 10000;
-		transition: opacity 1s linear, z-index 0.5s ease;
-		user-select: none;
-	}
-
-	&-lang {
-		display: flex;
-		flex-direction: row;
-		gap: 20px;
-		justify-content: center;
-	}
-
 	&-upper {
 		font-family: "Roboto", sans-serif;
 		display: flex;
@@ -139,6 +56,26 @@ h2 .accordion-text-active {
 			background-color: white;
 			height: 70px;
 			z-index: 100;
+			&-lang-container {
+				position: fixed;
+				height: 80px;
+				font-family: "Roboto", sans-serif;
+				display: flex;
+				width: 100%;
+				background-color: white;
+				flex-direction: row;
+				top: -80px;
+				z-index: 10000;
+				transition: opacity 1s linear, z-index 0.5s ease;
+				user-select: none;
+			}
+
+			&-lang {
+				display: flex;
+				flex-direction: row;
+				gap: 20px;
+				justify-content: center;
+			}
 		}
 
 		&-right {
@@ -175,9 +112,10 @@ h2 .accordion-text-active {
 		}
 
 		&-content {
-			max-width: 1366px;
-			width: 1366px;
+			max-width: $content-width;
+			width: 100%;
 			margin: 0 auto 0 auto;
+			padding-left: 200px;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -209,7 +147,7 @@ h2 .accordion-text-active {
 	}
 }
 
-//Language dropdown arrow
+//*Language dropdown arrow span
 .dropdownarrow {
 	border-style: solid;
 	border-color: black;
@@ -225,66 +163,59 @@ h2 .accordion-text-active {
 	user-select: none;
 }
 
-.overview-container {
-	margin: 0;
-	width: 100%;
-	padding: 0;
-	box-sizing: border-box;
-	text-align: center;
-}
-
-.overview-content {
-	max-width: $content-width;
-	width: $content-width;
-	margin: 0 auto 0 auto;
-	display: flex;
-}
-
-/* Larger screens (min-width: 769px) */
-.overview-head {
-	max-width: 100%;
-	display: flex;
-	flex-direction: row;
-	height: auto;
-
-	&-left {
-		min-height: 716px;
-		flex: 1;
-		max-width: 50%;
+//*First section STREAMLINE YOUR WORKPLACE
+//TODO: Mobile
+.overview {
+	&-container {
+		@include container;
+		overflow: hidden;
 	}
-
-	&-left-bottomimages {
+	&-content {
+		@include content;
+	}
+	&-head {
+		max-width: 100%;
 		display: flex;
 		flex-direction: row;
+		height: auto;
 
-		img {
-			height: $spacing-unit-xx-large;
-			width: auto;
-		}
-	}
-
-	&-right {
-		position: relative;
-		min-height: 100%;
-		flex: 1;
-		max-width: 50%;
-
-		#desks {
-			height: 500px;
-			position: absolute;
+		&-left {
+			min-height: 716px;
+			flex: 1;
+			max-width: 50%;
 		}
 
-		#hands {
-			margin-left: 100px;
-			height: 700px;
-			width: auto;
-			position: absolute;
+		&-left-bottomimages {
+			display: flex;
+			flex-direction: row;
+
+			img {
+				height: $spacing-unit-xx-large;
+				width: auto;
+			}
+		}
+
+		&-right {
+			position: relative;
+			min-height: 100%;
+			flex: 1;
+			max-width: 50%;
 			overflow: hidden;
+
+			#desks {
+				height: 500px;
+				position: absolute;
+			}
+
+			#hand {
+				margin-left: 100px;
+				height: 700px;
+				width: auto;
+				position: absolute;
+				overflow: hidden;
+			}
 		}
 	}
-}
-.overview {
-	max-width: 1366px;
 	&-descriptions {
 		display: flex;
 		flex-direction: row;
@@ -313,7 +244,7 @@ h2 .accordion-text-active {
 		}
 	}
 }
-/* Media query for screens smaller than 768px */
+
 @media (max-width: 768px) {
 	.overview-container {
 		margin: 0;
@@ -360,7 +291,8 @@ h2 .accordion-text-active {
 	/* Additional styling for smaller screens as needed */
 }
 
-//Slider
+//*Slider
+//TODO: Make it work desktop + mobile
 .slider-container {
 	display: flex;
 	flex-direction: column;
@@ -375,129 +307,28 @@ h2 .accordion-text-active {
 	transition: transform ease;
 	user-select: none;
 	cursor: grab;
-}
 
-.slider-card {
-	background-color: white;
-	padding: $spacing-unit-large;
-	margin: $spacing-unit-small;
-	display: flex;
-	flex-direction: column;
-}
-
-/* Add styles to disable image drag and text selection within slider content */
-.slider img {
-	width: 205px;
-	-webkit-user-drag: none;
-}
-
-/* Add styles to change cursor when hovering over slider content */
-.slider:hover {
-	cursor: grabbing;
-}
-
-//image slider
-.image-slider-container {
-	max-width: 100%;
-	width: 100%;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.image-slider-content {
-	flex-direction: column;
-	max-width: 100%;
-	width: 100%;
-}
-
-.image-slider-image {
-	display: inline-block;
-	overflow: hidden;
-	vertical-align: middle;
-
-	picture {
+	&-card {
+		background-color: white;
+		padding: $spacing-unit-large;
+		margin: $spacing-unit-small;
+		display: flex;
+		flex-direction: column;
 		img {
-			max-width: none;
-			height: 516px;
-			transform-origin: top;
-			transition: transform 0.3s;
-			transform: scale(1);
+			width: 205px;
+			-webkit-user-drag: none;
 		}
 	}
-}
-
-.image-slider-content-phone {
-	display: flex;
-	flex-direction: row;
-	width: 100vw;
-	height: 0px;
-}
-
-.image-slider-content-phone-left {
-	width: 50%;
-}
-
-.image-slider-content-phone-right {
-	width: 50%;
-	&-image {
-		position: relative;
-		top: -480px;
-		margin-left: 5vw;
-		img {
-			height: 600px;
-		}
+	:hover {
+		cursor: grabbing;
 	}
 }
 
-.image-slider-description {
-	display: flex;
-	flex-direction: column;
-	background-color: $product-color;
-	margin-top: -5px;
-	padding-left: $left-padding;
-	padding-right: $left-padding;
-}
+//*Slider in second section
+//TODO: Mobile and navigation arrows
 
-.image-slider-description-upper {
-	display: flex;
-	flex-direction: row;
-	gap: 5vw;
-}
-
-.image-slider-description-upper-left {
-	width: 50%;
-	padding: $spacing-unit-base;
-	h1 {
-		font-size: 60px;
-		color: white;
-	}
-}
-
-.image-slider-description-upper-right {
-	padding: $spacing-unit-base;
-	width: 50%;
-	padding-top: 150px;
-	p {
-		color: white;
-	}
-}
-
-.image-slider-description-lower {
-	text-align: center;
-	border-top: 0px dotted white;
-	padding-top: $spacing-unit-small;
-	max-width: $content-width;
-	width: $content-width;
-	p {
-		color: white;
-	}
-}
-
-@media (max-width: 768px) {
-	//image slider
-	.image-slider-container {
+.image-slider {
+	&-container {
 		max-width: 100%;
 		width: 100%;
 		overflow: hidden;
@@ -505,153 +336,255 @@ h2 .accordion-text-active {
 		justify-content: center;
 		align-items: center;
 	}
-
-	.image-slider-content {
+	&-content {
 		flex-direction: column;
 		max-width: 100%;
 		width: 100%;
-	}
+		&-phone {
+			display: flex;
+			flex-direction: row;
+			width: 100vw;
+			height: 0px;
+			&-left {
+				width: 50%;
+			}
 
-	.image-slider-content-phone {
-		display: flex;
-		flex-direction: row;
-		width: 100vw;
-		height: 0px;
-	}
-
-	.image-slider-content-phone-right {
-		&-image {
-			position: relative;
-			top: -50vh;
-			img {
-				height: 70vh;
+			&-right {
+				width: 50%;
+				&-image {
+					position: relative;
+					top: -480px;
+					margin-left: 5vw;
+					img {
+						height: 600px;
+					}
+				}
 			}
 		}
 	}
+	&-image {
+		display: inline-block;
+		overflow: hidden;
+		vertical-align: middle;
 
-	.image-slider-description {
+		picture {
+			img {
+				max-width: none;
+				height: 516px;
+				transform-origin: top;
+				transition: transform 0.3s;
+				transform: scale(1);
+			}
+		}
+	}
+	&-description {
 		display: flex;
 		flex-direction: column;
 		background-color: $product-color;
 		margin-top: -5px;
 		padding-left: $left-padding;
 		padding-right: $left-padding;
-	}
-
-	.image-slider-description-upper {
-		display: flex;
-		flex-direction: row;
-		gap: 5vw;
-	}
-
-	.image-slider-description-upper-left {
-		width: 50%;
-		padding: $spacing-unit-base;
-		h1 {
-			font-size: 60px;
-			color: white;
+		&-upper {
+			display: flex;
+			flex-direction: row;
+			gap: 5vw;
+			&-left {
+				width: 50%;
+				padding: $spacing-unit-base;
+				h1 {
+					font-size: 60px;
+					color: white;
+				}
+			}
+			&-right {
+				padding: $spacing-unit-base;
+				width: 50%;
+				padding-top: 150px;
+				p {
+					color: white;
+				}
+			}
 		}
-	}
-
-	.image-slider-description-upper-right {
-		padding: $spacing-unit-base;
-		width: 50%;
-		padding-top: 150px;
-		p {
-			color: white;
-		}
-	}
-
-	.image-slider-description-lower {
-		text-align: center;
-		border-top: 0px dotted white;
-		padding-top: $spacing-unit-small;
-		max-width: $content-width;
-		width: $content-width;
-		p {
-			color: white;
+		&-lower {
+			text-align: center;
+			border-top: 0px dotted white;
+			padding-top: $spacing-unit-small;
+			max-width: $content-width;
+			width: $content-width;
+			p {
+				color: white;
+			}
 		}
 	}
 }
 
-//room booking
-.room-booking-container {
-	background-color: white;
-	margin: 0;
-	width: 100%;
-	padding: 0;
-	box-sizing: border-box;
-	text-align: center;
+//*Slider in second section mobile
+//TODO: Navigation arrows
+
+@media (max-width: 768px) {
+	.image-slider {
+		&-container {
+			max-width: 100%;
+			width: 100%;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&-content {
+			flex-direction: column;
+			max-width: 100%;
+			width: 100%;
+			&-phone {
+				display: flex;
+				flex-direction: row;
+				width: 100vw;
+				height: 0px;
+				&-left {
+					width: 50%;
+				}
+
+				&-right {
+					width: 50%;
+					&-image {
+						position: relative;
+						top: -480px;
+						margin-left: 5vw;
+						img {
+							height: 600px;
+						}
+					}
+				}
+			}
+		}
+		&-image {
+			display: inline-block;
+			overflow: hidden;
+			vertical-align: middle;
+
+			picture {
+				img {
+					max-width: none;
+					height: 516px;
+					transform-origin: top;
+					transition: transform 0.3s;
+					transform: scale(1);
+				}
+			}
+		}
+		&-description {
+			display: flex;
+			flex-direction: column;
+			background-color: $product-color;
+			margin-top: -5px;
+			padding-left: $left-padding;
+			padding-right: $left-padding;
+			&-upper {
+				display: flex;
+				flex-direction: row;
+				gap: 5vw;
+				&-left {
+					width: 50%;
+					padding: $spacing-unit-base;
+					h1 {
+						font-size: 60px;
+						color: white;
+					}
+				}
+				&-right {
+					padding: $spacing-unit-base;
+					width: 50%;
+					padding-top: 150px;
+					p {
+						color: white;
+					}
+				}
+			}
+			&-lower {
+				text-align: center;
+				border-top: 0px dotted white;
+				padding-top: $spacing-unit-small;
+				max-width: $content-width;
+				width: $content-width;
+				p {
+					color: white;
+				}
+			}
+		}
+	}
 }
 
-.room-booking-content {
-	padding-top: 5vh;
-	max-width: $content-width;
-	width: $content-width;
-	margin: 0 auto 0 auto;
-	display: flex;
-	flex-direction: row;
+//*Room booking
+//TODO: Fix mobile
+.room-booking {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+	}
+	&-row1 {
+		width: 40%;
+	}
+
+	&-row2 {
+		width: 40%;
+	}
+
+	&-row3 {
+		width: 20%;
+	}
 }
 
-.room-booking-row1 {
-	width: 40%;
+//*Room booking mobile
+//TODO: Fix order of things
+@media (max-width: 768px) {
+	.room-booking {
+		&-content {
+			max-width: 100vw;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-row1,
+		&-row2,
+		&-row3 {
+			width: 100%;
+		}
+
+		&-row3 {
+			order: 2;
+			position: absolute;
+			top: -400px;
+			left: 350px;
+		}
+	}
 }
 
-.room-booking-row2 {
-	width: 40%;
-}
+//*Accordion
+//TODO: Make it work lmao
+.accordion {
+	&-container {
+		@include container;
+	}
 
-.room-booking-row3 {
-	width: 20%;
-}
-
-@media only screen and (max-width: 768px) {
-	.room-booking-content {
-		max-width: 100vw;
-		display: flex;
+	&-content {
+		@include content;
 		flex-direction: column;
 	}
 
-	.room-booking-row1,
-	.room-booking-row2,
-	.room-booking-row3 {
-		width: 100%;
-	}
-
-	.room-booking-row3 {
-		order: 2;
-		position: absolute;
-		top: -400px;
-		left: 350px;
+	&-item {
+		&-container {
+			width: 100%;
+			padding: 2px;
+			font-weight: bold;
+			display: flex;
+		}
 	}
 }
 
-//Accordion
-.accordion-container {
-	background-color: white;
-	margin: 0;
-	width: 100%;
-	padding: 0;
-	box-sizing: border-box;
-	text-align: center;
-}
-
-.accordion-content {
-	padding-top: 5vh;
-	max-width: $content-width;
-	width: $content-width;
-	margin: 0 auto 0 auto;
-	display: flex;
-	flex-direction: column;
-}
-
-.accordion-item-container {
-	width: 100%;
-	padding: 2px;
-	font-weight: bold;
-	display: flex;
-}
-
+//*Accordion item list
+//TODO: Make it work on desktop + mobile, fix naming
 .list-item-title {
 	transition: font-size 0.3s ease, color 0.3s ease;
 
@@ -678,34 +611,48 @@ h2 .accordion-text-active {
 	top: 9px;
 }
 
-//System requirements
-.sreq-container {
-	background-color: white;
-	margin: 0;
-	width: 100%;
-	padding: 0;
-	box-sizing: border-box;
-	text-align: center;
-}
+//*System requirements section
+//TODO: Do it?
+.sreq {
+	&-container {
+		@include container;
+	}
 
-.sreq-content {
-	padding-top: 5vh;
-	max-width: $content-width;
-	width: 100%;
-	margin: 0 auto 0 auto;
-	display: flex;
-	flex-direction: row;
-	gap: 10%;
+	&-content {
+		@include content;
+		gap: 100px;
 
-	&-left,
-	&-right {
-		max-width: 50%;
-		width: 50%;
+		&-left,
+		&-right {
+			max-width: 50%;
+			width: 50%;
+		}
 	}
 }
 
 @media (max-width: 768px) {
-	.sreq-container {
+	.sreq {
+		&-container {
+			@include container;
+		}
+
+		&-content {
+			@include content;
+			gap: 10%;
+
+			&-left,
+			&-right {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+}
+
+//*Download bar
+//TODO: Mobile
+.download {
+	&-container {
 		background-color: white;
 		margin: 0;
 		width: 100%;
@@ -713,51 +660,26 @@ h2 .accordion-text-active {
 		box-sizing: border-box;
 		text-align: center;
 	}
-
-	.sreq-content {
-		padding-top: 5vh;
+	&-content {
+		background-color: $background-color;
+		padding: 20px 50px 20px 50px;
 		max-width: $content-width;
 		width: 100%;
 		margin: 0 auto 0 auto;
 		display: flex;
-		flex-direction: column;
-		gap: 10%;
+		flex-direction: row;
+		justify-content: space-between;
 
-		&-left,
-		&-right {
-			max-width: 100%;
-			width: 100%;
+		button {
+			font-family: "Roboto", sans-serif;
+			font-size: 17px;
+			background-color: $product-color;
+			color: white;
+			width: 200px;
+			height: 65px;
+			border-width: 0;
+			text-align: center;
 		}
-	}
-}
-
-.download-container {
-	background-color: white;
-	margin: 0;
-	width: 100%;
-	padding: 0;
-	box-sizing: border-box;
-	text-align: center;
-}
-.download-content {
-	background-color: $background-color;
-	padding: 20px 50px 20px 50px;
-	max-width: $content-width;
-	width: 100%;
-	margin: 0 auto 0 auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-
-	button {
-		font-family: "Roboto", sans-serif;
-		font-size: 17px;
-		background-color: $product-color;
-		color: white;
-		width: 200px;
-		height: 65px;
-		border-width: 0;
-		text-align: center;
 	}
 }
 
@@ -767,60 +689,49 @@ h2 .accordion-text-active {
 	}
 }
 
-//Router thingy
-.router-container {
-	background-color: white;
-	margin: 0;
-	width: 100%;
-	padding: 5vh 0 0 0;
-	box-sizing: border-box;
-	text-align: center;
-}
-.router-content {
-	max-width: $content-width;
-	width: 100%;
-	margin: 0 auto 0 auto;
-	display: flex;
-	flex-direction: row;
-
-	&-left {
-		width: 55%;
-		h2 {
-			font-weight: 300;
-		}
+//*Router thingy
+//TODO: Do it? Mobile.
+.router {
+	&-container {
+		@include container;
 	}
-	&-right {
-		width: 45%;
-		img {
-			height: 600px;
+	&-content {
+		@include content;
+
+		&-left {
+			width: 55%;
+			h2 {
+				font-weight: 300;
+			}
+		}
+		&-right {
+			width: 45%;
+			img {
+				height: 600px;
+			}
 		}
 	}
 }
 
-.underrouter-container {
-	background-color: white;
-	margin: 0;
-	width: 100%;
-	padding: 5vh 0 0 0;
-	box-sizing: border-box;
-	text-align: center;
-}
-.underrouter-content {
-	max-width: $content-width;
-	width: 100%;
-	margin: 0 auto 0 auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	&-right,
-	&-left{
-		padding-right: 150px;
-		width: 50%;
+//*Two descriptions under router section
+//TODO: Mobile
+.underrouter {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		justify-content: space-between;
+		&-right,
+		&-left {
+			padding-right: 150px;
+			width: 50%;
+		}
 	}
 }
 
-@media 
-//form
+//*Form
+//TODO: ALL
 
 .form-container {
 	display: flex;
@@ -850,38 +761,28 @@ h2 .accordion-text-active {
 	border: none;
 	cursor: pointer;
 }
-//Footer
-.footer-container {
-	position: relative;
-	margin: 0;
-	width: 100%;
-	padding: 0;
-	box-sizing: border-box;
-	text-align: center;
-	background-color: $product-color;
-}
 
+//*Footer
+//TODO: Mobile
 .footer {
-	max-width: $content-width;
-	width: $content-width;
-	margin: 0 auto 0 auto;
-	display: flex;
-	padding: 20px;
-	justify-content: space-between;
-}
-
-.column {
-	color: #ffffff;
-	flex: 1;
-	margin: 0 10px;
-}
-
-.column h4 {
-	color: #ffffff;
-	font-size: 18px;
-}
-
-.column p {
-	color: #ffffff;
-	font-size: 14px;
+	&-container {
+		@include container;
+		background-color: $product-color;
+	}
+	&-content {
+		@include content;
+		&-column {
+			color: #ffffff;
+			flex: 1;
+			margin: 0 10px;
+			h4 {
+				color: #ffffff;
+				font-size: 18px;
+			}
+			p {
+				color: #ffffff;
+				font-size: 14px;
+			}
+		}
+	}
 }
