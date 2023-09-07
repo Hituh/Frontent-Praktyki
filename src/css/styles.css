@@ -504,23 +504,31 @@ h2 .accordion-text-active {
   flex-direction: row;
   flex-direction: column;
 }
-.accordion-item-container {
+.accordion-item {
   width: 100%;
   padding: 2px;
   font-weight: bold;
   display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.accordion-item-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .list-item-title {
-  transition: font-size 0.3s ease, color 0.3s ease;
+  padding: 20px 0 20px 0;
+  margin: 0;
+  user-select: none;
+  transition: font-size 0.7s ease, color 0.7s ease;
 }
-.list-item-title:hover {
+.list-item-title.active {
+  font-size: 32px;
   color: #3126ff;
 }
-.list-item-title:active {
-  font-size: 26px;
-}
-
 .list-item-title-arrow {
   width: 8px;
   height: 8px;
@@ -533,6 +541,28 @@ h2 .accordion-text-active {
   margin-right: 30px;
   position: relative;
   top: 9px;
+  transition: transform 0.7s ease, width 0.7s ease, height 0.7s ease, top 0.7s ease;
+}
+.list-item-title-arrow.active {
+  top: 35px;
+  width: 16px;
+  height: 16px;
+  transform: rotate(135deg);
+}
+.list-item-description {
+  font-size: 0px;
+  height: 0;
+  overflow: hidden;
+  transition: font-size 0.7s ease, opacity 0.7s ease, transform 0.7s ease, padding 0.7s ease;
+  transform-origin: top; /* Set the transform origin to the top */
+  opacity: 0; /* Initially, hide the content */
+}
+.list-item-description.active {
+  padding: 5px 0 20px 0;
+  height: auto;
+  font-size: 16px;
+  opacity: 1; /* Show the content when active */
+  transform: scaleY(1); /* Expand the content from the top */
 }
 
 /* Main variables file */
