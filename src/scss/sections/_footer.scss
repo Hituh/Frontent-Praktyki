@@ -1,0 +1,28 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+
+//*Footer
+//TODO: Mobile
+.footer {
+	&-container {
+		@include container;
+		background-color: $product-color;
+	}
+	&-content {
+		@include content;
+		&-column {
+			color: #ffffff;
+			flex: 1;
+			margin: 0 10px;
+			h4 {
+				color: #ffffff;
+				font-size: 18px;
+			}
+			p {
+				color: #ffffff;
+				font-size: 14px;
+			}
+		}
+	}
+}

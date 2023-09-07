@@ -3,7 +3,7 @@ var hamburgerActive = false;
 
 function triggerMenu() {
     const hamburgerButton = document.querySelector(".hamburger"); // Select the button by class
-    const menucontainer = document.querySelector(".mobile-menu-content");
+    const menucontainer = document.querySelector(".mobile-menu-container");
     if (hamburgerActive) {
         // If the hamburger is active, remove the "is-active" class
         hamburgerButton.classList.remove("is-active");

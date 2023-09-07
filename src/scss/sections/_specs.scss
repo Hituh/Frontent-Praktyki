@@ -1,0 +1,86 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+
+//*Specs
+.specs {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		display: flex;
+		flex-direction: column;
+		&-upper {
+			display: flex;
+			flex-direction: row;
+			&-text {
+				max-width: 55%;
+				h2 {
+					font-weight: 100;
+				}
+			}
+			&-image {
+				max-width: 45%;
+				img {
+					width: 768px;
+				}
+			}
+		}
+		&-lower {
+			display: flex;
+			flex-direction: row;
+			&-left,
+			&-right {
+				width: 50%;
+				padding-right: 100px;
+				span {
+					font-family: "Roboto", sans-serif;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.specs {
+		&-container {
+			@include container;
+			padding-top: 200px;
+		}
+		&-content {
+			@include content;
+			display: flex;
+			flex-direction: column;
+			&-upper {
+				flex-direction: column;
+				&-text {
+					max-width: 100%;
+					h2 {
+						font-weight: 100;
+					}
+				}
+				&-image {
+					max-width: 100%;
+					img {
+						width: 100%;
+					}
+				}
+			}
+			&-lower {
+				display: flex;
+				flex-direction: column;
+				&-left,
+				&-right {
+					width: 100%;
+					padding-right: 0;
+					span {
+						font-family: "Roboto", sans-serif;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+
+//*System requirements section
+//TODO: Do it?
+.sreq {
+	&-container {
+		@include container;
+	}
+
+	&-content {
+		@include content;
+		gap: 100px;
+
+		&-left,
+		&-right {
+			max-width: 50%;
+			width: 50%;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.sreq {
+		&-container {
+			@include container;
+		}
+
+		&-content {
+			@include content;
+			gap: 10%;
+
+			&-left,
+			&-right {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+}

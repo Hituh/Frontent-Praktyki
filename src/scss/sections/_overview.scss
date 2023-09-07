@@ -1,0 +1,135 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+
+
+//*First section STREAMLINE YOUR WORKPLACE
+//TODO: Mobile
+.overview {
+	&-container {
+		@include container;
+		overflow: hidden;
+	}
+	&-content {
+		@include content;
+	}
+	&-head {
+		max-width: 100%;
+		display: flex;
+		flex-direction: row;
+		height: auto;
+
+		&-left {
+			min-height: 716px;
+			flex: 1;
+			max-width: 50%;
+		}
+
+		&-left-bottomimages {
+			display: flex;
+			flex-direction: row;
+
+			img {
+				height: $spacing-unit-xx-large;
+				width: auto;
+			}
+		}
+
+		&-right {
+			position: relative;
+			min-height: 100%;
+			flex: 1;
+			max-width: 50%;
+			overflow: hidden;
+
+			#desks {
+				height: 500px;
+				position: absolute;
+			}
+
+			#hand {
+				margin-left: 100px;
+				height: 600px;
+				top: 50px;
+				width: auto;
+				position: absolute;
+				overflow: hidden;
+				transition: top 0.3s ease;
+			}
+		}
+	}
+
+	&-descriptions {
+		display: flex;
+		flex-direction: row;
+		max-width: 1366px;
+		width: 1366px;
+		justify-content: space-between;
+
+		&-card {
+			flex-basis: 33%;
+		}
+	}
+}
+
+@media (max-width: 1366px) {
+	.overview {
+		&-descriptions {
+			display: flex;
+			flex-direction: row;
+			max-width: 100vw;
+			width: 100vw;
+			justify-content: space-between;
+
+			&-card {
+				flex-basis: 33%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.overview-container {
+		margin: 0;
+		width: 100%;
+		padding: 0;
+		box-sizing: border-box;
+		text-align: center;
+	}
+
+	.overview-content {
+		padding: 5vw;
+		max-width: 90vw;
+		margin: 0 auto 0 auto;
+		display: flex;
+	}
+	.overview-head {
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	.overview-head-right {
+		max-width: 100%;
+	}
+
+	.overview-head-left {
+		flex-basis: 50%;
+		max-width: 100%;
+	}
+
+	.overview {
+		&-descriptions {
+			display: flex;
+			flex-direction: column;
+			width: 80vw;
+			justify-content: space-between;
+
+			&-card {
+				word-wrap: normal;
+				padding-right: 100px;
+				width: 100%;
+			}
+		}
+	}
+	/* Additional styling for smaller screens as needed */
+}

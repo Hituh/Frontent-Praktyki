@@ -1,0 +1,64 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+
+//*Partners
+.partners {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		display: flex;
+		flex-direction: column;
+		&-upper {
+			width: 50%;
+			h4 {
+				font-weight: 100;
+			}
+		}
+		&-lower {
+			padding-top: 50px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&-row1,
+			&-row2,
+			&-row3 {
+				width: 33%;
+				padding-right: 100px;
+				p {
+					font-weight: 100;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.partners {
+		&-content {
+			flex-direction: column;
+			&-upper {
+				width: 100%;
+				h4 {
+					font-weight: 100;
+				}
+			}
+			&-lower {
+				padding-top: 50px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				&-row1,
+				&-row2,
+				&-row3 {
+					width: 100%;
+					p {
+						font-weight: 100;
+					}
+				}
+			}
+		}
+	}
+}

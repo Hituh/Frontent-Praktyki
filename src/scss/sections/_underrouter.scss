@@ -1,0 +1,33 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+
+//*Two descriptions under router section
+//TODO: Mobile
+.underrouter {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		justify-content: space-between;
+		&-right,
+		&-left {
+			padding-right: 150px;
+			width: 50%;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.underrouter {
+		&-content {
+			flex-direction: column;
+			&-left,
+			&-right {
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+	}
+}

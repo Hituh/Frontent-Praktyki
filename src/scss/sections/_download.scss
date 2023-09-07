@@ -1,0 +1,35 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+//*Download bar
+//TODO: Mobile
+.download {
+	&-container {
+		background-color: white;
+		margin: 0;
+		width: 100%;
+		padding: 0;
+		box-sizing: border-box;
+		text-align: center;
+	}
+	&-content {
+		background-color: $background-color;
+		padding: 20px 50px 20px 50px;
+		max-width: $content-width;
+		width: 100%;
+		margin: 0 auto 0 auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		button {
+			@include button;
+		}
+	}
+}
+
+@media (max-width: 1366px) {
+	.download-content {
+		padding: 0;
+	}
+}

@@ -1,0 +1,39 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+
+//*Slider
+//TODO: Make it work desktop + mobile
+.slider-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.slider {
+	overflow: hidden;
+	max-width: 100vw;
+	display: flex;
+	flex-wrap: nowrap;
+	transition: transform ease;
+	user-select: none;
+	cursor: grab;
+
+	&-card {
+		background-color: white;
+		padding: $spacing-unit-large;
+		margin: $spacing-unit-small;
+		display: flex;
+		flex-direction: column;
+		img {
+			width: 205px;
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 10px;
+			-webkit-user-drag: none;
+		}
+	}
+	:hover {
+		cursor: grabbing;
+	}
+}
