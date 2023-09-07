@@ -182,13 +182,26 @@ function setSliderPosition() {
 
 //*Accordion
 //TODO: Make it work lmao
-function accordionDropdown(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
+var acc = document.getElementsByClassName("accordion-item-button");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        console.log("clicked")
+        var panel = this.nextElementSibling;
+        var title = this.firstElementChild;
+        var arrow = this.lastElementChild;
+
+        if (panel.classList.contains("active")) {
+            title.classList.remove("active");
+            arrow.classList.remove("active");
+            panel.classList.remove("active");
+        } else {
+            title.classList.add("active");
+            arrow.classList.add("active");
+            panel.classList.add("active");
+        }
+    });
 }
 
 //*Force active button on contact form
