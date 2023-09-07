@@ -104,8 +104,8 @@ langDiv.addEventListener('click', (e) => {
 const handsElement = document.getElementById("hand");
 
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset < 200) {
-        handsElement.style.top = `${200}px`;
+    if (window.pageYOffset < 50) {
+        handsElement.style.top = `${50}px`;
     }
     else {
         handsElement.style.top = `${window.pageYOffset}px`;
