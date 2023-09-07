@@ -43,7 +43,6 @@ function handleScroll() {
         navbarlower.style.top = "70px";
         _navbarlowervisible = true;
     }
-
 }
 
 //* Smooth navigation to correct section from navbar
