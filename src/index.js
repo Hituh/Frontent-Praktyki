@@ -1,6 +1,28 @@
+//*Hamburger
+var hamburgerActive = false;
+
+function triggerMenu() {
+    const hamburgerButton = document.querySelector(".hamburger"); // Select the button by class
+    const menucontainer = document.querySelector(".mobile-menu-content");
+    if (hamburgerActive) {
+        // If the hamburger is active, remove the "is-active" class
+        hamburgerButton.classList.remove("is-active");
+        menucontainer.classList.remove('active');
+    } else {
+        // If the hamburger is not active, add the "is-active" class
+        hamburgerButton.classList.add("is-active");
+        menucontainer.classList.add('active');
+    }
+
+    // Toggle the hamburgerActive variable
+    hamburgerActive = !hamburgerActive;
+}
+
+
 //* Smooth navigation to correct section from navbar
 //TODO: Fix wrong scrolling. It moves to correct section but a bit too low
 
+let _navbarlowervisible = true;
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll(".navbar-lower-container a[href^='#']");
 
@@ -9,7 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault(); // Prevent the default behavior of the link
             const targetId = this.getAttribute("href").substring(1); // Get the target section's ID
             const targetElement = document.getElementById(targetId); // Get the target section element
-            var offset = 100;
+
+            var offset = 5 * window.innerHeight / 100; // Calculate offset as 5% of the viewport height
+
             const bodyRect = document.body.getBoundingClientRect().top;
             const targetElementPosition = targetElement.getBoundingClientRect().top;
             const offsetPosition = targetElementPosition - bodyRect - offset;
@@ -67,20 +91,21 @@ const navbarupper = document.getElementById("navbar-upper");
 let langclicked = false
 let scrollYold = window.scrollY;
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', handleScroll);
 
+function handleScroll() {
     if (window.scrollY > scrollYold) {
         scrollYold = window.scrollY;
         navbarlower.style.zIndex = 101;
         navbarlower.style.top = "0px";
+        _navbarlowervisible = false;
     } else {
-
         scrollYold = window.scrollY;
         navbarlower.style.zIndex = 99;
         navbarlower.style.top = "70px";
+        _navbarlowervisible = true;
     }
-});
-
+}
 
 //*Language selection dropdown bar for desktop
 //TODO: Probably make it also work on mobile
@@ -116,49 +141,43 @@ window.addEventListener('scroll', () => {
 //*slider
 //TODO: Make it work lmao
 
-const slider = document.getElementById("content-slider");
+// Add your JavaScript code for slider functionality here
+const slider = document.getElementById('content-slider');
 let isDragging = false;
 let startPosition = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 
-slider.addEventListener("mousedown", (e) => {
+slider.addEventListener('mousedown', (e) => {
     isDragging = true;
     startPosition = e.clientX;
-    slider.style.cursor = "grabbing";
+    slider.style.cursor = 'grabbing';
 });
 
-slider.addEventListener("mousemove", (e) => {
+slider.addEventListener('mouseup', () => {
+    isDragging = false;
+    slider.style.cursor = 'grab';
+    if (currentTranslate > prevTranslate && currentTranslate < 0) {
+        // Move to the next card
+        prevTranslate = currentTranslate;
+        currentTranslate -= slider.offsetWidth;
+    } else if (currentTranslate < prevTranslate && currentTranslate > -(slider.offsetWidth * (slider.children.length - 1))) {
+        // Move to the previous card
+        prevTranslate = currentTranslate;
+        currentTranslate += slider.offsetWidth;
+    }
+    setSliderPosition();
+});
+
+slider.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
     const currentPosition = e.clientX;
-    const diff = currentPosition - startPosition;
-    currentTranslate = prevTranslate + diff;
+    currentTranslate = prevTranslate + currentPosition - startPosition;
+    setSliderPosition();
+});
 
-    // Limit the slider's movement within page boundaries
-    const slidercard = document.getElementById("card1");
-    console.log(slidercard.offsetWidth);
-    const minTranslate = 0
-
-    const maxTranslate = 1920;
-    currentTranslate = Math.min(maxTranslate, Math.max(minTranslate, currentTranslate));
-
+function setSliderPosition() {
     slider.style.transform = `translateX(${currentTranslate}px)`;
-});
-
-slider.addEventListener("mouseup", () => {
-    endDrag();
-});
-
-slider.addEventListener("mouseleave", () => {
-    if (isDragging) {
-        endDrag();
-    }
-});
-
-function endDrag() {
-    isDragging = false;
-    prevTranslate = currentTranslate;
-    slider.style.cursor = "grab";
 }
 
 //*Accordion
@@ -171,3 +190,21 @@ function accordionDropdown(id) {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+//*Force active button on contact form
+
+//*Autoresize textarea in form
+const textarea = document.getElementById('message');
+
+// Get the textarea element
+
+// Attach an event listener to the textarea for input changes
+textarea.addEventListener('input', function () {
+    this.style.height = 'auto'; // Reset the height to auto to recalculate
+    this.style.height = this.scrollHeight + 'px'; // Set the height to the scrollHeight
+    console.log(this.style.height)
+    // Set a minimum height (e.g., 1em) to prevent it from collapsing completely
+    if (this.style.height < 258) {
+        this.style.height = '38px';
+    }
+});
