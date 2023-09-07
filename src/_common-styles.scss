@@ -1,21 +1,33 @@
 // Define common variables
-@import '_variables.scss';
+@import "_variables.scss";
 
 // Common container mixin
 @mixin container {
-  background-color: white;
-  margin: 0;
-  width: 100%;
-  padding: 5vh 0 0 0;
-  box-sizing: border-box;
-  text-align: center;
+	background-color: white;
+	margin: 0;
+	width: 100%;
+	padding: 10vh 0 0 0;
+	box-sizing: border-box;
+	text-align: center;
 }
 
 // Common content mixin
 @mixin content {
-  max-width: $content-width;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
+	max-width: $content-width;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+
+//Common button mixin
+@mixin button {
+	font-family: "Roboto", sans-serif;
+	font-size: 17px;
+	background-color: $product-color;
+	color: white;
+	width: 200px;
+	height: 65px;
+	border-width: 0;
+	text-align: center;
 }

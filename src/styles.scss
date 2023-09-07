@@ -147,6 +147,89 @@ body {
 	}
 }
 
+.hamburger-container {
+	display: none;
+}
+
+@media (max-width: 901px) {
+	.hamburger {
+		&-container {
+			@include container;
+			display: block;
+			padding: 0;
+		}
+
+		&-content {
+			@include content;
+			display: flex;
+			justify-content: space-between; /* Distribute content evenly, pushing left to the left and right to the right */
+			align-items: center; /* Vertically center the content */
+			&-left {
+				z-index: 999;
+				padding: $spacing-unit-base;
+				img {
+					height: 40px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.navbar {
+		&-upper,
+		&-lower-container {
+			display: none;
+		}
+	}
+}
+
+.mobile-menu-container {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.mobile-menu {
+		&-container {
+			display: block;
+			width: 100vw;
+			height: 100vh;
+			position: fixed;
+		}
+
+		&-content {
+			display: flex;
+			flex-direction: column;
+			align-items: center; /* Center items horizontally */
+			justify-content: space-between; /* Center items vertically */
+			-webkit-box-align: center;
+			height: 100vh;
+			width: 100vw;
+			max-height: 0; /* Set initial max-height to 0 */
+			top: -200px;
+			overflow: hidden; /* Hide content that overflows the container */
+			transition: max-height 1s ease, top 1s ease, height 1s ease; /* Add a transition for smooth max-height and top changes */
+			
+			.active {
+				display: flex;
+				height: 100vh;
+				flex-direction: column;
+				text-align: center;
+				max-height: 100vh; /* Expand to full viewport height */
+				top: 0;
+				background-color: #ffffff;
+			}
+			&-workplace {
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				h1 {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
 //*Language dropdown arrow span
 .dropdownarrow {
 	border-style: solid;
@@ -319,6 +402,9 @@ body {
 		flex-direction: column;
 		img {
 			width: 205px;
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 10px;
 			-webkit-user-drag: none;
 		}
 	}
@@ -332,14 +418,10 @@ body {
 
 .image-slider {
 	&-container {
-		max-width: 100%;
-		width: 100%;
-		overflow: hidden;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include container;
 	}
 	&-content {
+		@include content;
 		flex-direction: column;
 		max-width: 100%;
 		width: 100%;
@@ -674,14 +756,7 @@ body {
 		justify-content: space-between;
 
 		button {
-			font-family: "Roboto", sans-serif;
-			font-size: 17px;
-			background-color: $product-color;
-			color: white;
-			width: 200px;
-			height: 65px;
-			border-width: 0;
-			text-align: center;
+			@include button;
 		}
 	}
 }
@@ -784,36 +859,351 @@ body {
 	}
 }
 
+//*Partners
+.partners {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		display: flex;
+		flex-direction: column;
+		&-upper {
+			width: 50%;
+			h4 {
+				font-weight: 100;
+			}
+		}
+		&-lower {
+			padding-top: 50px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&-row1,
+			&-row2,
+			&-row3 {
+				width: 33%;
+				padding-right: 100px;
+				p {
+					font-weight: 100;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.partners {
+		&-content {
+			flex-direction: column;
+			&-upper {
+				width: 100%;
+				h4 {
+					font-weight: 100;
+				}
+			}
+			&-lower {
+				padding-top: 50px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				&-row1,
+				&-row2,
+				&-row3 {
+					width: 100%;
+					p {
+						font-weight: 100;
+					}
+				}
+			}
+		}
+	}
+}
+
+//*Specs
+
+.specs {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		display: flex;
+		flex-direction: column;
+		&-upper {
+			display: flex;
+			flex-direction: row;
+			&-text {
+				max-width: 55%;
+				h2 {
+					font-weight: 100;
+				}
+			}
+			&-image {
+				max-width: 45%;
+				img {
+					width: 768px;
+				}
+			}
+		}
+		&-lower {
+			display: flex;
+			flex-direction: row;
+			&-left,
+			&-right {
+				width: 50%;
+				padding-right: 100px;
+				span {
+					font-family: "Roboto", sans-serif;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.specs {
+		&-container {
+			@include container;
+			padding-top: 200px;
+		}
+		&-content {
+			@include content;
+			display: flex;
+			flex-direction: column;
+			&-upper {
+				flex-direction: column;
+				&-text {
+					max-width: 100%;
+					h2 {
+						font-weight: 100;
+					}
+				}
+				&-image {
+					max-width: 100%;
+					img {
+						width: 100%;
+					}
+				}
+			}
+			&-lower {
+				display: flex;
+				flex-direction: column;
+				&-left,
+				&-right {
+					width: 100%;
+					padding-right: 0;
+					span {
+						font-family: "Roboto", sans-serif;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+//*Shop
+.shop {
+	&-container {
+		@include container;
+		background-color: $background-color;
+	}
+	&-content {
+		@include content;
+		padding-bottom: 100px;
+		display: flex;
+		flex-direction: row;
+		&-left {
+			padding-right: 200px;
+			width: 33%;
+			h1 {
+				font-size: 48px;
+			}
+			button {
+				@include button;
+			}
+		}
+		&-right {
+			img {
+				height: 100%;
+			}
+		}
+	}
+}
+
+//*FAQ
+.faq {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		margin: 0 auto 0 auto;
+		&-left,
+		&-center,
+		&-right {
+			width: 33%;
+			padding-right: 100px;
+			h1 {
+				font-size: 48px;
+			}
+			h4 {
+				font-weight: 400;
+				line-height: 8px;
+			}
+			p {
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.faq {
+		&-container {
+		}
+		&-content {
+			flex-direction: column;
+			&-left,
+			&-center,
+			&-right {
+				margin-top: -24px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+//*Contact
+.contact {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		justify-content: center;
+		h4 {
+			margin-right: 20px;
+			text-decoration: none;
+			color: #000000;
+			font-weight: 400;
+		}
+	}
+}
+
+#contact-test-active {
+	font-weight: bold;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-size: 50px 3px;
+	background-image: linear-gradient(to left, transparent 50%, #01ffcb 50%);
+}
+
 //*Form
 //TODO: ALL
+.form {
+	&-div {
+		display: flex;
+		flex-direction: column;
+		padding-right: 200px;
+		padding: 20px;
+	}
 
-.form-container {
-	display: flex;
-	justify-content: space-between;
+	&-label {
+		font-family: "Roboto", sans-serif;
+		font-weight: 100;
+		font-size: 13px;
+		padding-bottom: 10px;
+	}
+
+	&-input {
+		font-size: 1.875rem;
+		color: rgb(0, 0, 0);
+		font-family: Roboto;
+		font-weight: 400;
+		z-index: 2;
+		border: 0px;
+		position: relative;
+		resize: none;
+		height: 38px;
+		line-height: 38px;
+		overflow: hidden;
+		border: none; /* Remove any existing borders */
+
+		background-image: linear-gradient(
+			to left,
+			transparent 50%,
+			#000 50%
+		);
+		background-position: 0 100%;
+		background-size: 15px 1px;
+		background-repeat: repeat-x;
+
+		outline: none !important;
+	}
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		flex-direction: column;
+		&-top {
+			display: flex;
+			flex-direction: row;
+			&-left,
+			&-right {
+				width: 50%;
+			}
+		}
+		&-bottom {
+			textarea {
+				min-height: 38px;
+				height: 38px;
+				resize: none;
+				overflow: hidden;
+			}
+			width: 100%;
+		}
+	}
 }
 
-.form-column {
-	flex: 1;
-	margin-right: $spacing-unit-medium;
-}
+//*Bottom slider
+//TODO: ALL
 
-.form-input {
-	width: 100%;
-	margin-bottom: $spacing-unit-small;
-	padding: $spacing-unit-base;
-}
+.bottom-slider {
+	&-container {
+		@include container;
+	}
 
-.form-label {
-	font-weight: bold;
-}
-
-.form-button {
-	width: 100%;
-	padding: $spacing-unit-medium;
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	cursor: pointer;
+	&-content {
+		@include content;
+		height: 560px;
+		margin-bottom: 100px;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 100px;
+		&-card {
+			margin: 0;
+			width: 20%;
+			&-text {
+				padding: 30px;
+				position: relative;
+				top: 0;
+				left: 0;
+				z-index: 2;
+				gap: 0;
+				h2,
+				h1,
+				p {
+					margin: 0%;
+				}
+			}
+			img {
+				position: absolute;
+				z-index: 1;
+			}
+		}
+	}
 }
 
 //*Footer

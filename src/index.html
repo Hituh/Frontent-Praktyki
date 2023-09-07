@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/src/css/hamburgers.css" <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +19,7 @@
     <!--Navbar-->
     <div class="navbar-upper">
         <div class="navbar-upper-left">
-            <img src="/assets/logo.png" alt="logo">
+            <img src="/assets/zonifero_logo_black.ef52f150.png" alt="logo">
         </div>
         <div class="navbar-upper-center">
             <a>Zonifero products</a>
@@ -46,7 +47,7 @@
     </div>
 
     <!--Navbar lower-->
-    <div class="navbar-lower-container" id="navbar-lower">
+    <div class="navbar-lower-container" id="navbar-lower" sty>
         <div class="navbar-lower-content">
             <p style="font-weight: bold;">zonifero WorkPlace:</p>
             <a href="#overview">Overview</a>
@@ -56,52 +57,110 @@
             <a href="#contact">Contact</a>
         </div>
     </div>
+    <div class="hamburger-container">
+        <div class="hamburger-content">
+            <div class="hamburger-content-left">
+                <img src="/assets/zonifero_logo_black.ef52f150.png" alt="logo">
+            </div>
+            <div class="hamburger-content-right" style="z-index: 1000;">
+                <button class="hamburger hamburger--spin " onClick="triggerMenu()" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
 
+    <div class="mobile-menu-container">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-content-workplace">
+                <h1 class="headline-text">Zonifero WorkPlace:</h1>
+                <a style="cursor: pointer;">Podsumowanie</a>
+                <a style="cursor: pointer;">Funkcje</a>
+                <a style="cursor: pointer;">Kontakt</a>
+            </div>
+            <div class="mobile-menu-content-links">
+                <a class="StyledLink-sc-18fw721-0 fxLbAc" href="/pl/">Produkty
+                    Zonifero</a>
+                <a class="StyledBlogLink-d4f3ch-0 fZpDvZ" href="/blog">Blog</a>
+                <a class="StyledLink-sc-18fw721-0 fxLbAc" href="/pl/faq">FAQ</a>
+                <a class="StyledLink-sc-18fw721-0 fxLbAc" href="/pl/for-investors">Dla inwestorów</a>
+                <a class="StyledExternalLink__StyledLink-sc-1qg3s0d-0 dFJrCP"
+                    href="https://zonifero.com/pl/support">Support</a>
+                <a class="StyledLink-sc-18fw721-0 fxLbAc" href="/pl/praca">Praca</a>
+
+            </div>
+            <div class="mobile-menu-content-lang">
+                <div class="LanguagesDropdownWrapper-ebj3it-0 Zhnwe">
+                    <div class="LanguagesWrapper-x1kmw-0 gdjRZC">
+                        <a class="Language-sc-1qfkt1i-0 iwctWP" href="/en/workplace">EN</a>
+                        <a class="Language-sc-1qfkt1i-0 eMwhKQ" href="/pl/workplace">PL</a>
+                        <a class="Language-sc-1qfkt1i-0 iwctWP" href="/fr/workplace">FR</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ButtonsSection-sc-1xl577e-0 iDITTH">
+                <a class="TagASignIn__TagContainer-sc-1dommab-0 huDFJx" href="https://portal.zonifero.com/">
+                    <div class="TagASignIn__Tag-sc-1dommab-1 gJwSvQ">Logowanie </div>
+                </a>
+                <a class="TagAGetTheApp__TagContainerLink-sc-1gbunqe-1 brwFOq" href="/pl/contact">
+                    <a class="TagAGetTheApp__TagFlexContainer-sc-1gbunqe-2 kgKSsR">Dowiedz się więcej!</a>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
     <!--First section-->
-    <div class="overview-container">
-        <div class="overview-content" style="margin-top: 100px;">
-            <!--First section - overview-->
-            <section id="overview">
-                <!--Big text with mobile download buttons-->
-                <div class="overview-head">
-                    <div class="overview-head-left">
-                        <h1 class="big-headline-text">Streamline your workplace</h1>
-                        <h1 class="description-text">Effectively and quickly from your mobile device. Staying connected
-                            has
-                            never been easier with Zonifero WorkPlace.</h1>
-                        <div class="overview-head-left-bottomimages">
-                            <img src="/assets/google2.png" style="margin-right: 20px;">
-                            <img src="/assets/apple2.png">
+    <section id="overview">
+        <div class="overview-container">
+            <div class="overview-content">
+                <!--First section - overview-->
+                <div>
+                    <!--Big text with mobile download buttons-->
+                    <div class="overview-head">
+                        <div class="overview-head-left">
+                            <h1 class="big-headline-text">Streamline your workplace</h1>
+                            <h1 class="description-text">Effectively and quickly from your mobile device. Staying
+                                connected
+                                has
+                                never been easier with Zonifero WorkPlace.</h1>
+                            <div class="overview-head-left-bottomimages">
+                                <img src="/assets/google2.png" style="margin-right: 20px;">
+                                <img src="/assets/apple2.png">
+                            </div>
+                        </div>
+                        <div class="overview-head-right">
+                            <img src="/assets/desks.png" id="desks">
+                            <img src="/assets/hand.png" id="hand">
                         </div>
                     </div>
-                    <div class="overview-head-right">
-                        <img src="/assets/desks.png" id="desks">
-                        <img src="/assets/hand.png" id="hand">
-                    </div>
-                </div>
 
-                <!--Lower 3 texts/cards-->
-                <div class="overview-descriptions">
-                    <div class="overview-descriptions-card">
-                        <h2>Management</h2>
-                        <p>Tools for real-time management of all your facilities and people across multiple sites. Ease,
-                            speed, and effectiveness of facilities communications.</p>
+                    <!--Lower 3 texts/cards-->
+                    <div class="overview-descriptions">
+                        <div class="overview-descriptions-card">
+                            <h2>Management</h2>
+                            <p>Tools for real-time management of all your facilities and people across multiple sites.
+                                Ease,
+                                speed, and effectiveness of facilities communications.</p>
+                        </div>
+                        <div class="overview-descriptions-card">
+                            <h2>Employees</h2>
+                            <p>Improved productivity and satisfaction as your employees stay informed, connected, and
+                                can
+                                feed
+                                requests and updates in real time.</p>
+                        </div>
+                        <div class="overview-descriptions-card">
+                            <h2>Visitors</h2>
+                            <p>A smooth and welcoming visitor experience - easy navigation around your facilities.</p>
+                        </div>
                     </div>
-                    <div class="overview-descriptions-card">
-                        <h2>Employees</h2>
-                        <p>Improved productivity and satisfaction as your employees stay informed, connected, and can
-                            feed
-                            requests and updates in real time.</p>
-                    </div>
-                    <div class="overview-descriptions-card">
-                        <h2>Visitors</h2>
-                        <p>A smooth and welcoming visitor experience - easy navigation around your facilities.</p>
-                    </div>
-                </div>
 
-                <!--Slider-->
-                <h4 style="text-align: left;">Problem-solving app</h4>
-                <div class="content">
+                    <!--Slider-->
+                    <h4 style="text-align: left;">Problem-solving app</h4>
                     <div class="slider-container">
                         <div class="slider" id="content-slider">
                             <div class="slider-card" id="card1">
@@ -130,23 +189,18 @@
                                     which of
                                     them are idle.</p>
                             </div>
-                            <!-- <div class="slider-card">
+                            <div class="slider-card">
                                 <img src="/assets/mob_roblem_solving.png">
-                                <h3>Swiftly introduce new employees</h3>
+                                <h3>Swiftly intrsoduce new employees</h3>
                                 <p>With built-in maps, Q&A, and notifications, new employees can find their way
                                     around the office.</p>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
-            </section>
+                </div>
+            </div>
         </div>
-    </div>
-
-    </div>
     </section>
-    </div>
-    </div>
-
     <!--Features section-->
     <section id="features">
         <div class="image-slider-container">
@@ -317,149 +371,248 @@
             </div>
         </div>
         <!--Partners-->
-        <h1 class="headline-text">Partners</h1>
-        <h3>We only work with the best. Zonifero buslness supports the booklng of hot-desks, meetlng and
-            other rooms. Reservations can be made from the applicatjon on the
-            tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
-            G Sule. Room reservalons can also be made for buslnesses tha do
-            not use Offlce 365 or G Surte,
-
-            zonifero buslness also has a calendar feature that can be run on a</h3>
         <div class="partners-container">
-            <div class="partners">
-                <div>
-                    <img src="/assets/logo_nsg.png">
-                    <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks, meetlng
-                        and
+            <div class="partners-content">
+                <div class="partners-content-upper">
+                    <h1 class="headline-text">Partners</h1>
+                    <h4>We only work with the best. Zonifero buslness supports the booklng of hot-desks, meetlng and
                         other rooms. Reservations can be made from the applicatjon on the
                         tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
                         G Sule. Room reservalons can also be made for buslnesses tha do
                         not use Offlce 365 or G Surte,
 
-                        zonifero buslness also has a calendar feature that can be run on a</p>
+                        zonifero buslness also has a calendar feature that can be run on a</h4>
                 </div>
-                <div>
-                    <img src="/assets/Layer 504.png">
-                    <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks, meetlng
-                        and
-                        other rooms. Reservations can be made from the applicatjon on the
-                        tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
-                        G Sule. Room reservalons can also be made for buslnesses tha do
-                        not use Offlce 365 or G Surte,
+                <div class="partners-content-lower">
+                    <div class="partners-content-lower-row1">
+                        <img src="/assets/logo_nsg.png">
+                        <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks, meetlng
+                            and
+                            other rooms. Reservations can be made from the applicatjon on the
+                            tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
+                            G Sule. Room reservalons can also be made for buslnesses tha do
+                            not use Offlce 365 or G Surte,
 
-                        zonifero buslness also has a calendar feature that can be run on a</p>
+                            zonifero buslness also has a calendar feature that can be run on a</p>
+                    </div>
 
-                </div>
-                <div>
-                    <img src="/assets/logo_nsg.png">
-                    <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks, meetlng
-                        and
-                        other rooms. Reservations can be made from the applicatjon on the
-                        tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
-                        G Sule. Room reservalons can also be made for buslnesses tha do
-                        not use Offlce 365 or G Surte,
+                    <div class="partners-content-lower-row2">
+                        <img src="/assets/Layer 504.png">
+                        <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks, meetlng
+                            and
+                            other rooms. Reservations can be made from the applicatjon on the
+                            tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
+                            G Sule. Room reservalons can also be made for buslnesses tha do
+                            not use Offlce 365 or G Surte,
 
-                        zonifero buslness also has a calendar feature that can be run on a</p>
+                            zonifero buslness also has a calendar feature that can be run on a</p>
+
+                    </div>
+                    <div class="partners-content-lower-row3">
+                        <img src="/assets/logo_nsg.png">
+                        <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks, meetlng
+                            and
+                            other rooms. Reservations can be made from the applicatjon on the
+                            tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
+                            G Sule. Room reservalons can also be made for buslnesses tha do
+                            not use Offlce 365 or G Surte,
+
+                            zonifero buslness also has a calendar feature that can be run on a</p>
+                    </div>
                 </div>
             </div>
         </div>
 
     </section>
     <!--Specs-->
-    <div class="container">
-        <div class="content">
-            <section id="specs">
-                <h4>Zoptymalizuj koszty i ergonomię biura z Zonifero</h4>
-                <img src="/assets/mob_devices copy.png">
-                <h2>Zarz4dzaj šwiadomie rozwojem biura, optymalizuj koszty
-                    zwi4zane z ustugami i powierzchni4 a takie podnoš
-                    komfort pracy dzieki jednemu systemowi</h2>
+    <section id="specs">
+        <div class="specs-container">
+            <div class="specs-content">
+                <div class="specs-content-upper">
+                    <div class="specs-content-upper-text">
+                        <h1 class="headline-text">Zoptymalizuj koszty i ergonomię biura z Zonifero</h1>
+                        <h2>Zarz4dzaj šwiadomie rozwojem biura, optymalizuj koszty
+                            zwi4zane z ustugami i powierzchni4 a takie podnoš
+                            komfort pracy dzieki jednemu systemowi</h2>
+                    </div>
+                    <div class="specs-content-upper-image">
+                        <picture>
+                            <source srcset="/assets/mob_devices copy.png" media="(max-width: 768px)">
+                            <img src="/assets/devices.png">
+                        </picture>
+                    </div>
+
+                </div>
+                <div class="specs-content-lower">
+                    <div class="specs-content-lower-left">
+                        <h1 class="headline-text">523%</h1>
+                        <p>Dlugoterminowe konyci z wdroienie Zonlfero wynoszO co najmnlej
+                            523' w stosunku do wydanej kwoty, Lorem ipsum dolor sit amet,
+                            consectetur adlpiscing elrt. Nunc empor sem slt amet purus maximus,
+                            eu fringille orci rhoncus</p>
+                        <span>* Wyliczenla sO zalezne lokalizacjl blura</span>
+                    </div>
+                    <div class="specs-content-lower-right">
+                        <h1 class="headline-text">320+</h1>
+                        <p>Dlugoterminowe konyci z wdroienie Zonlfero wynoszO co najmnlej
+                            523' w stosunku do wydanej kwoty, Lorem ipsum dolor sit amet,
+                            consectetur adlpiscing elrt. Nunc empor sem slt amet purus maximus,
+                            eu fringille orci rhoncus</p>
+                        <span>* Wyliczenla sO zalezne lokalizacjl blura</span>
+                    </div>
+                </div>
                 <!--Procenty-->
-                <h1 class="headline-text">523%</h1>
-                <p>Dlugoterminowe konyci z wdroienie Zonlfero wynoszO co najmnlej
-                    523' w stosunku do wydanej kwoty, Lorem ipsum dolor sit amet,
-                    consectetur adlpiscing elrt. Nunc empor sem slt amet purus maximus,
-                    eu fringille orci rhoncus</p>
-                <p>Wyliczenla sO zalezne lokalizacjl blura</p>
-                <h1 class="headline-text">320+</h1>
-                <p>Dlugoterminowe konyci z wdroienie Zonlfero wynoszO co najmnlej
-                    523' w stosunku do wydanej kwoty, Lorem ipsum dolor sit amet,
-                    consectetur adlpiscing elrt. Nunc empor sem slt amet purus maximus,
-                    eu fringille orci rhoncus</p>
-                <p>Wyliczenla sO zalezne lokalizacjl blura</p>
-                <!--Sklep-->
-                <h1 class="big-headline-text">Shop zonifero accesories</h1>
-                <p>blablbalbalblalblablab</p>
-                <button>Contact us</button>
-                <img src="/assets/mob_starter_kit.png">
-            </section>
+            </div>
         </div>
-    </div>
-
-    <div class="container">
-        <div class="content">
-            <section id="faq"><!--FAQ-->
-                <h4>Frequently Aksed Questions</h4>
-                <p>Question one big big</p>
-                <p>Question two big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-                <p>Question another big big</p>
-            </section>
+        <!--Sklep-->
+        <div class="shop-container">
+            <div class="shop-content">
+                <div class="shop-content-left">
+                    <h1 class="headline-text">Shop zonifero accesories</h1>
+                    <p>roienie Zonlfero wynoszO co najmnlej
+                        523' w stosunku do wydanej kwoty, Lorem ipsum dolor sit amet,
+                        consectetur adlpiscing elrt. Nunc empor sem slt amet purus maximus,
+                        eu fringille orci rhoncus</p>
+                    <button>Contact us</button>
+                </div>
+                <div class="shop-content-right">
+                    <img src="/assets/mob_starter_kit.png">
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+    <section id="faq">
+        <div class="faq-container">
+            <div class="faq-content"><!--FAQ-->
+                <div class="faq-content-left">
+                    <h1 class="headline-text">Frequently Aksed Questions</h1>
 
-    <!--Contact section-->>
-    <div class="container">
-        <div class="content">
-            <section id="contact">
-                <h4>Contact form</h4>
+                </div>
+                <div class="faq-content-center">
+                    <h4 style="font-weight: bold;">Question one big big</h4>
+                    <p>AnswerAnswerAnswerAnswerAnswerAnswerAnswer
+                        AnswerAnswerAnswerAnswerAnswerAnswerAnswerAnswer
+                        AnswerAnswerAnswerAnswerAnswerAnswerAnswerAnswer Answer
+                    </p>
+                    <h4>Question two big big</h4>
+                    <h4>Question another big big</h4>
+                    <h4>Question another big big</h4>
+                    <h4>Question another big big</h4>
+                    <h4>Question another big big</h4>
+                    <h4>Question another big big</h4>
+                    <h4>Question another big big</h4>
+                </div>
+                <div class="faq-content-right">
+                    <h4>Question another big big</h4>
+                    <h4>Question another big big</h4>
+                    <h4>Question another big big</h4>
+                    <h4>Question another big big</h4>
+                    <h4>Question another big big</h4>
+                    <h4>Question another big big</h4>
+                    <h4>Question another big big</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Contact section-->
+    <!--Upper contact two buttons-->
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-content">
+                <h4 id="contact-test-active">Contact form</h4>
                 <h4>Call us</h4>
-                <!--Contact Form-->
-                <!-- <form action="submit.php" method="post">
-                    <div class="form-container">
-                        <div class="form-column">
-                            <div>
-                                <label class="form-label" for="first-name">First Name:</label>
-                                <input class="form-input" type="text" id="first-name" name="first-name" required>
+            </div>
+        </div>
+        <!--Contact form-->
+        <div class="form-container">
+            <div class="form-content">
+                <form action="submit.php" method="post">
+                    <div class="form-content-top">
+                        <div class="form-content-top-left">
+                            <div class="form-div">
+                                <label class="form-label" for="first-name">First Name *</label>
+                                <input class="form-input" type="text" id="first-name" name="first-name" required
+                                    value="John">
                             </div>
-                            <div>
-                                <label class="form-label" for="family-name">Family Name:</label>
-                                <input class="form-input" type="text" id="family-name" name="family-name" required>
-                            </div>
-                            <div>
-                                <label class="form-label" for="phone">Phone:</label>
-                                <input class="form-input" type="tel" id="phone" name="phone" required>
-                            </div>
-                            <div>
-                                <label class="form-label" for="email">Email:</label>
-                                <input class="form-input" type="email" id="email" name="email" required>
+                            <div class="form-div">
+                                <label class="form-label" for="family-name">Family Name *</label>
+                                <input class="form-input" type="text" id="family-name" name="family-name" required
+                                    value="Wick">
                             </div>
                         </div>
-                        <div class="form-column">
-                            <div>
-                                <label class="form-label" for="message">Message:</label>
-                                <textarea class="form-input" id="message" name="message" rows="6" required></textarea>
+                        <div class="form-content-top-right">
+                            <div class="form-div">
+                                <label class="form-label" for="phone">Your hone</label>
+                                <input class="form-input" type="tel" id="phone" name="phone" required
+                                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value="+48605708904">
+                            </div>
+                            <div class="form-div">
+                                <label class="form-label" for="email">Your email *</label>
+                                <input class="form-input" type="email" id="email" name="email" required
+                                    value="johnwick@hollywood.com">
                             </div>
                         </div>
                     </div>
-                    <button class="form-button" type="submit">Submit</button>
-                </form> -->
-                <!--Zonifero product family-->
-            </section>
-        </div>
-    </div>
 
+                    <div class="form-content-bottom">
+                        <div class="form-div">
+                            <label class="form-label" for="message">Message *</label>
+                            <textarea class="form-input" id="message" name="message" rows="6"
+                                required>Hello :D I'm just wondering if you could...</textarea>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <!--Zonifero product family-->
+        <div class="bottom-slider-container">
+            <div class="bottom-slider-content">
+                <div class="bottom-slider-content-card" id="card1">
+                    <img src="/assets/mob_.png">
+                    <div class="bottom-slider-content-card-text">
+                        <h2>Zonifero</h2>
+                        <h1 class="big-headline-text">Lobby</h1>
+                        <p>Lorem ipsum lmao lmao lmao</p>
+                    </div>
+                </div>
+                <div class="bottom-slider-content-card" id="card1">
+                    <img src="/assets/mob_.png">
+                    <div class="bottom-slider-content-card-text">
+                        <h2>Zonifero</h2>
+                        <h1 class="big-headline-text">Lobby</h1>
+                        <p>Lorem ipsum lmao lmao lmao</p>
+                    </div>
+                </div>
+                <div class="bottom-slider-content-card" id="card1">
+                    <img src="/assets/mob_.png">
+                    <div class="bottom-slider-content-card-text">
+                        <h2>Zonifero</h2>
+                        <h1 class="big-headline-text">Lobby</h1>
+                        <p>Lorem ipsum lmao lmao lmao</p>
+                    </div>
+                </div>
+                <div class="bottom-slider-content-card" id="card1">
+                    <img src="/assets/mob_.png">
+                    <div class="bottom-slider-content-card-text">
+                        <h2>Zonifero</h2>
+                        <h1 class="big-headline-text">Lobby</h1>
+                        <p>Lorem ipsum lmao lmao lmao</p>
+                    </div>
+                </div>
+                <div class="bottom-slider-content-card" id="card1">
+                    <img src="/assets/mob_.png">
+                    <div class="bottom-slider-content-card-text">
+                        <h2>Zonifero</h2>
+                        <h1 class="big-headline-text">Lobby</h1>
+                        <p>Lorem ipsum lmao lmao lmao</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--Footer-->
     <div class="footer-container">
         <div class="footer-content">
@@ -486,9 +639,9 @@
                 <p>Blog</p>
             </div>
 
-        </div><img src="/assets/ex_logo.png" style="position: absolute; bottom: 20px; right:20px;">
+        </div>
+        <img src="/assets/ex_logo.png" style="position: absolute; bottom: 0; right:0;">
     </div>
-
 
     <script src="./index.js"></script>
 </body>
