@@ -18,36 +18,76 @@ function triggerMenu() {
     hamburgerActive = !hamburgerActive;
 }
 
+//*Navbar hiding
+//TODO: If visible, also hide language selection bar
+const langDiv = document.getElementById("menuarrow");
+const langBarcontainer = document.querySelector(".navbar-lang-container");
+const langBar = document.querySelector(".navbar-lang");
+const navbarlower = document.getElementById("navbar-lower");
+const navbarupper = document.getElementById("navbar-upper");
+
+let langclicked = false
+let scrollYold = window.scrollY;
+
+window.addEventListener('scroll', handleScroll);
+
+function handleScroll() {
+    if (window.scrollY > scrollYold + 0.0003) {
+        scrollYold = window.scrollY;
+        navbarlower.style.zIndex = 101;
+        navbarlower.style.top = "0px";
+        _navbarlowervisible = false;
+    } else {
+        scrollYold = window.scrollY;
+        navbarlower.style.zIndex = 99;
+        navbarlower.style.top = "70px";
+        _navbarlowervisible = true;
+    }
+
+}
 
 //* Smooth navigation to correct section from navbar
 //TODO: Fix wrong scrolling. It moves to correct section but a bit too low
 
 let _navbarlowervisible = true;
+let previousActive = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll(".navbar-lower-container a[href^='#']");
 
-    links.forEach(function (link) {
+    links.forEach(function (link, index) { // Add the index parameter to the forEach callback
         link.addEventListener("click", function (e) {
+
             e.preventDefault(); // Prevent the default behavior of the link
             const targetId = this.getAttribute("href").substring(1); // Get the target section's ID
             const targetElement = document.getElementById(targetId); // Get the target section element
 
-            var offset = 5 * window.innerHeight / 100; // Calculate offset as 5% of the viewport height
 
-            const bodyRect = document.body.getBoundingClientRect().top;
-            const targetElementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = targetElementPosition - bodyRect - offset;
             if (targetElement) {
+                if (index > previousActive) {
+                    var offset = 5 * window.innerHeight / 100;
+                    previousActive = index;
+                }
+                else {
+                    var offset = 10 * window.innerHeight / 100;
+                    previousActive = index;
+                }
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const targetElementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = targetElementPosition - bodyRect - offset;
                 // Scroll to the target section smoothly with a 200px offset from the top of the screen
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: "smooth"
-                })
+                });
+
+                // Print the index of the clicked link
 
             }
         });
     });
 });
+
 
 //* Navbar visible section highlighting
 //TODO: Needs a bit of pixel perfect fix
@@ -80,32 +120,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-//*Navbar hiding
-//TODO: If visible, also hide language selection bar
-const langDiv = document.getElementById("menuarrow");
-const langBarcontainer = document.querySelector(".navbar-lang-container");
-const langBar = document.querySelector(".navbar-lang");
-const navbarlower = document.getElementById("navbar-lower");
-const navbarupper = document.getElementById("navbar-upper");
 
-let langclicked = false
-let scrollYold = window.scrollY;
-
-window.addEventListener('scroll', handleScroll);
-
-function handleScroll() {
-    if (window.scrollY > scrollYold) {
-        scrollYold = window.scrollY;
-        navbarlower.style.zIndex = 101;
-        navbarlower.style.top = "0px";
-        _navbarlowervisible = false;
-    } else {
-        scrollYold = window.scrollY;
-        navbarlower.style.zIndex = 99;
-        navbarlower.style.top = "70px";
-        _navbarlowervisible = true;
-    }
-}
 
 //*Language selection dropdown bar for desktop
 //TODO: Probably make it also work on mobile
