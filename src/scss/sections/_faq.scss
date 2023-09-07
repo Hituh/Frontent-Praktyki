@@ -1,0 +1,44 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+//*FAQ
+.faq {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		margin: 0 auto 0 auto;
+		&-left,
+		&-center,
+		&-right {
+			width: 33%;
+			padding-right: 100px;
+			h1 {
+				font-size: 48px;
+			}
+			h4 {
+				font-weight: 400;
+				line-height: 8px;
+			}
+			p {
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.faq {
+		&-container {
+		}
+		&-content {
+			flex-direction: column;
+			&-left,
+			&-center,
+			&-right {
+				margin-top: -24px;
+				width: 100%;
+			}
+		}
+	}
+}

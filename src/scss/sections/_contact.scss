@@ -1,0 +1,28 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+
+//*Contact
+.contact {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		justify-content: center;
+		h4 {
+			margin-right: 20px;
+			text-decoration: none;
+			color: #000000;
+			font-weight: 400;
+		}
+	}
+}
+
+#contact-test-active {
+	font-weight: bold;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-size: 50px 3px;
+	background-image: linear-gradient(to left, transparent 50%, #01ffcb 50%);
+}

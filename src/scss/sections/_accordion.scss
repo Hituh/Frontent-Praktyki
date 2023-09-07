@@ -1,0 +1,53 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+
+//*Accordion
+//TODO: Make it work lmao
+.accordion {
+	&-container {
+		@include container;
+	}
+
+	&-content {
+		@include content;
+		flex-direction: column;
+	}
+
+	&-item {
+		&-container {
+			width: 100%;
+			padding: 2px;
+			font-weight: bold;
+			display: flex;
+		}
+	}
+}
+
+//*Accordion item list
+//TODO: Make it work on desktop + mobile, fix naming
+.list-item-title {
+	transition: font-size 0.3s ease, color 0.3s ease;
+
+	&:hover {
+		color: $product-color;
+	}
+
+	&:active {
+		font-size: 26px;
+	}
+}
+
+.list-item-title-arrow {
+	width: 8px;
+	height: 8px;
+	display: block;
+	border-style: solid;
+	border-color: black;
+	border-image: initial;
+	border-width: 0px 1px 1px 0px;
+	transform: rotate(45deg);
+	margin-right: 30px;
+	position: relative;
+	top: 9px;
+}

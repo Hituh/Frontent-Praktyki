@@ -1,0 +1,50 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+
+//*Room booking
+//TODO: Fix mobile
+.room-booking {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+	}
+	&-row1 {
+		width: 40%;
+	}
+
+	&-row2 {
+		width: 40%;
+	}
+
+	&-row3 {
+		width: 20%;
+	}
+}
+
+//*Room booking mobile
+//TODO: Fix order of things
+@media (max-width: 768px) {
+	.room-booking {
+		&-content {
+			max-width: 100vw;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-row1,
+		&-row2,
+		&-row3 {
+			width: 100%;
+		}
+
+		&-row3 {
+			order: 2;
+			position: absolute;
+			top: -400px;
+			left: 350px;
+		}
+	}
+}

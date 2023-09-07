@@ -1,0 +1,71 @@
+@import "../_variables.scss";
+@import "../_fonts.scss";
+@import "../_common-styles.scss";
+
+//*Form
+//TODO: ALL
+.form {
+	&-div {
+		display: flex;
+		flex-direction: column;
+		padding-right: 200px;
+		padding: 20px;
+	}
+
+	&-label {
+		font-family: "Roboto", sans-serif;
+		font-weight: 100;
+		font-size: 13px;
+		padding-bottom: 10px;
+	}
+
+	&-input {
+		font-size: 1.875rem;
+		color: rgb(0, 0, 0);
+		font-family: Roboto;
+		font-weight: 400;
+		z-index: 2;
+		border: 0px;
+		position: relative;
+		resize: none;
+		height: 38px;
+		line-height: 38px;
+		overflow: hidden;
+		border: none; /* Remove any existing borders */
+
+		background-image: linear-gradient(
+			to left,
+			transparent 50%,
+			#000 50%
+		);
+		background-position: 0 100%;
+		background-size: 15px 1px;
+		background-repeat: repeat-x;
+
+		outline: none !important;
+	}
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		flex-direction: column;
+		&-top {
+			display: flex;
+			flex-direction: row;
+			&-left,
+			&-right {
+				width: 50%;
+			}
+		}
+		&-bottom {
+			textarea {
+				min-height: 38px;
+				height: 38px;
+				resize: none;
+				overflow: hidden;
+			}
+			width: 100%;
+		}
+	}
+}
