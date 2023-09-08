@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="/src/css/hamburgers.css" <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="/src/css/hamburgers.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <title>Zonifero</title>
 </head>
@@ -129,8 +127,12 @@
                             </div>
                         </div>
                         <div class="overview-head-right">
-                            <img src="/assets/desks.png" id="desks">
-                            <img src="/assets/hand.png" id="hand">
+                            <div class="overview-head-right-desks">
+                                <img src="/assets/desks.png" id="desks">
+                            </div>
+                            <div class="overview-head-right-hand">
+                                <img src="/assets/hand.png" id="hand">
+                            </div>
                         </div>
                     </div>
 
@@ -157,42 +159,62 @@
 
                     <!--Slider-->
                     <h4 style="text-align: left;">Problem-solving app</h4>
-                    <div class="slider-container">
-                        <div class="slider" id="content-slider">
-                            <div class="slider-card" id="card1">
-                                <img src="/assets/mob_roblem_solving.png">
-                                <h3>Use your time and space smarter</h3>
-                                <p>Never again run out of coffee or other supplies. Create an efficient hive for
-                                    your busy bees.</p>
+                    <!--
+                        <div class="slider-container">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slider-card">
+                                        <img src="/assets/mob_roblem_solving.png">
+                                        <h3>Swiftly introduce new employees</h3>
+                                        <p>With built-in maps, Q&A, and notifications, new employees can find their way
+                                            around the office.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider-card">
+                                        <img src="/assets/mob_roblem_solving.png">
+                                        <h3>Swiftly introduce new employees</h3>
+                                        <p>With built-in maps, Q&A, and notifications, new employees can find their way
+                                            around the office.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider-card">
+                                        <img src="/assets/mob_roblem_solving.png">
+                                        <h3>Swiftly introduce new employees</h3>
+                                        <p>With built-in maps, Q&A, and notifications, new employees can find their way
+                                            around the office.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider-card">
+                                        <img src="/assets/mob_roblem_solving.png">
+                                        <h3>Swiftly introduce new employees</h3>
+                                        <p>With built-in maps, Q&A, and notifications, new employees can find their way
+                                            around the office.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider-card">
+                                        <img src="/assets/mob_roblem_solving.png">
+                                        <h3>Swiftly introduce new employees</h3>
+                                        <p>With built-in maps, Q&A, and notifications, new employees can find their way
+                                            around the office.
+                                        </p>
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="slider-card">
-                                <img src="/assets/mob_roblem_solving.png">
-                                <h3>Never stress about meetings again</h3>
-                                <p>Zonifero will measure how you use the rooms so that you always have enough
-                                    rooms
-                                    available.</p>
-                            </div>
-                            <div class="slider-card">
-                                <img src="/assets/mob_roblem_solving.png">
-                                <h3>Find the right person in a breeze</h3>
-                                <p>Can't keep track of your peers in a large office space? Zonifero can pinpoint
-                                    their location.</p>
-                            </div>
-                            <div class="slider-card">
-                                <img src="/assets/mob_roblem_solving.png">
-                                <h3>Save your desk and room space</h3>
-                                <p>Zonifero will tell you which desks and rooms are in use and how many and
-                                    which of
-                                    them are idle.</p>
-                            </div>
-                            <div class="slider-card">
-                                <img src="/assets/mob_roblem_solving.png">
-                                <h3>Swiftly intrsoduce new employees</h3>
-                                <p>With built-in maps, Q&A, and notifications, new employees can find their way
-                                    around the office.</p>
-                            </div>
+
                         </div>
                     </div>
+                -->
+
                 </div>
             </div>
         </div>
@@ -200,11 +222,20 @@
     <!--Features section-->
     <section id="features">
         <div class="image-slider-container">
+            <div class="image-slider-title">
+                <h2>Features</h2>
+            </div>
             <div class="image-slider-content">
-                <div class="image-slider-image">
-                    <picture>
-                        <img src="/assets/Layer 78.png">
-                    </picture>
+                <div class="image-slider-buttons">
+                    <div class="image-slider-buttons-left" onclick="changeBackground('left')">
+                        <span class="image-slider-buttons-arrow left"></span>
+                    </div>
+                    <div class="image-slider-buttons-right" onclick="changeBackground('right')">
+                        <span class="image-slider-buttons-arrow right"></span>
+                    </div>
+                </div>
+                <div class="image-slider-content-image" id="image-slider-content-image">
+
                 </div>
                 <div class="image-slider-content-phone">
                     <div class="image-slider-content-phone-left">
@@ -217,23 +248,27 @@
 
                     </div>
                 </div>
-                <div class="image-slider-description">
-                    <div class="image-slider-description-upper">
-                        <div class="image-slider-description-upper-left">
-                            <h1 class="headline-text">Hot desk booking. </br>
-                                Like a pro.</h1>
+                <div class="image-slider-content-description-container">
+                    <div class="image-slider-content-description">
+                        <div class="image-slider-content-description-upper">
+                            <div class="image-slider-content-description-upper-left">
+                                <h1 class="headline-text">Hot desk booking.</br>Like a pro</h1>
+                            </div>
+                            <div class="image-slider-content-description-upper-right">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed dictum massa.
+                                    Interdum et malesuada fames ac ante
+                                    ipsum primis i in faucibus.</p>
+                            </div>
                         </div>
-                        <div class="image-slider-description-upper-right">
-                            <p>LDrRn ipsn -M amef stw adii Qi- Sed ristiq
-                                vO-rt -d finis convallis. FuKe eget pw aluet lio euis bBnd
-                                s eu erim. hrt et arw W eue</p>
+                        <div class="image-slider-content-description-lower">
+                            <div class="image-slider-content-description-lower-text">
+                                <p>View and download full specs</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="image-slider-description-lower">
-                        <p>View and download full specs</p>
                     </div>
                 </div>
             </div>
+
 
         </div>
 
@@ -343,9 +378,13 @@
         <div class="download-container">
             <div class="download-content">
                 <h4>Download</h4>
-                <p>Zonifero workplace brochure and specification</p>
-                <p>PDF</p>
-                <p>19.34MB</p>
+                <div class="download-content-wrapper">
+                    <p class="first">Zonifero workplace brochure and specification</p>
+                    <div class="download-content-wrapper-mobile">
+                        <p>PDF</p>
+                        <p class="last">19.34MB</p>
+                    </div>
+                </div>
                 <button class="downloadbutton">Download</button>
             </div>
         </div>
@@ -513,11 +552,6 @@
                     </p>
                     <h4>Question two big big</h4>
                     <h4>Question another big big</h4>
-                    <h4>Question another big big</h4>
-                    <h4>Question another big big</h4>
-                    <h4>Question another big big</h4>
-                    <h4>Question another big big</h4>
-                    <h4>Question another big big</h4>
                 </div>
                 <div class="faq-content-right">
                     <h4>Question another big big</h4>
@@ -659,6 +693,9 @@
         </div>
         <img src="/assets/ex_logo.png" style="position: absolute; bottom: 0; right:0;">
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="./index.js"></script>
 </body>

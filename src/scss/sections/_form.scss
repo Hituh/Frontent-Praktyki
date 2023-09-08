@@ -34,14 +34,15 @@
 		border: none; /* Remove any existing borders */
 
 		background-image: linear-gradient(
-			to left,
-			transparent 50%,
-			#000 50%
-		);
-		background-position: 0 100%;
-		background-size: 15px 1px;
-		background-repeat: repeat-x;
-
+						to left,
+						transparent 75%,
+						/* Decreased the transparent percentage */
+							#000 100%
+							/* Increased the white percentage */
+					);
+					background-position: 0 100%;
+					background-size: 5px 1px; /* Increased the spacing */
+					background-repeat: repeat-x;
 		outline: none !important;
 	}
 	&-container {

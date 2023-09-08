@@ -11,12 +11,13 @@
 
 	&-content {
 		@include content;
-		gap: 100px;
+		justify-content: center;
+		gap: 120px;
+		padding-bottom: 60px;
 
 		&-left,
 		&-right {
-			max-width: 50%;
-			width: 50%;
+			flex-basis: 50%;
 		}
 	}
 }
@@ -29,6 +30,7 @@
 
 		&-content {
 			@include content;
+			flex-direction: column;
 			gap: 10%;
 
 			&-left,
