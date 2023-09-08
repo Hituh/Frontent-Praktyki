@@ -49,11 +49,11 @@
 	}
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1000px) {
 	.download-content {
 		padding: 0;
 		height: auto;
-		padding: 20px 0 20px 0;
+		padding: 40px 0 40px 0;
 		flex-direction: column;
 		&-wrapper {
 			&-mobile {
@@ -66,6 +66,16 @@
 		}
 		.downloadbutton {
 			height: 60px;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.download-content {
+		.first {
+			text-align: center;
+			max-width: 50vw;
+			width: 50vw;
 		}
 	}
 }

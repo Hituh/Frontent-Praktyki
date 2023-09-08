@@ -5,6 +5,30 @@
 //*Form
 //TODO: ALL
 .form {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		flex-direction: column;
+		&-top {
+			display: flex;
+			flex-direction: column;
+			&-left,
+			&-right {
+				width: 100%;
+			}
+		}
+		&-bottom {
+			textarea {
+				min-height: 38px;
+				height: 38px;
+				resize: none;
+				overflow: hidden;
+			}
+			width: 100%;
+		}
+	}
 	&-div {
 		display: flex;
 		flex-direction: column;
@@ -34,39 +58,14 @@
 		border: none; /* Remove any existing borders */
 
 		background-image: linear-gradient(
-						to left,
-						transparent 75%,
-						/* Decreased the transparent percentage */
-							#000 100%
-							/* Increased the white percentage */
-					);
-					background-position: 0 100%;
-					background-size: 5px 1px; /* Increased the spacing */
-					background-repeat: repeat-x;
+			to left,
+			transparent 75%,
+			/* Decreased the transparent percentage */ #000 100%
+				/* Increased the white percentage */
+		);
+		background-position: 0 100%;
+		background-size: 5px 1px; /* Increased the spacing */
+		background-repeat: repeat-x;
 		outline: none !important;
-	}
-	&-container {
-		@include container;
-	}
-	&-content {
-		@include content;
-		flex-direction: column;
-		&-top {
-			display: flex;
-			flex-direction: row;
-			&-left,
-			&-right {
-				width: 50%;
-			}
-		}
-		&-bottom {
-			textarea {
-				min-height: 38px;
-				height: 38px;
-				resize: none;
-				overflow: hidden;
-			}
-			width: 100%;
-		}
 	}
 }

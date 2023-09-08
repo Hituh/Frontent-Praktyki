@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="/src/css/hamburgers.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <title>Zonifero</title>
 </head>
@@ -58,7 +56,11 @@
     <div class="hamburger-container">
         <div class="hamburger-content">
             <div class="hamburger-content-left">
-                <img src="/assets/zonifero_logo_black.ef52f150.png" alt="logo">
+                <picture>
+                    <source srcset="/assets/zonifero_logo.png" media="(max-width:500px)">
+                    <img src="/assets/zonifero_logo_black.ef52f150.png" alt="logo">
+
+                </picture>
             </div>
             <div class="hamburger-content-right" style="z-index: 1000;">
                 <button class="hamburger hamburger--spin " onClick="triggerMenu()" type="button">
@@ -293,9 +295,11 @@
                     </picture>
                 </div>
                 <div class="room-booking-row3">
-                    <p><strong>unlimited</strong> rooms</p>
-                    <p><strong>unlimited</strong> employees</p>
-                    <p><strong>10</strong> floors</p>
+                    <div class="room-booking-row3-text">
+                        <p><strong>unlimited</strong> rooms</p>
+                        <p><strong>unlimited</strong> employees</p>
+                        <p><strong>10</strong> floors</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -529,11 +533,15 @@
                         523' w stosunku do wydanej kwoty, Lorem ipsum dolor sit amet,
                         consectetur adlpiscing elrt. Nunc empor sem slt amet purus maximus,
                         eu fringille orci rhoncus</p>
-                    <button>Contact us</button>
+                    <button class="desktop">Contact us</button>
                 </div>
                 <div class="shop-content-right">
                     <img src="/assets/mob_starter_kit.png">
                 </div>
+                <div class="mobile-button-container">
+                    <button class="mobile">Contact us</button>
+                </div>
+
             </div>
         </div>
     </section>
@@ -545,22 +553,25 @@
 
                 </div>
                 <div class="faq-content-center">
-                    <h4 style="font-weight: bold;">Question one big big</h4>
-                    <p>AnswerAnswerAnswerAnswerAnswerAnswerAnswer
-                        AnswerAnswerAnswerAnswerAnswerAnswerAnswerAnswer
-                        AnswerAnswerAnswerAnswerAnswerAnswerAnswerAnswer Answer
+                    <h4 style="font-weight: bold;">Question one big big?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                    <h4>Question two big big</h4>
                     <h4>Question another big big</h4>
                 </div>
                 <div class="faq-content-right">
-                    <h4>Question another big big</h4>
-                    <h4>Question another big big</h4>
-                    <h4>Question another big big</h4>
-                    <h4>Question another big big</h4>
-                    <h4>Question another big big</h4>
-                    <h4>Question another big big</h4>
-                    <h4>Question another big big</h4>
+                    <h4>Question another big big?</h4>
+                    <h4>Question another big big?</h4>
+                    <h4>Question another big big?</h4>
+                    <h4>Question another big big?</h4>
+                    <h4>Question another big big?</h4>
+                    <h4>Question another big big?</h4>
+                    <h4>Question another big big?</h4>
                 </div>
 
             </div>
@@ -585,24 +596,24 @@
                             <div class="form-div">
                                 <label class="form-label" for="first-name">First Name *</label>
                                 <input class="form-input" type="text" id="first-name" name="first-name" required
-                                    value="John">
+                                    placeholder="John">
                             </div>
                             <div class="form-div">
                                 <label class="form-label" for="family-name">Family Name *</label>
                                 <input class="form-input" type="text" id="family-name" name="family-name" required
-                                    value="Wick">
+                                    placeholder="Wick">
                             </div>
                         </div>
                         <div class="form-content-top-right">
                             <div class="form-div">
                                 <label class="form-label" for="phone">Your hone</label>
                                 <input class="form-input" type="tel" id="phone" name="phone" required
-                                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value="+48605708904">
+                                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="+48 605 708 904">
                             </div>
                             <div class="form-div">
                                 <label class="form-label" for="email">Your email *</label>
                                 <input class="form-input" type="email" id="email" name="email" required
-                                    value="johnwick@hollywood.com">
+                                    placeholder="johnwick@hollywood.com">
                             </div>
                         </div>
                     </div>
@@ -610,8 +621,8 @@
                     <div class="form-content-bottom">
                         <div class="form-div">
                             <label class="form-label" for="message">Message *</label>
-                            <textarea class="form-input" id="message" name="message" rows="6"
-                                required>Hello :D I'm just wondering if you could...</textarea>
+                            <textarea class="form-input" id="message" name="message" rows="6" required
+                                placeholder="Hello :D I'm just wondering if you could..."></textarea>
                         </div>
                     </div>
                 </form>
@@ -619,6 +630,7 @@
             </div>
         </div>
         <!--Zonifero product family-->
+        <!--
         <div class="bottom-slider-container">
             <div class="bottom-slider-content">
                 <div class="bottom-slider-content-card" id="card1">
@@ -662,7 +674,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </section>
     <!--Footer-->
     <div class="footer-container">
