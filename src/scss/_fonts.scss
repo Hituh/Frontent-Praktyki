@@ -8,11 +8,15 @@ h3 {
 	color: $text-color;
 	font-size: 30px;
 	line-height: 1.33;
+	@media (max-width: 768px) {
+		font-size: 36px;
+	}
 }
 
 h3 {
 	font-size: 19px;
 	line-height: 1.37;
+	
 }
 
 h4,

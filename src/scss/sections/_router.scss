@@ -51,12 +51,14 @@
 				width: 100%;
 				h2 {
 					font-weight: 300;
+					font-size: 28px;
 				}
 			}
 			&-right {
 				width: 100%;
 				img {
-					height: 600px;
+					width: 100%;
+					height: auto;
 				}
 			}
 		}

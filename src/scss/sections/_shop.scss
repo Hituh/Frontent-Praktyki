@@ -6,7 +6,7 @@
 .shop {
 	&-container {
 		@include container;
-		background-color: #F7F7F7;
+		background-color: #f7f7f7;
 	}
 	&-content {
 		@include content;
@@ -26,6 +26,32 @@
 		&-right {
 			img {
 				height: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.shop {
+		&-container {
+			padding-bottom: 40px;
+		}
+		&-content {
+			flex-direction: column;
+			&-left {
+				width: 100%;
+				.desktop {
+					display: none;
+				}
+			}
+			.mobile {
+				&-button-container{
+					width: 100%;
+					text-align: center;
+					padding-top: 40px;
+				}
+				@include button;
+				padding: 0 auto 0 auto;
 			}
 		}
 	}

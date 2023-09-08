@@ -9,6 +9,12 @@ h3 {
   font-size: 30px;
   line-height: 1.33;
 }
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
+}
 
 h3 {
   font-size: 19px;
@@ -68,6 +74,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -159,6 +171,20 @@ h2 .accordion-text-active {
   }
   .hamburger-content-left img {
     height: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .hamburger-container {
+    max-width: 100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .hamburger-content {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
 .mobile-menu-container {
@@ -254,10 +280,15 @@ h2 .accordion-text-active {
 @media (max-width: 500px) {
   .mobile-menu-container {
     overflow: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 100vh;
   }
   .mobile-menu-content {
     margin-top: 80px;
     max-height: calc(100vh - 145px);
+    margin: 0;
+    padding: 0;
   }
   .mobile-menu-content-workplace, .mobile-menu-content-links, .mobile-menu-content-lang {
     padding: 0;
@@ -277,6 +308,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -471,6 +508,12 @@ h3 {
   font-size: 30px;
   line-height: 1.33;
 }
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
+}
 
 h3 {
   font-size: 19px;
@@ -614,6 +657,12 @@ h3 {
   font-size: 30px;
   line-height: 1.33;
 }
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
+}
 
 h3 {
   font-size: 19px;
@@ -723,6 +772,12 @@ h3 {
   font-size: 30px;
   line-height: 1.33;
 }
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
+}
 
 h3 {
   font-size: 19px;
@@ -819,6 +874,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -919,11 +980,11 @@ h2 .accordion-text-active {
   gap: 20px;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1000px) {
   .download-content {
     padding: 0;
     height: auto;
-    padding: 20px 0 20px 0;
+    padding: 40px 0 40px 0;
     flex-direction: column;
   }
   .download-content-wrapper-mobile {
@@ -937,6 +998,13 @@ h2 .accordion-text-active {
     height: 60px;
   }
 }
+@media (max-width: 500px) {
+  .download-content .first {
+    text-align: center;
+    max-width: 50vw;
+    width: 50vw;
+  }
+}
 /* Main variables file */
 /* Main fonts related file */
 /* Main variables file */
@@ -947,6 +1015,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -1038,6 +1112,14 @@ h2 .accordion-text-active {
     margin-top: -24px;
     width: 100%;
   }
+  .faq-content-left h4, .faq-content-center h4, .faq-content-right h4 {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .faq-content-left p, .faq-content-center p, .faq-content-right p {
+    font-weight: 100;
+    font-size: 16px;
+  }
 }
 /* Main variables file */
 /* Main fonts related file */
@@ -1049,6 +1131,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -1146,6 +1234,12 @@ h3 {
   font-size: 30px;
   line-height: 1.33;
 }
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
+}
 
 h3 {
   font-size: 19px;
@@ -1195,6 +1289,44 @@ h2 .accordion-text-active {
   }
 }
 /* Main variables file */
+.form-container {
+  background-color: white;
+  margin: 0;
+  width: 100%;
+  padding: 10vh 0 0 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.form-content {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .form-content {
+    max-width: calc(100% - 40px);
+    padding: 0 20px 0 20px;
+  }
+}
+.form-content-top {
+  display: flex;
+  flex-direction: column;
+}
+.form-content-top-left, .form-content-top-right {
+  width: 100%;
+}
+.form-content-bottom {
+  width: 100%;
+}
+.form-content-bottom textarea {
+  min-height: 38px;
+  height: 38px;
+  resize: none;
+  overflow: hidden;
+}
 .form-div {
   display: flex;
   flex-direction: column;
@@ -1226,44 +1358,6 @@ h2 .accordion-text-active {
   background-repeat: repeat-x;
   outline: none !important;
 }
-.form-container {
-  background-color: white;
-  margin: 0;
-  width: 100%;
-  padding: 10vh 0 0 0;
-  box-sizing: border-box;
-  text-align: center;
-}
-.form-content {
-  max-width: 1366px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-direction: column;
-}
-@media (max-width: 768px) {
-  .form-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
-  }
-}
-.form-content-top {
-  display: flex;
-  flex-direction: row;
-}
-.form-content-top-left, .form-content-top-right {
-  width: 50%;
-}
-.form-content-bottom {
-  width: 100%;
-}
-.form-content-bottom textarea {
-  min-height: 38px;
-  height: 38px;
-  resize: none;
-  overflow: hidden;
-}
 
 /* Main variables file */
 /* Main fonts related file */
@@ -1275,6 +1369,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -1547,6 +1647,9 @@ h2 .accordion-text-active {
   .image-slider-content-description-upper-right {
     padding-bottom: 20px;
   }
+  .image-slider-content-description-lower-text {
+    padding: 0 5vw 0 5vw;
+  }
   .image-slider-content-image {
     width: 100%;
     height: 510px;
@@ -1584,6 +1687,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -1776,6 +1885,12 @@ h3 {
   font-size: 30px;
   line-height: 1.33;
 }
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
+}
 
 h3 {
   font-size: 19px;
@@ -1902,111 +2017,11 @@ h3 {
   font-size: 30px;
   line-height: 1.33;
 }
-
-h3 {
-  font-size: 19px;
-  line-height: 1.37;
-}
-
-h4,
-p {
-  font-family: "Roboto", sans-serif;
-  color: #000000;
-  font-size: 17px;
-  line-height: 1.47;
-}
-
-h2 .accordion-text-active {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 26px;
-  color: #000000;
-}
-
-.big-headline-text,
-.headline-text {
-  font-size: 70px;
-  line-height: 1.14;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-}
-
-.big-headline-text {
-  color: #3126ff;
-}
-
-.description-text {
-  color: #000000;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 1.33;
-  font-family: "Roboto", sans-serif;
-}
-
 @media (max-width: 768px) {
-  .big-headline-text,
-  .headline-text {
-    font-size: 48px;
+  h2,
+  h3 {
+    font-size: 36px;
   }
-}
-/* Main variables file */
-.room-booking-container {
-  background-color: white;
-  margin: 0;
-  width: 100%;
-  padding: 10vh 0 0 0;
-  box-sizing: border-box;
-  text-align: center;
-}
-.room-booking-content {
-  max-width: 1366px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-}
-@media (max-width: 768px) {
-  .room-booking-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
-  }
-}
-.room-booking-row1 {
-  width: 40%;
-}
-.room-booking-row2 {
-  width: 40%;
-}
-.room-booking-row3 {
-  width: 20%;
-}
-
-@media (max-width: 768px) {
-  .room-booking-content {
-    display: flex;
-    flex-direction: column;
-  }
-  .room-booking-row1, .room-booking-row2, .room-booking-row3 {
-    width: 100%;
-  }
-  .room-booking-row3 {
-    order: 2;
-    position: absolute;
-    top: -400px;
-    left: 350px;
-  }
-}
-/* Main variables file */
-/* Main fonts related file */
-/* Main variables file */
-h2,
-h3 {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  color: #000000;
-  font-size: 30px;
-  line-height: 1.33;
 }
 
 h3 {
@@ -2093,14 +2108,31 @@ h2 .accordion-text-active {
     display: flex;
     flex-direction: column;
   }
-  .room-booking-row1, .room-booking-row2, .room-booking-row3 {
+  .room-booking-row1 {
     width: 100%;
   }
+  .room-booking-row2 {
+    width: 100%;
+    display: none;
+  }
   .room-booking-row3 {
-    order: 2;
+    width: 100%;
+    height: auto;
+    background-image: url(/assets/Space_Gray.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 66.64%;
+    position: relative; /* (img-height / img-width * container-width) */
+    /* (853 / 1280 * 100) */
+  }
+  .room-booking-row3-text {
     position: absolute;
-    top: -400px;
-    left: 350px;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
   }
 }
 /* Main variables file */
@@ -2113,6 +2145,141 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
+}
+
+h3 {
+  font-size: 19px;
+  line-height: 1.37;
+}
+
+h4,
+p {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  font-size: 17px;
+  line-height: 1.47;
+}
+
+h2 .accordion-text-active {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.big-headline-text,
+.headline-text {
+  font-size: 70px;
+  line-height: 1.14;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.big-headline-text {
+  color: #3126ff;
+}
+
+.description-text {
+  color: #000000;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.33;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .big-headline-text,
+  .headline-text {
+    font-size: 48px;
+  }
+}
+/* Main variables file */
+.room-booking-container {
+  background-color: white;
+  margin: 0;
+  width: 100%;
+  padding: 10vh 0 0 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.room-booking-content {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .room-booking-content {
+    max-width: calc(100% - 40px);
+    padding: 0 20px 0 20px;
+  }
+}
+.room-booking-row1 {
+  width: 40%;
+}
+.room-booking-row2 {
+  width: 40%;
+}
+.room-booking-row3 {
+  width: 20%;
+}
+
+@media (max-width: 768px) {
+  .room-booking-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .room-booking-row1 {
+    width: 100%;
+  }
+  .room-booking-row2 {
+    width: 100%;
+    display: none;
+  }
+  .room-booking-row3 {
+    width: 100%;
+    height: auto;
+    background-image: url(/assets/Space_Gray.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 66.64%;
+    position: relative; /* (img-height / img-width * container-width) */
+    /* (853 / 1280 * 100) */
+  }
+  .room-booking-row3-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+  }
+}
+/* Main variables file */
+/* Main fonts related file */
+/* Main variables file */
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #000000;
+  font-size: 30px;
+  line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -2229,12 +2396,14 @@ h2 .accordion-text-active {
   }
   .router-content-left h2 {
     font-weight: 300;
+    font-size: 28px;
   }
   .router-content-right {
     width: 100%;
   }
   .router-content-right img {
-    height: 600px;
+    width: 100%;
+    height: auto;
   }
 }
 /* Main variables file */
@@ -2247,6 +2416,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -2304,7 +2479,7 @@ h2 .accordion-text-active {
   padding: 10vh 0 0 0;
   box-sizing: border-box;
   text-align: center;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 .shop-content {
   max-width: 1366px;
@@ -2343,6 +2518,36 @@ h2 .accordion-text-active {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  .shop-container {
+    padding-bottom: 40px;
+  }
+  .shop-content {
+    flex-direction: column;
+  }
+  .shop-content-left {
+    width: 100%;
+  }
+  .shop-content-left .desktop {
+    display: none;
+  }
+  .shop-content .mobile {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    background-color: #3126ff;
+    color: white;
+    width: 200px;
+    height: 65px;
+    border-width: 0;
+    text-align: center;
+    padding: 0 auto 0 auto;
+  }
+  .shop-content .mobile-button-container {
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+  }
+}
 /* Main variables file */
 /* Main fonts related file */
 /* Main variables file */
@@ -2353,6 +2558,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -2457,6 +2668,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -2595,11 +2812,9 @@ h2 .accordion-text-active {
   .specs-content-upper-text h2 {
     font-weight: 100;
   }
-  .specs-content-upper-image {
-    max-width: 100%;
-  }
   .specs-content-upper-image img {
-    width: 100%;
+    width: 100vw;
+    margin-left: -20px;
   }
   .specs-content-lower {
     display: flex;
@@ -2624,6 +2839,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -2743,6 +2964,12 @@ h3 {
   color: #000000;
   font-size: 30px;
   line-height: 1.33;
+}
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 36px;
+  }
 }
 
 h3 {
