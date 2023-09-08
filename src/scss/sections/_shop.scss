@@ -6,7 +6,7 @@
 .shop {
 	&-container {
 		@include container;
-		background-color: $background-color;
+		background-color: #F7F7F7;
 	}
 	&-content {
 		@include content;

@@ -1,3 +1,5 @@
+//*slick
+
 //*Hamburger
 var hamburgerActive = false;
 
@@ -152,47 +154,45 @@ window.addEventListener('scroll', () => {
 });
 
 
+//*image-slider background changing
+const imageList = [
+    '/assets/Layer_78.png',
+    '/assets/william-iven-8515-unsplash.jpg',
+    '/assets/rawpixel-675355-unsplash.jpg'
+];
+
+let currentIndex = 0;
+
+function changeBackground(direction) {
+    const sliderImage = document.getElementById('image-slider-content-image');
+    sliderImage.classList.add('fade-out'); // Apply fade-out animation class
+
+    const newImage = new Image();
+    newImage.src = imageList[currentIndex];
+
+    newImage.onload = function () {
+        sliderImage.classList.add('fade-out'); // Apply fade-out animation class
+
+        setTimeout(() => {
+            if (direction === 'left') {
+                currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
+            } else if (direction === 'right') {
+                currentIndex = (currentIndex + 1) % imageList.length;
+            }
+
+            sliderImage.style.backgroundImage = `url(${imageList[currentIndex]})`;
+
+            // Trigger a reflow to ensure smooth transition
+            sliderImage.offsetWidth; // This line forces a reflow
+
+            sliderImage.classList.remove('fade-out'); // Remove fade-out animation class
+        }, 300); // Adjust the duration as needed (milliseconds)
+    };
+}
 //*slider
 //TODO: Make it work lmao
 
-// Add your JavaScript code for slider functionality here
-const slider = document.getElementById('content-slider');
-let isDragging = false;
-let startPosition = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
 
-slider.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startPosition = e.clientX;
-    slider.style.cursor = 'grabbing';
-});
-
-slider.addEventListener('mouseup', () => {
-    isDragging = false;
-    slider.style.cursor = 'grab';
-    if (currentTranslate > prevTranslate && currentTranslate < 0) {
-        // Move to the next card
-        prevTranslate = currentTranslate;
-        currentTranslate -= slider.offsetWidth;
-    } else if (currentTranslate < prevTranslate && currentTranslate > -(slider.offsetWidth * (slider.children.length - 1))) {
-        // Move to the previous card
-        prevTranslate = currentTranslate;
-        currentTranslate += slider.offsetWidth;
-    }
-    setSliderPosition();
-});
-
-slider.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const currentPosition = e.clientX;
-    currentTranslate = prevTranslate + currentPosition - startPosition;
-    setSliderPosition();
-});
-
-function setSliderPosition() {
-    slider.style.transform = `translateX(${currentTranslate}px)`;
-}
 
 //*Accordion
 //TODO: Make it work lmao

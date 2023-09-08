@@ -12,6 +12,7 @@
 
 	&-content {
 		@include content;
+		overflow: visible;
 		height: 560px;
 		margin-bottom: 100px;
 		flex-direction: row;

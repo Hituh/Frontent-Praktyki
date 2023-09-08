@@ -1,5 +1,5 @@
-/* Main fonts related file */   
-@import '_variables.scss';
+/* Main fonts related file */
+@import "_variables.scss";
 
 h2,
 h3 {
@@ -48,4 +48,11 @@ h2 .accordion-text-active {
 	font-size: 30px;
 	line-height: 1.33;
 	font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+	.big-headline-text,
+	.headline-text {
+		font-size: 48px;
+	}
 }

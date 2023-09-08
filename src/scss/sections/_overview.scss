@@ -2,7 +2,6 @@
 @import "../_fonts.scss";
 @import "../_common-styles.scss";
 
-
 //*First section STREAMLINE YOUR WORKPLACE
 //TODO: Mobile
 .overview {
@@ -23,38 +22,45 @@
 			min-height: 716px;
 			flex: 1;
 			max-width: 50%;
-		}
+			&-bottomimages {
+				display: flex;
+				flex-direction: row;
 
-		&-left-bottomimages {
-			display: flex;
-			flex-direction: row;
-
-			img {
-				height: $spacing-unit-xx-large;
-				width: auto;
+				img {
+					height: $spacing-unit-xx-large;
+					width: auto;
+				}
 			}
 		}
 
 		&-right {
+			display: flex;
+			flex-direction: row;
 			position: relative;
 			min-height: 100%;
 			flex: 1;
 			max-width: 50%;
-			overflow: hidden;
 
-			#desks {
-				height: 500px;
-				position: absolute;
+			&-desks {
+				#desks {
+					height: 500px;
+					position: absolute;
+				}
 			}
-
-			#hand {
-				margin-left: 100px;
-				height: 600px;
-				top: 50px;
-				width: auto;
-				position: absolute;
+			&-hand {
+				position: relative;
 				overflow: hidden;
-				transition: top 0.3s ease;
+				width: 100%;
+				height: 100%;
+				#hand {
+					overflow: hidden;
+					margin-left: 100px;
+					height: 600px;
+					top: 50px;
+					width: auto;
+					position: absolute;
+					transition: top 0.3s ease;
+				}
 			}
 		}
 	}
@@ -89,35 +95,34 @@
 }
 
 @media (max-width: 768px) {
-	.overview-container {
-		margin: 0;
-		width: 100%;
-		padding: 0;
-		box-sizing: border-box;
-		text-align: center;
-	}
-
-	.overview-content {
-		padding: 5vw;
-		max-width: 90vw;
-		margin: 0 auto 0 auto;
-		display: flex;
-	}
-	.overview-head {
-		flex-direction: column;
-		flex-wrap: wrap;
-	}
-
-	.overview-head-right {
-		max-width: 100%;
-	}
-
-	.overview-head-left {
-		flex-basis: 50%;
-		max-width: 100%;
-	}
-
 	.overview {
+		&-container {
+			margin: 0;
+			width: 100%;
+			padding: 0;
+			box-sizing: border-box;
+			text-align: center;
+		}
+
+		&-content {
+			padding: 5vw;
+			max-width: 90vw;
+			margin: 0 auto 0 auto;
+			display: flex;
+		}
+
+		&-head {
+			flex-direction: column;
+			flex-wrap: wrap;
+			&-right {
+				max-width: 100%;
+			}
+			&-left {
+				flex-basis: 50%;
+				max-width: 100%;
+			}
+		}
+
 		&-descriptions {
 			display: flex;
 			flex-direction: column;
@@ -130,6 +135,6 @@
 				width: 100%;
 			}
 		}
+		/* Additional styling for smaller screens as needed */
 	}
-	/* Additional styling for smaller screens as needed */
 }
