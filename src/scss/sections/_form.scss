@@ -10,10 +10,11 @@
 	}
 	&-content {
 		@include content;
+		margin-bottom: 50px;
 		flex-direction: column;
 		&-top {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			&-left,
 			&-right {
 				width: 100%;
@@ -28,6 +29,12 @@
 			}
 			width: 100%;
 		}
+		&-button{
+				text-align: center;
+				button{
+					@include button;
+				}
+			}
 	}
 	&-div {
 		display: flex;
@@ -67,5 +74,36 @@
 		background-size: 5px 1px; /* Increased the spacing */
 		background-repeat: repeat-x;
 		outline: none !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.form {
+		&-container {
+			@include container;
+			margin-bottom: 50px;
+		}
+		&-content {
+			form {
+				width: 100%;
+			}
+			@include content;
+			width: 100%;
+			margin: 0;
+			&-top {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			.form-div {
+				padding: 20px 0 20px 0;
+			}
+			&-button{
+				text-align: center;
+				button{
+					@include button;
+				}
+			}
+		}
 	}
 }

@@ -38,12 +38,13 @@
 			width: 100%;
 			gap: 40px;
 			justify-content: flex-end;
-			padding-right: 180px;
 			align-items: center;
 			flex-direction: row;
 			background-color: white;
 			height: 70px;
 			z-index: 100;
+			left:0;
+			right:0;
 			&-lang-container {
 				position: fixed;
 				height: 80px;
@@ -103,7 +104,6 @@
 			max-width: $content-width;
 			width: 100%;
 			margin: 0 auto 0 auto;
-			padding-left: 200px;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -131,6 +131,15 @@
 				background-size: 10px 3px;
 				background-repeat: no-repeat;
 			}
+		}
+	}
+}
+
+@media (min-width: 900px) and (max-width:1766px)
+{
+	.navbar {
+		&-lower-content {
+			padding-left: 200px;
 		}
 	}
 }

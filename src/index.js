@@ -1,4 +1,3 @@
-//*slick
 
 //*Hamburger
 var hamburgerActive = false;
@@ -145,15 +144,14 @@ langDiv.addEventListener('click', (e) => {
 const handsElement = document.getElementById("hand");
 
 window.addEventListener('scroll', () => {
-    console.log(handsElement.style.top)
     if (window.innerWidth < 1366) {
 
-        handsElement.style.top = `${window.pageYOffset - 75}px`;
+        handsElement.style.top = `${window.pageYOffset - 175}px`;
 
     }
     else {
-            handsElement.style.top = `${window.pageYOffset}px`;
-     
+        handsElement.style.top = `${window.pageYOffset}px`;
+
 
     }
 });
@@ -195,28 +193,27 @@ function changeBackground(direction) {
         }, 300); // Adjust the duration as needed (milliseconds)
     };
 }
-//*slider
-//TODO: Make it work lmao
-
-
-
 //*Accordion
-//TODO: Make it work lmao
+var acc = document.getElementsByClassName("accordion-item-button");
+var i;
+
 var acc = document.getElementsByClassName("accordion-item-button");
 var i;
 
 for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
-        console.log("clicked")
         var panel = this.nextElementSibling;
         var title = this.firstElementChild;
         var arrow = this.lastElementChild;
 
-        if (panel.classList.contains("active")) {
-            title.classList.remove("active");
-            arrow.classList.remove("active");
-            panel.classList.remove("active");
-        } else {
+        // Check if the clicked item is already active
+        var isActive = panel.classList.contains("active");
+
+        // Close all accordion items
+        closeAllAccordionItems(acc);
+
+        // If the clicked item was not active, open it
+        if (!isActive) {
             title.classList.add("active");
             arrow.classList.add("active");
             panel.classList.add("active");
@@ -224,7 +221,17 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-//*Force active button on contact form
+function closeAllAccordionItems(accordionItems) {
+    for (var j = 0; j < accordionItems.length; j++) {
+        var panel = accordionItems[j].nextElementSibling;
+        var title = accordionItems[j].firstElementChild;
+        var arrow = accordionItems[j].lastElementChild;
+
+        title.classList.remove("active");
+        arrow.classList.remove("active");
+        panel.classList.remove("active");
+    }
+}
 
 //*Autoresize textarea in form
 const textarea = document.getElementById('message');
@@ -235,9 +242,42 @@ const textarea = document.getElementById('message');
 textarea.addEventListener('input', function () {
     this.style.height = 'auto'; // Reset the height to auto to recalculate
     this.style.height = this.scrollHeight + 'px'; // Set the height to the scrollHeight
-    console.log(this.style.height)
+
     // Set a minimum height (e.g., 1em) to prevent it from collapsing completely
     if (this.style.height < 258) {
         this.style.height = '38px';
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth < 769) { // Check if the screen width is less than 769px
+
+        const cards = document.querySelectorAll(".overview-descriptions-content-card");
+        const dots = document.querySelectorAll(".dot");
+
+        let currentCardIndex = 0;
+
+        function showCard(index) {
+            cards.forEach((card) => {
+                card.style.display = "none";
+            });
+            cards[index].style.display = "block";
+
+            dots.forEach((dot) => {
+                dot.classList.remove("active");
+            });
+            dots[index].classList.add("active");
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                showCard(index);
+                currentCardIndex = index;
+            });
+        });
+
+        showCard(currentCardIndex);
+    }
+});
+
+

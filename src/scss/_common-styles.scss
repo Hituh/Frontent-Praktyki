@@ -18,9 +18,9 @@
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
-	@media (max-width: 768px) {
-		max-width: calc(100% - 40px);
-		padding: 0 20px 0 20px;
+	@media (max-width: 1421px) {
+		padding: 0 30px 0 20px;
+		max-width: calc(100% - 50px);
 	}
 }
 
@@ -34,4 +34,12 @@
 	height: 65px;
 	border-width: 0;
 	text-align: center;
+	cursor: pointer;
+	transition: border-radius 0.3s ease, background-color 0.3s ease;
+	&:hover{
+		background-color: #5148f2;
+;
+		border-radius: 10px;
+	}
+	
 }

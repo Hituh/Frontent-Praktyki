@@ -41,12 +41,12 @@
 			display: none;
 		}
 		&-row3 {
-			width: 100%;
+			width: 120%;
 			height: auto;
 			background-image: url(/assets/Space_Gray.png);
 			background-size: contain;
 			background-repeat: no-repeat;
-			width: 100%;
+			margin-left: -80px;
 			height: 0;
 			padding-top: 66.64%;
 			position: relative; /* (img-height / img-width * container-width) */
@@ -55,7 +55,7 @@
 				position: absolute;
 				top: 0;
 				bottom: 0;
-				left: 50%;
+				left: 40%;
 				right: 0;
 			}
 		}

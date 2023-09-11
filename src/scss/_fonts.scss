@@ -12,6 +12,10 @@ h3 {
 		font-size: 36px;
 	}
 }
+h2 {
+	font-weight: 600;
+	font-size: 2rem;
+}
 
 h3 {
 	font-size: 19px;
@@ -29,12 +33,15 @@ p {
 
 h2 .accordion-text-active {
 	font-family: "Poppins", sans-serif;
-	font-weight: bold;
 	font-size: 19px;
 	line-height: 26px;
 	color: #000000;
 }
 
+a {
+	text-decoration: none;
+	color: #000000;
+}
 .big-headline-text,
 .headline-text {
 	font-size: 70px;
@@ -58,5 +65,7 @@ h2 .accordion-text-active {
 	.big-headline-text,
 	.headline-text {
 		font-size: 48px;
+	}
+	h2{
 	}
 }
