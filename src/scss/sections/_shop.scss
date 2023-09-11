@@ -6,6 +6,7 @@
 .shop {
 	&-container {
 		@include container;
+		overflow: hidden;
 		background-color: #f7f7f7;
 	}
 	&-content {
@@ -31,6 +32,10 @@
 	}
 }
 
+@media (max-width: 900px){
+
+}
+
 @media (max-width: 768px) {
 	.shop {
 		&-container {
@@ -39,13 +44,14 @@
 		&-content {
 			flex-direction: column;
 			&-left {
+				padding-right: 0;
 				width: 100%;
 				.desktop {
 					display: none;
 				}
 			}
 			.mobile {
-				&-button-container{
+				&-button-container {
 					width: 100%;
 					text-align: center;
 					padding-top: 40px;

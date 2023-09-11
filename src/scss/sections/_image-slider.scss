@@ -113,7 +113,7 @@
 		transform: translateY(-50%);
 		width: 100%;
 		top: 470px;
-		z-index: 999; /* Adjust the z-index as needed */
+		z-index: 9; /* Adjust the z-index as needed */
 		&-left,
 		&-right {
 			width: 80px;
@@ -223,6 +223,9 @@
 					width: 100%;
 					&-image {
 						text-align: center;
+						img{
+							margin-left: -65px;
+						}
 					}
 				}
 			}

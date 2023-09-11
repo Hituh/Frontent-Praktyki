@@ -6,6 +6,7 @@
 .specs {
 	&-container {
 		@include container;
+		overflow: hidden
 	}
 	&-content {
 		@include content;
@@ -62,6 +63,8 @@
 					}
 				}
 				&-image {
+					max-width: fit-content;
+					overflow: hidden;
 					img {
 						width: 100vw;
 						margin-left:-20px;

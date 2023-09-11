@@ -151,6 +151,7 @@
 	}
 }
 
+
 @media (max-width: 500px) {
 	.mobile-menu {
 		&-container {
@@ -160,10 +161,7 @@
 			height: 100vh;
 		}
 		&-content {
-			margin-top: 80px;
-			max-height: calc(100vh - 145px);
-			margin: 0;
-			padding: 0;
+			margin-top: 100px;
 			&-workplace,
 			&-links,
 			&-lang {

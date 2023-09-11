@@ -30,6 +30,25 @@
 				p {
 					font-weight: 100;
 				}
+				.row-inside {
+					cursor: pointer;
+					transition: border-bottom 0.5s ease, margin-top 0.5s ease;
+					&:hover {
+						margin-top: -10px;
+						border-bottom: 2px solid gray;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 900px) {
+	.partners {
+		&-content{
+			&-lower{
+				&-row1,&-row2,&-row3{
+					padding: 0;
+				}
 			}
 		}
 	}
@@ -53,12 +72,24 @@
 				&-row1,
 				&-row2,
 				&-row3 {
+					padding-right: 0;
 					width: 100%;
 					p {
 						font-weight: 100;
 					}
+					.row-inside {
+					cursor: pointer;
+					transition: padding-left 0.5s ease,margin-right 0.5s ease;
+					&:hover {
+						margin-top:0;
+						border-bottom:0;
+						padding-left: 10px;
+						margin-right: -10px;
+					}
+				}
 				}
 			}
 		}
 	}
 }
+

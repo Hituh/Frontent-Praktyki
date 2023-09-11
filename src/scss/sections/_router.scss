@@ -6,6 +6,7 @@
 .router {
 	&-container {
 		@include container;
+			overflow: hidden;
 	}
 	&-content {
 		@include content;
@@ -25,7 +26,7 @@
 	}
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1000px) {
 	.router {
 		&-content {
 			&-left {
@@ -36,7 +37,7 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 	.router {
 		&-container {
 			@include container;
@@ -49,10 +50,6 @@
 
 			&-left {
 				width: 100%;
-				h2 {
-					font-weight: 300;
-					font-size: 28px;
-				}
 			}
 			&-right {
 				width: 100%;

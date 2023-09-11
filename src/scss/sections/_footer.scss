@@ -11,6 +11,11 @@
 	}
 	&-content {
 		@include content;
+		flex-direction: column;
+		&-columns {
+			display:flex;
+			flex-direction: row;
+		}
 		&-column {
 			color: #ffffff;
 			flex: 1;
@@ -22,6 +27,25 @@
 			p {
 				color: #ffffff;
 				font-size: 14px;
+			}
+		}
+		&-logo {
+			border-top: 1px dashed white;
+			margin-top: 10px;
+			padding: 20px 0 20px 0;
+			text-align: end;
+		}
+	}
+}
+
+@media (max-width:768px){
+	.footer {
+		&-content{
+			flex-direction: column;
+			&-column {
+				p{
+					line-height: 1;
+				}
 			}
 		}
 	}

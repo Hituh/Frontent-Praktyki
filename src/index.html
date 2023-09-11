@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/src/css/hamburgers.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
+    <link rel="stylesheet" href="./css/styles.css">
 
     <title>Zonifero</title>
 </head>
@@ -18,26 +22,26 @@
             <img src="/assets/zonifero_logo_black.ef52f150.png" alt="logo">
         </div>
         <div class="navbar-upper-center">
-            <a>Zonifero products</a>
-            <a>Store</a>
-            <a>Blog</a>
+            <a href="www.wp.pl">Zonifero products</a>
+            <a href="www.wp.pl">Store</a>
+            <a href="www.wp.pl">Blog</a>
             <div class="navbar-dropdown" id="menuarrow" style="cursor:pointer">
                 <img src="/assets/globe.png" alt="language chocice">
                 <span class="dropdownarrow"></h3>
             </div>
             <div class="navbar-upper-center-lang-container">
                 <div class="navbar-upper-center-lang-content">
-                    <p style="font-weight: bold;">PL</p>
-                    <p>EN</p>
-                    <p>FR</p>
+                    <p style="font-weight: bold;" href="www.wp.pl">PL</p>
+                    <p href="www.wp.pl">EN</p>
+                    <p href="www.wp.pl">FR</p>
                 </div>
             </div>
-            <a style="margin-right: 162px;">Sign in</a>
+            <a style="margin-right: 162px;" href="www.wp.pl">Sign in</a>
 
         </div>
         <div class="navbar-upper-right">
             <div class="get-app">
-                <a>Get the app</a>
+                <a href="www.wp.pl" style="color:white">Get the app</a>
             </div>
         </div>
     </div>
@@ -81,7 +85,7 @@
                 <a style="cursor: pointer;">Kontakt</a>
             </div>
             <div class="mobile-menu-content-links">
-                <a href="/pl/">Produkty
+                <a href="www.wp.pl">Produkty
                     Zonifero</a>
                 <a href="/blog">Blog</a>
                 <a href="/pl/faq">FAQ</a>
@@ -130,10 +134,80 @@
                         zonifero WorkPlace.</h2>
                 </div>
                 <div class="buttons">
-                    <img src="/assets/google2.png">
-                    <img src="/assets/apple2.png">
+                    <button class="buttons-left">
+
+                    </button>
+                    <button class="buttons-right">
+                    </button>
                 </div>
 
+            </div>
+
+        </div>
+        <div class="overview-descriptions-container">
+            <div class="overview-descriptions-content desc-slick">
+                <div class="overview-descriptions-content-card">
+                    <h2>Management</h2>
+                    <p>Tools for real-time management of all your facilities and people across multiple sites.
+                        Ease,
+                        speed, and effectiveness of facilities communications.</p>
+                </div>
+                <div class="overview-descriptions-content-card">
+                    <h2>Employees</h2>
+                    <p>Improved productivity and satisfaction as your employees stay informed, connected, and
+                        can
+                        feed
+                        requests and updates in real time.</p>
+                </div>
+                <div class="overview-descriptions-content-card">
+                    <h2>Visitors</h2>
+                    <p>A smooth and welcoming visitor experience - easy navigation around your facilities.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Slider-->
+        <div class="slider-container">
+            <div class="slider-content">
+                <div class="slider-content-card" id="card1">
+                    <img src="/assets/desk_icon.png">
+                    <h3>Use your time and space smarter</h3>
+                    <p>Never again run out of coffee or other supplies. Create an efficient hive for
+                        your busy bees.</p>
+                </div>
+                <div class="slider-content-card" id="card2">
+                    <img src="/assets/desk_icon.png">
+                    <h3>Never stress about meetings again</h3>
+                    <p>Zonifero will measure how you use the rooms so that you always have enough
+                        rooms
+                        available.</p>
+                </div>
+                <div class="slider-content-card" id="card3">
+                    <img src="/assets/desk_icon.png">
+                    <h3>Find the right person in a breeze</h3>
+                    <p>Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                        their location.</p>
+                </div>
+                <div class="slider-content-card" id="card4">
+                    <img src="/assets/desk_icon.png">
+                    <h3>Save your desk and room space</h3>
+                    <p>Zonifero will tell you which desks and rooms are in use and how many and
+                        which of
+                        them are idle.</p>
+                </div>
+                <div class="slider-content-card" id="card5">
+                    <img src="/assets/desk_icon.png">
+                    <h3>Swiftly introduce new employees</h3>
+                    <p>With built-in maps, Q&A, and notifications, new employees can find their way
+                        around the office.</p>
+                </div>
+                <div class="slider-content-card" id="card4">
+                    <img src="/assets/desk_icon.png">
+                    <h3>Save your desk and room space</h3>
+                    <p>Zonifero will tell you which desks and rooms are in use and how many and
+                        which of
+                        them are idle.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -181,7 +255,9 @@
                         </div>
                         <div class="image-slider-content-description-lower">
                             <div class="image-slider-content-description-lower-text">
-                                <p>View and download full specs</p>
+                                <a href="www.wp.pl">
+                                    <p>View and download full specs</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -228,49 +304,84 @@
                         <h3 class="list-item-title">Hot desk booking</h3>
                         <span class="list-item-title-arrow"></span>
                     </div>
-                    <div class="list-item-description">Lorem pissum</div>
+                    <div class="list-item-description">
+                        <p>Lorem pissumCan't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.</p>
+                    </div>
                 </div>
                 <div class="accordion-item">
                     <div class="accordion-item-button">
                         <h3 class="list-item-title">Hot desk booking</h3>
                         <span class="list-item-title-arrow"></span>
                     </div>
-                    <div class="list-item-description">Lorem pissum</div>
+                    <div class="list-item-description">
+                        <p>Lorem pissumCan't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.</p>
+                    </div>
                 </div>
                 <div class="accordion-item">
                     <div class="accordion-item-button">
                         <h3 class="list-item-title">Hot desk booking</h3>
                         <span class="list-item-title-arrow"></span>
                     </div>
-                    <div class="list-item-description">Lorem pissum</div>
+                    <div class="list-item-description">
+                        <p>Lorem pissumCan't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.</p>
+                    </div>
                 </div>
                 <div class="accordion-item">
                     <div class="accordion-item-button">
                         <h3 class="list-item-title">Hot desk booking</h3>
                         <span class="list-item-title-arrow"></span>
                     </div>
-                    <div class="list-item-description">Lorem pissum</div>
+                    <div class="list-item-description">
+                        <p>Lorem pissumCan't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.</p>
+                    </div>
                 </div>
                 <div class="accordion-item">
                     <div class="accordion-item-button">
                         <h3 class="list-item-title">Hot desk booking</h3>
                         <span class="list-item-title-arrow"></span>
                     </div>
-                    <div class="list-item-description">Lorem pissum</div>
+                    <div class="list-item-description">
+                        <p>Lorem pissumCan't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.</p>
+                    </div>
                 </div>
                 <div class="accordion-item">
                     <div class="accordion-item-button">
                         <h3 class="list-item-title">Hot desk booking</h3>
                         <span class="list-item-title-arrow"></span>
                     </div>
-                    <div class="list-item-description">Lorem pissum</div>
+                    <div class="list-item-description">
+                        <p>Lorem pissumCan't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.</p>
+                    </div>
                 </div>
                 <div class="accordion-item">
                     <div class="accordion-item-button">
                         <h3 class="list-item-title">Hot desk booking</h3>
                         <span class="list-item-title-arrow"></span>
                     </div>
-                    <div class="list-item-description">Lorem pissum</div>
+                    <div class="list-item-description">
+                        <p>Lorem pissumCan't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                            their location.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -363,42 +474,47 @@
                 </div>
                 <div class="partners-content-lower">
                     <div class="partners-content-lower-row1">
-                        <img src="/assets/logo_nsg.png">
-                        <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks,
-                            meetlng
-                            and
-                            other rooms. Reservations can be made from the applicatjon on the
-                            tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
-                            G Sule. Room reservalons can also be made for buslnesses tha do
-                            not use Offlce 365 or G Surte,
+                        <div class="row-inside">
+                            <img src="/assets/logo_nsg.png">
+                            <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks,
+                                meetlng
+                                and
+                                other rooms. Reservations can be made from the applicatjon on the
+                                tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
+                                G Sule. Room reservalons can also be made for buslnesses tha do
+                                not use Offlce 365 or G Surte,
 
-                            zonifero buslness also has a calendar feature that can be run on a</p>
+                                zonifero buslness also has a calendar feature that can be run on a</p>
+                        </div>
                     </div>
 
                     <div class="partners-content-lower-row2">
-                        <img src="/assets/Layer 504.png">
-                        <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks,
-                            meetlng
-                            and
-                            other rooms. Reservations can be made from the applicatjon on the
-                            tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
-                            G Sule. Room reservalons can also be made for buslnesses tha do
-                            not use Offlce 365 or G Surte,
+                        <div class="row-inside">
+                            <img src="/assets/Layer 504.png">
+                            <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks,
+                                meetlng
+                                and
+                                other rooms. Reservations can be made from the applicatjon on the
+                                tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
+                                G Sule. Room reservalons can also be made for buslnesses tha do
+                                not use Offlce 365 or G Surte,
 
-                            zonifero buslness also has a calendar feature that can be run on a</p>
-
+                                zonifero buslness also has a calendar feature that can be run on a</p>
+                        </div>
                     </div>
                     <div class="partners-content-lower-row3">
-                        <img src="/assets/logo_nsg.png">
-                        <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks,
-                            meetlng
-                            and
-                            other rooms. Reservations can be made from the applicatjon on the
-                            tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
-                            G Sule. Room reservalons can also be made for buslnesses tha do
-                            not use Offlce 365 or G Surte,
+                        <div class="row-inside">
+                            <img src="/assets/logo_nsg.png">
+                            <p>We only work with the best. Zonifero buslness supports the booklng of hot-desks,
+                                meetlng
+                                and
+                                other rooms. Reservations can be made from the applicatjon on the
+                                tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
+                                G Sule. Room reservalons can also be made for buslnesses tha do
+                                not use Offlce 365 or G Surte,
 
-                            zonifero buslness also has a calendar feature that can be run on a</p>
+                                zonifero buslness also has a calendar feature that can be run on a</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -528,8 +644,8 @@
                         <div class="form-content-top-right">
                             <div class="form-div">
                                 <label class="form-label" for="phone">Your hone</label>
-                                <input class="form-input" type="tel" id="phone" name="phone" required
-                                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="+48 605 708 904">
+                                <input class="form-input" type="tel" id="phone" name="phone"
+                                    placeholder="+48 605 708 904">
                             </div>
                             <div class="form-div">
                                 <label class="form-label" for="email">Your email *</label>
@@ -545,6 +661,9 @@
                             <textarea class="form-input" id="message" name="message" rows="6" required
                                 placeholder="Hello :D I'm just wondering if you could..."></textarea>
                         </div>
+                    </div>
+                    <div class="form-content-button">
+                        <button>Send message</button>
                     </div>
                 </form>
 
@@ -600,37 +719,47 @@
     <!--Footer-->
     <div class="footer-container">
         <div class="footer-content">
-            <div class="footer-content-column">
-                <h4>Products:</h4>
-                <p>zonifero business</p>
-                <p>zonifero real estate</p>
-                <p>zonifero lobby</p>
-                <p>zonifero services</p>
-                <p>zonifero tv</p>
-            </div>
-            <div class="footer-content-column">
-                <h4>Resources:</h4>
-                <p>Documentation</p>
-                <p>FAQ</p>
-                <p>Blog</p>
-                <p>Media</p>
+            <div class="footer-content-columns">
+                <div class="footer-content-column">
+                    <h4>Products:</h4>
+                    <p>zonifero business</p>
+                    <p>zonifero real estate</p>
+                    <p>zonifero lobby</p>
+                    <p>zonifero services</p>
+                    <p>zonifero tv</p>
+                </div>
+                <div class="footer-content-column">
+                    <h4>Resources:</h4>
+                    <p>Documentation</p>
+                    <p>FAQ</p>
+                    <p>Blog</p>
+                    <p>Media</p>
 
+                </div>
+                <div class="footer-content-column" style="margin-right: 30%;">
+                    <h4>About:</h4>
+                    <p>About us</p>
+                    <p>Company</p>
+                    <p>Blog</p>
+                </div>
             </div>
-            <div class="footer-content-column" style="margin-right: 30%;">
-                <h4>About:</h4>
-                <p>About us</p>
-                <p>Company</p>
-                <p>Blog</p>
+
+            <div class="footer-content-logo">
+                <img src="/assets/ex_logo.png">
             </div>
 
         </div>
         <img src="/assets/ex_logo.png" style="position: absolute; bottom: 0; right:0;">
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <script type="text/javascript" src="./slick.js"></script>
     <script src="./index.js"></script>
+
 </body>
 
 </html>

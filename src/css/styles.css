@@ -16,6 +16,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -31,9 +36,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -82,6 +91,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -97,9 +111,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -158,10 +176,10 @@ h2 .accordion-text-active {
     align-items: center; /* Vertically center the content */
   }
 }
-@media (max-width: 901px) and (max-width: 768px) {
+@media (max-width: 901px) and (max-width: 1421px) {
   .hamburger-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 @media (max-width: 901px) {
@@ -285,10 +303,7 @@ h2 .accordion-text-active {
     height: 100vh;
   }
   .mobile-menu-content {
-    margin-top: 80px;
-    max-height: calc(100vh - 145px);
-    margin: 0;
-    padding: 0;
+    margin-top: 100px;
   }
   .mobile-menu-content-workplace, .mobile-menu-content-links, .mobile-menu-content-lang {
     padding: 0;
@@ -316,6 +331,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -331,9 +351,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -395,12 +419,13 @@ h2 .accordion-text-active {
   width: 100%;
   gap: 40px;
   justify-content: flex-end;
-  padding-right: 180px;
   align-items: center;
   flex-direction: row;
   background-color: white;
   height: 70px;
   z-index: 100;
+  left: 0;
+  right: 0;
 }
 .navbar-upper-center-lang-container {
   position: fixed;
@@ -454,7 +479,6 @@ h2 .accordion-text-active {
   max-width: 1366px;
   width: 100%;
   margin: 0 auto 0 auto;
-  padding-left: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -477,6 +501,11 @@ h2 .accordion-text-active {
   background-repeat: no-repeat;
 }
 
+@media (min-width: 900px) and (max-width: 1766px) {
+  .navbar-lower-content {
+    padding-left: 200px;
+  }
+}
 @media (max-width: 900px) {
   .navbar-upper, .navbar-lower-container {
     display: none;
@@ -515,6 +544,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -530,9 +564,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -579,10 +617,10 @@ h2 .accordion-text-active {
   flex-direction: row;
   flex-direction: column;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .accordion-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .accordion-item {
@@ -592,6 +630,7 @@ h2 .accordion-text-active {
   display: flex;
   flex-direction: column;
   text-align: left;
+  cursor: pointer;
 }
 .accordion-item-button {
   width: 100%;
@@ -635,7 +674,7 @@ h2 .accordion-text-active {
   height: 0;
   overflow: hidden;
   transition: font-size 0.7s ease, opacity 0.7s ease, transform 0.7s ease, padding 0.7s ease;
-  transform-origin: top; /* Set the transform origin to the top */
+  transform-origin: top center; /* Set the transform origin to the top center */
   opacity: 0; /* Initially, hide the content */
 }
 .list-item-description.active {
@@ -664,6 +703,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -679,9 +723,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -733,10 +781,10 @@ h2 .accordion-text-active {
   justify-content: space-between;
   gap: 100px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .bottom-slider-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .bottom-slider-content-card {
@@ -779,6 +827,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -794,9 +847,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -843,10 +900,10 @@ h2 .accordion-text-active {
   flex-direction: row;
   justify-content: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .contact-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .contact-content h4 {
@@ -882,6 +939,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -897,9 +959,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -940,7 +1006,6 @@ h2 .accordion-text-active {
 }
 .download-content {
   background-color: #f7f7f7;
-  padding: 20px 50px 20px 50px;
   max-width: 1366px;
   width: 100%;
   height: 60px;
@@ -960,7 +1025,13 @@ h2 .accordion-text-active {
   height: 65px;
   border-width: 0;
   text-align: center;
+  cursor: pointer;
+  transition: border-radius 0.3s ease, background-color 0.3s ease;
   height: 100%;
+}
+.download-content button:hover {
+  background-color: #5148f2;
+  border-radius: 10px;
 }
 .download-content-wrapper {
   display: inherit;
@@ -1023,6 +1094,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -1038,9 +1114,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -1087,10 +1167,10 @@ h2 .accordion-text-active {
   flex-direction: row;
   margin: 0 auto 0 auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .faq-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .faq-content-left, .faq-content-center, .faq-content-right {
@@ -1111,6 +1191,7 @@ h2 .accordion-text-active {
   .faq-content-left, .faq-content-center, .faq-content-right {
     margin-top: -24px;
     width: 100%;
+    padding-right: 0;
   }
   .faq-content-left h4, .faq-content-center h4, .faq-content-right h4 {
     font-weight: 400;
@@ -1139,6 +1220,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -1154,9 +1240,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -1202,12 +1292,17 @@ h2 .accordion-text-active {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  flex-direction: column;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .footer-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
+}
+.footer-content-columns {
+  display: flex;
+  flex-direction: row;
 }
 .footer-content-column {
   color: #ffffff;
@@ -1222,7 +1317,21 @@ h2 .accordion-text-active {
   color: #ffffff;
   font-size: 14px;
 }
+.footer-content-logo {
+  border-top: 1px dashed white;
+  margin-top: 10px;
+  padding: 20px 0 20px 0;
+  text-align: end;
+}
 
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-content-column p {
+    line-height: 1;
+  }
+}
 /* Main variables file */
 /* Main fonts related file */
 /* Main variables file */
@@ -1241,6 +1350,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -1256,9 +1370,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -1303,17 +1421,18 @@ h2 .accordion-text-active {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  margin-bottom: 50px;
   flex-direction: column;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .form-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .form-content-top {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .form-content-top-left, .form-content-top-right {
   width: 100%;
@@ -1326,6 +1445,25 @@ h2 .accordion-text-active {
   height: 38px;
   resize: none;
   overflow: hidden;
+}
+.form-content-button {
+  text-align: center;
+}
+.form-content-button button {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  background-color: #3126ff;
+  color: white;
+  width: 200px;
+  height: 65px;
+  border-width: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: border-radius 0.3s ease, background-color 0.3s ease;
+}
+.form-content-button button:hover {
+  background-color: #5148f2;
+  border-radius: 10px;
 }
 .form-div {
   display: flex;
@@ -1359,6 +1497,64 @@ h2 .accordion-text-active {
   outline: none !important;
 }
 
+@media (max-width: 768px) {
+  .form-container {
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    padding: 10vh 0 0 0;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .form-content {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+  }
+  .form-content form {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) and (max-width: 1421px) {
+  .form-content {
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
+  }
+}
+@media (max-width: 768px) {
+  .form-content-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-content .form-div {
+    padding: 20px 0 20px 0;
+  }
+  .form-content-button {
+    text-align: center;
+  }
+  .form-content-button button {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    background-color: #3126ff;
+    color: white;
+    width: 200px;
+    height: 65px;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    transition: border-radius 0.3s ease, background-color 0.3s ease;
+  }
+  .form-content-button button:hover {
+    background-color: #5148f2;
+    border-radius: 10px;
+  }
+}
 /* Main variables file */
 /* Main fonts related file */
 /* Main variables file */
@@ -1377,6 +1573,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -1392,9 +1593,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -1440,10 +1645,10 @@ h2 .accordion-text-active {
   display: flex;
   flex-direction: row;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .image-slider-title {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .image-slider-content {
@@ -1487,10 +1692,10 @@ h2 .accordion-text-active {
   flex-direction: column;
   height: 350px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .image-slider-content-description {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .image-slider-content-description-container {
@@ -1552,7 +1757,7 @@ h2 .accordion-text-active {
   transform: translateY(-50%);
   width: 100%;
   top: 470px;
-  z-index: 999; /* Adjust the z-index as needed */
+  z-index: 9; /* Adjust the z-index as needed */
 }
 .image-slider-buttons-left, .image-slider-buttons-right {
   width: 80px;
@@ -1624,10 +1829,10 @@ h2 .accordion-text-active {
     flex-direction: row;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 1421px) {
   .image-slider-title {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 @media (max-width: 768px) {
@@ -1665,6 +1870,9 @@ h2 .accordion-text-active {
   .image-slider-content-phone-right-image {
     text-align: center;
   }
+  .image-slider-content-phone-right-image img {
+    margin-left: -65px;
+  }
   .image-slider-buttons {
     top: 480px;
   }
@@ -1695,6 +1903,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -1710,9 +1923,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -1793,16 +2010,36 @@ h2 .accordion-text-active {
 }
 .overview-content-image-hand #hand {
   overflow: hidden;
-  margin-left: 100px;
+  margin-left: 140px;
   height: 600px;
   top: 50px;
   width: auto;
   position: absolute;
   transition: top 0.3s ease;
 }
-.overview-content .buttons img {
-  padding-right: 20px;
-  height: 80px;
+.overview-content .buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.overview-content .buttons-left {
+  height: 70px;
+  width: 200px;
+  background-image: url(/assets/apple2.png);
+  background-repeat: no-repeat;
+}
+.overview-content .buttons-right {
+  height: 70px;
+  width: 200px;
+  background-image: url(/assets/google2.png);
+}
+.overview-content .buttons-left, .overview-content .buttons-right {
+  cursor: pointer;
+  transition: border-radius 0.3s ease;
+  border: 0px;
+}
+.overview-content .buttons-left:hover, .overview-content .buttons-right:hover {
+  border-radius: 15px;
 }
 
 @media (max-width: 1124px) {
@@ -1815,9 +2052,22 @@ h2 .accordion-text-active {
     text-align: center;
   }
   .overview-content {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
     display: flex;
     flex-direction: column;
   }
+}
+@media (max-width: 1124px) and (max-width: 1421px) {
+  .overview-content {
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
+  }
+}
+@media (max-width: 1124px) {
   .overview-content-image {
     height: 360px;
     display: block;
@@ -1837,8 +2087,9 @@ h2 .accordion-text-active {
     position: absolute;
     left: calc(50% - 222.5px);
     transition: top 0.3s ease;
-    z-index: 1111;
+    z-index: 70;
     transform: scale(0.7);
+    margin-left: 0;
   }
   .overview-content-image-desks {
     position: absolute;
@@ -1847,6 +2098,7 @@ h2 .accordion-text-active {
     left: 5%;
     overflow: hidden;
     left: 0;
+    padding-top: 0;
   }
   .overview-content-image-desks #desks {
     transform: scale(1);
@@ -1855,14 +2107,59 @@ h2 .accordion-text-active {
   }
 }
 @media (max-width: 768px) {
+  .overview-container {
+    padding-top: 100px;
+  }
   .overview-content {
     padding: 0 20px 0 20px;
   }
+  .overview-content .buttons button {
+    max-width: 200px;
+    max-height: 70px;
+    width: 40vw;
+    height: 14vw;
+    background-size: cover;
+  }
 }
-@media (max-width: 501px) {
-  .overview-content .buttons img {
-    width: 40%;
-    height: auto;
+.overview-descriptions-container {
+  background-color: white;
+  margin: 0;
+  width: 100%;
+  padding: 10vh 0 0 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.overview-descriptions-content {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 1421px) {
+  .overview-descriptions-content {
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
+  }
+}
+.overview-descriptions-content-card {
+  flex-basis: 33%;
+}
+
+@media (max-width: 1366px) {
+  .overview-descriptions-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .overview-descriptions-content-card {
+    flex-basis: 33%;
+  }
+}
+@media (max-width: 768px) {
+  .overview-descriptions-content-card {
+    word-wrap: normal;
+    width: 100%;
   }
 }
 /* Main variables file */
@@ -1883,6 +2180,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -1898,9 +2200,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -1948,10 +2254,10 @@ h2 .accordion-text-active {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .partners-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .partners-content-upper {
@@ -1973,7 +2279,20 @@ h2 .accordion-text-active {
 .partners-content-lower-row1 p, .partners-content-lower-row2 p, .partners-content-lower-row3 p {
   font-weight: 100;
 }
+.partners-content-lower-row1 .row-inside, .partners-content-lower-row2 .row-inside, .partners-content-lower-row3 .row-inside {
+  cursor: pointer;
+  transition: border-bottom 0.5s ease, margin-top 0.5s ease;
+}
+.partners-content-lower-row1 .row-inside:hover, .partners-content-lower-row2 .row-inside:hover, .partners-content-lower-row3 .row-inside:hover {
+  margin-top: -10px;
+  border-bottom: 2px solid gray;
+}
 
+@media (max-width: 900px) {
+  .partners-content-lower-row1, .partners-content-lower-row2, .partners-content-lower-row3 {
+    padding: 0;
+  }
+}
 @media (max-width: 768px) {
   .partners-content {
     flex-direction: column;
@@ -1991,11 +2310,22 @@ h2 .accordion-text-active {
     justify-content: space-between;
   }
   .partners-content-lower-row1, .partners-content-lower-row2, .partners-content-lower-row3 {
+    padding-right: 0;
     width: 100%;
   }
   .partners-content-lower-row1 p, .partners-content-lower-row2 p, .partners-content-lower-row3 p {
     font-weight: 100;
   }
+  .partners-content-lower-row1 .row-inside, .partners-content-lower-row2 .row-inside, .partners-content-lower-row3 .row-inside {
+    cursor: pointer;
+    transition: padding-left 0.5s ease, margin-right 0.5s ease;
+  }
+  .partners-content-lower-row1 .row-inside:hover, .partners-content-lower-row2 .row-inside:hover, .partners-content-lower-row3 .row-inside:hover {
+    margin-top: 0;
+    border-bottom: 0;
+    padding-left: 10px;
+    margin-right: -10px;
+  }
 }
 /* Main variables file */
 /* Main fonts related file */
@@ -2015,6 +2345,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -2030,9 +2365,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -2078,10 +2417,10 @@ h2 .accordion-text-active {
   display: flex;
   flex-direction: row;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .room-booking-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .room-booking-row1 {
@@ -2107,12 +2446,12 @@ h2 .accordion-text-active {
     display: none;
   }
   .room-booking-row3 {
-    width: 100%;
+    width: 120%;
     height: auto;
     background-image: url(/assets/Space_Gray.png);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 100%;
+    margin-left: -80px;
     height: 0;
     padding-top: 66.64%;
     position: relative; /* (img-height / img-width * container-width) */
@@ -2122,7 +2461,7 @@ h2 .accordion-text-active {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%;
+    left: 40%;
     right: 0;
   }
 }
@@ -2144,6 +2483,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -2159,9 +2503,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -2207,10 +2555,10 @@ h2 .accordion-text-active {
   display: flex;
   flex-direction: row;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .room-booking-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .room-booking-row1 {
@@ -2236,12 +2584,12 @@ h2 .accordion-text-active {
     display: none;
   }
   .room-booking-row3 {
-    width: 100%;
+    width: 120%;
     height: auto;
     background-image: url(/assets/Space_Gray.png);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 100%;
+    margin-left: -80px;
     height: 0;
     padding-top: 66.64%;
     position: relative; /* (img-height / img-width * container-width) */
@@ -2251,7 +2599,7 @@ h2 .accordion-text-active {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%;
+    left: 40%;
     right: 0;
   }
 }
@@ -2273,6 +2621,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -2288,9 +2641,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -2328,6 +2685,7 @@ h2 .accordion-text-active {
   padding: 10vh 0 0 0;
   box-sizing: border-box;
   text-align: center;
+  overflow: hidden;
 }
 .router-content {
   max-width: 1366px;
@@ -2336,10 +2694,10 @@ h2 .accordion-text-active {
   display: flex;
   flex-direction: row;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .router-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .router-content-left {
@@ -2355,7 +2713,7 @@ h2 .accordion-text-active {
   height: 600px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .router-container {
     background-color: white;
     margin: 0;
@@ -2375,19 +2733,15 @@ h2 .accordion-text-active {
     flex-direction: column;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 900px) and (max-width: 1421px) {
   .router-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .router-content-left {
     width: 100%;
-  }
-  .router-content-left h2 {
-    font-weight: 300;
-    font-size: 28px;
   }
   .router-content-right {
     width: 100%;
@@ -2415,6 +2769,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -2430,9 +2789,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -2470,6 +2833,7 @@ h2 .accordion-text-active {
   padding: 10vh 0 0 0;
   box-sizing: border-box;
   text-align: center;
+  overflow: hidden;
   background-color: #f7f7f7;
 }
 .shop-content {
@@ -2482,10 +2846,10 @@ h2 .accordion-text-active {
   display: flex;
   flex-direction: row;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .shop-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .shop-content-left {
@@ -2504,6 +2868,12 @@ h2 .accordion-text-active {
   height: 65px;
   border-width: 0;
   text-align: center;
+  cursor: pointer;
+  transition: border-radius 0.3s ease, background-color 0.3s ease;
+}
+.shop-content-left button:hover {
+  background-color: #5148f2;
+  border-radius: 10px;
 }
 .shop-content-right img {
   height: 100%;
@@ -2517,6 +2887,7 @@ h2 .accordion-text-active {
     flex-direction: column;
   }
   .shop-content-left {
+    padding-right: 0;
     width: 100%;
   }
   .shop-content-left .desktop {
@@ -2531,12 +2902,18 @@ h2 .accordion-text-active {
     height: 65px;
     border-width: 0;
     text-align: center;
+    cursor: pointer;
+    transition: border-radius 0.3s ease, background-color 0.3s ease;
     padding: 0 auto 0 auto;
   }
   .shop-content .mobile-button-container {
     width: 100%;
     text-align: center;
     padding-top: 40px;
+  }
+  .shop-content .mobile:hover {
+    background-color: #5148f2;
+    border-radius: 10px;
   }
 }
 /* Main variables file */
@@ -2557,6 +2934,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -2572,9 +2954,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -2606,47 +2992,44 @@ h2 .accordion-text-active {
 }
 /* Main variables file */
 .slider-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-}
-
-.swiper-slide {
-  background-color: #fff; /* Background color for each slide */
-  padding: 20px;
-  border: 1px solid #ddd; /* Border for each slide */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for each slide */
-}
-
-.slider {
-  overflow: hidden;
-  max-width: 100vw;
-  display: flex;
-  transition: transform 0.3s ease;
-  flex-wrap: nowrap;
-  transition: transform 0.3 ease;
-  user-select: none;
-  cursor: grab;
-}
-.slider-card {
   background-color: white;
-  padding: 40px;
-  margin: 10px;
+  margin: 0;
+  width: 100%;
+  padding: 10vh 0 0 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.slider-content {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
-.slider-card img {
-  width: 205px;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  -webkit-user-drag: none;
+@media (max-width: 1421px) {
+  .slider-content {
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
+  }
 }
-.slider :hover {
-  cursor: grabbing;
+.slider-content-card {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin: 20px;
+  width: 200px;
+}
+.slider-content-card img {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .slider-content-card img {
+    max-width: 100px;
+    height: auto;
+  }
+}
+.slick-dots {
+  width: calc(100% - 50px);
 }
 
 /* Main variables file */
@@ -2667,6 +3050,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -2682,9 +3070,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -2722,6 +3114,7 @@ h2 .accordion-text-active {
   padding: 10vh 0 0 0;
   box-sizing: border-box;
   text-align: center;
+  overflow: hidden;
 }
 .specs-content {
   max-width: 1366px;
@@ -2732,10 +3125,10 @@ h2 .accordion-text-active {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .specs-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .specs-content-upper {
@@ -2787,10 +3180,10 @@ h2 .accordion-text-active {
     flex-direction: column;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 1421px) {
   .specs-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 @media (max-width: 768px) {
@@ -2802,6 +3195,10 @@ h2 .accordion-text-active {
   }
   .specs-content-upper-text h2 {
     font-weight: 100;
+  }
+  .specs-content-upper-image {
+    max-width: fit-content;
+    overflow: hidden;
   }
   .specs-content-upper-image img {
     width: 100vw;
@@ -2838,6 +3235,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -2853,9 +3255,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -2904,10 +3310,10 @@ h2 .accordion-text-active {
   gap: 120px;
   padding-bottom: 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .sreq-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .sreq-content-left, .sreq-content-right {
@@ -2933,10 +3339,10 @@ h2 .accordion-text-active {
     gap: 10%;
   }
 }
-@media (max-width: 768px) and (max-width: 768px) {
+@media (max-width: 768px) and (max-width: 1421px) {
   .sreq-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 @media (max-width: 768px) {
@@ -2963,6 +3369,11 @@ h3 {
   }
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
 h3 {
   font-size: 19px;
   line-height: 1.37;
@@ -2978,9 +3389,13 @@ p {
 
 h2 .accordion-text-active {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
   font-size: 19px;
   line-height: 26px;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
   color: #000000;
 }
 
@@ -3018,6 +3433,7 @@ h2 .accordion-text-active {
   padding: 10vh 0 0 0;
   box-sizing: border-box;
   text-align: center;
+  padding-top: 0px;
 }
 .underrouter-content {
   max-width: 1366px;
@@ -3027,10 +3443,10 @@ h2 .accordion-text-active {
   flex-direction: row;
   justify-content: space-between;
 }
-@media (max-width: 768px) {
+@media (max-width: 1421px) {
   .underrouter-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
+    padding: 0 30px 0 20px;
+    max-width: calc(100% - 50px);
   }
 }
 .underrouter-content-right, .underrouter-content-left {
@@ -3038,7 +3454,7 @@ h2 .accordion-text-active {
   width: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .underrouter-content {
     flex-direction: column;
   }

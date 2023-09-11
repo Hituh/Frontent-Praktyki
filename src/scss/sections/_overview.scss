@@ -33,10 +33,11 @@
 			"buttons bigimage";
 		grid-template-columns: repeat(2, 1fr);
 		gap: 10px; /* Gap between grid items */
+
 		&-image {
 			grid-area: bigimage;
 			&-desks {
-				padding-top: 100px ;
+				padding-top: 100px;
 				#desks {
 					height: 500px;
 					position: absolute;
@@ -49,7 +50,7 @@
 				overflow: hidden;
 				#hand {
 					overflow: hidden;
-					margin-left: 100px;
+					margin-left: 140px;
 					height: 600px;
 					top: 50px;
 					width: auto;
@@ -59,9 +60,28 @@
 			}
 		}
 		.buttons {
-			img{
-				padding-right: 20px;
-				height: 80px;
+			display: flex;
+			flex-direction: row;
+			gap: 20px;
+			&-left {
+				height: 70px;
+				width: 200px;
+				background-image: url(/assets/apple2.png);
+				background-repeat: no-repeat;
+			}
+			&-right {
+				height: 70px;
+				width: 200px;
+				background-image: url(/assets/google2.png);
+			}
+			&-left,
+			&-right {
+				cursor: pointer;
+				transition: border-radius 0.3s ease;
+				border: 0px;
+				&:hover {
+					border-radius: 15px;
+				}
 			}
 		}
 	}
@@ -73,6 +93,7 @@
 			@include container;
 		}
 		&-content {
+			@include content;
 			display: flex;
 			flex-direction: column;
 			&-image {
@@ -93,8 +114,9 @@
 						position: absolute;
 						left: calc(50% - 222.5px);
 						transition: top 0.3s ease;
-						z-index: 1111;
+						z-index: 70;
 						transform: scale(0.7);
+						margin-left: 0;
 					}
 				}
 
@@ -106,6 +128,7 @@
 					left: 5%;
 					overflow: hidden;
 					left: 0;
+					padding-top: 0;
 					#desks {
 						transform: scale(1);
 						width: 100%;
@@ -118,20 +141,57 @@
 }
 @media (max-width: 768px) {
 	.overview {
-		&-content{
+		&-container {
+			padding-top: 100px;
+		}
+		&-content {
 			padding: 0 20px 0 20px;
+			.buttons {
+				button {
+					max-width: 200px;
+					max-height: 70px;
+					width: 40vw;
+					height: calc(40vw * 0.35);
+					background-size: cover;
+				}
+			}
 		}
 	}
 }
 
-@media (max-width: 501px) {
-	.overview {
-		&-content{
-			.buttons{
-				img{
-					width: 40%;
-					height: auto;
-				}
+
+.overview-descriptions {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		&-card {
+			flex-basis: 33%;
+		}
+	}
+}
+
+@media (max-width: 1366px) {
+	.overview-descriptions {
+		&-content {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-card {
+				flex-basis: 33%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.overview-descriptions {
+		&-content {
+			&-card {
+				word-wrap: normal;
+				width: 100%;
 			}
 		}
 	}
