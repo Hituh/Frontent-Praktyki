@@ -1743,6 +1743,21 @@ h2 .accordion-text-active {
   }
 }
 /* Main variables file */
+.title {
+  grid-area: title;
+}
+.title .big-headline-text {
+  font-weight: bold;
+}
+
+.description {
+  grid-area: description;
+}
+
+.buttons {
+  grid-area: buttons;
+}
+
 .overview-container {
   background-color: white;
   margin: 0;
@@ -1750,59 +1765,33 @@ h2 .accordion-text-active {
   padding: 10vh 0 0 0;
   box-sizing: border-box;
   text-align: center;
-  overflow: hidden;
 }
 .overview-content {
   max-width: 1366px;
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-areas: "title bigimage" "description bigimage" "buttons bigimage";
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* Gap between grid items */
 }
-@media (max-width: 768px) {
-  .overview-content {
-    max-width: calc(100% - 40px);
-    padding: 0 20px 0 20px;
-  }
+.overview-content-image {
+  grid-area: bigimage;
 }
-.overview-head {
-  max-width: 100%;
-  display: flex;
-  flex-direction: row;
-  height: auto;
+.overview-content-image-desks {
+  padding-top: 100px;
 }
-.overview-head-left {
-  min-height: 716px;
-  flex: 1;
-  max-width: 50%;
-}
-.overview-head-left-bottomimages {
-  display: flex;
-  flex-direction: row;
-}
-.overview-head-left-bottomimages img {
-  height: 90px;
-  width: auto;
-}
-.overview-head-right {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  min-height: 100%;
-  flex: 1;
-  max-width: 50%;
-}
-.overview-head-right-desks #desks {
+.overview-content-image-desks #desks {
   height: 500px;
   position: absolute;
 }
-.overview-head-right-hand {
+.overview-content-image-hand {
   position: relative;
-  overflow: hidden;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
-.overview-head-right-hand #hand {
+.overview-content-image-hand #hand {
   overflow: hidden;
   margin-left: 100px;
   height: 600px;
@@ -1811,67 +1800,69 @@ h2 .accordion-text-active {
   position: absolute;
   transition: top 0.3s ease;
 }
-.overview-descriptions {
-  display: flex;
-  flex-direction: row;
-  max-width: 1366px;
-  width: 1366px;
-  justify-content: space-between;
-}
-.overview-descriptions-card {
-  flex-basis: 33%;
+.overview-content .buttons img {
+  padding-right: 20px;
+  height: 80px;
 }
 
-@media (max-width: 1366px) {
-  .overview-descriptions {
-    display: flex;
-    flex-direction: row;
-    max-width: 100vw;
-    width: 100vw;
-    justify-content: space-between;
-  }
-  .overview-descriptions-card {
-    flex-basis: 33%;
-  }
-}
-@media (max-width: 768px) {
-  .overview {
-    /* Additional styling for smaller screens as needed */
-  }
+@media (max-width: 1124px) {
   .overview-container {
+    background-color: white;
     margin: 0;
     width: 100%;
-    padding: 0;
+    padding: 10vh 0 0 0;
     box-sizing: border-box;
     text-align: center;
   }
   .overview-content {
-    padding: 5vw;
-    max-width: 90vw;
-    margin: 0 auto 0 auto;
-    display: flex;
-  }
-  .overview-head {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .overview-head-right {
-    max-width: 100%;
-  }
-  .overview-head-left {
-    flex-basis: 50%;
-    max-width: 100%;
-  }
-  .overview-descriptions {
     display: flex;
     flex-direction: column;
-    width: 80vw;
-    justify-content: space-between;
   }
-  .overview-descriptions-card {
-    word-wrap: normal;
-    padding-right: 100px;
+  .overview-content-image {
+    height: 360px;
+    display: block;
+    /* Update the .&-hand styles */
+    /* .&-desks styles remain the same */
+  }
+  .overview-content-image-hand {
+    width: auto;
+    height: 100%;
+    position: relative; /* Change from absolute to relative */
+    overflow: hidden; /* Hide the overflowing content */
+  }
+  .overview-content-image-hand #hand {
+    height: 600px;
+    top: -75px;
+    width: auto;
+    position: absolute;
+    left: calc(50% - 222.5px);
+    transition: top 0.3s ease;
+    z-index: 1111;
+    transform: scale(0.7);
+  }
+  .overview-content-image-desks {
+    position: absolute;
+    height: 360px;
+    width: 90%;
+    left: 5%;
+    overflow: hidden;
+    left: 0;
+  }
+  .overview-content-image-desks #desks {
+    transform: scale(1);
     width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .overview-content {
+    padding: 0 20px 0 20px;
+  }
+}
+@media (max-width: 501px) {
+  .overview-content .buttons img {
+    width: 40%;
+    height: auto;
   }
 }
 /* Main variables file */

@@ -145,13 +145,19 @@ langDiv.addEventListener('click', (e) => {
 const handsElement = document.getElementById("hand");
 
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset < 50) {
-        handsElement.style.top = `${50}px`;
+    console.log(handsElement.style.top)
+    if (window.innerWidth < 1366) {
+
+        handsElement.style.top = `${window.pageYOffset - 75}px`;
+
     }
     else {
-        handsElement.style.top = `${window.pageYOffset}px`;
+            handsElement.style.top = `${window.pageYOffset}px`;
+     
+
     }
 });
+
 
 
 //*image-slider background changing
