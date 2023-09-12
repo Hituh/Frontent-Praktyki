@@ -1,9 +1,5 @@
-@import "../_variables.scss";
-@import "../_fonts.scss";
-@import "../_common-styles.scss";
 
 //*First section STREAMLINE YOUR WORKPLACE
-//TODO: Mobile
 
 .title {
 	grid-area: title;
@@ -23,6 +19,7 @@
 		@include container;
 	}
 	&-content {
+		@include content;
 		max-width: 1366px;
 		width: 100%;
 		margin: 0 auto;
@@ -32,7 +29,7 @@
 			"description bigimage"
 			"buttons bigimage";
 		grid-template-columns: repeat(2, 1fr);
-		gap: 10px; /* Gap between grid items */
+		gap: 10px; 
 
 		&-image {
 			grid-area: bigimage;
@@ -100,12 +97,11 @@
 				height: 360px;
 				display: block;
 
-				/* Update the .&-hand styles */
 				&-hand {
 					width: auto;
 					height: 100%;
-					position: relative; /* Change from absolute to relative */
-					overflow: hidden; /* Hide the overflowing content */
+					position: relative; 
+					overflow: hidden;
 
 					#hand {
 						height: 600px;
@@ -120,7 +116,6 @@
 					}
 				}
 
-				/* .&-desks styles remain the same */
 				&-desks {
 					position: absolute;
 					height: 360px;
@@ -159,40 +154,3 @@
 	}
 }
 
-
-.overview-descriptions {
-	&-container {
-		@include container;
-	}
-	&-content {
-		@include content;
-		&-card {
-			flex-basis: 33%;
-		}
-	}
-}
-
-@media (max-width: 1366px) {
-	.overview-descriptions {
-		&-content {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-
-			&-card {
-				flex-basis: 33%;
-			}
-		}
-	}
-}
-
-@media (max-width: 768px) {
-	.overview-descriptions {
-		&-content {
-			&-card {
-				word-wrap: normal;
-				width: 100%;
-			}
-		}
-	}
-}

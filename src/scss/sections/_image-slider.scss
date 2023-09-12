@@ -1,9 +1,4 @@
-@import "../_variables.scss";
-@import "../_fonts.scss";
-@import "../_common-styles.scss";
-
 //*Slider in second section
-//TODO: Mobile and navigation arrows
 
 .image-slider {
 	&-container {
@@ -173,9 +168,6 @@
 	animation-fill-mode: forwards;
 }
 
-//*Slider in second section mobile
-//TODO: Navigation arrows
-
 @media (max-width: 768px) {
 	.image-slider {
 		&-container {
@@ -194,10 +186,6 @@
 					&-left,
 					&-right {
 						width: 100%;
-						h1 {
-						}
-						p {
-						}
 					}
 					&-right {
 						padding-bottom: 20px;

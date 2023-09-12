@@ -1,8 +1,5 @@
-@import "../_variables.scss";
-@import "../_fonts.scss";
-@import "../_common-styles.scss";
-
 //*Shop
+
 .shop {
 	&-container {
 		@include container;
@@ -16,7 +13,7 @@
 		flex-direction: row;
 		&-left {
 			padding-right: 200px;
-			width: 33%;
+			width: 30%;
 			h1 {
 				font-size: 48px;
 			}
@@ -29,14 +26,19 @@
 				height: 100%;
 			}
 		}
+		&-button-mobile {
+			display: none;
+		}
 	}
 }
 
-@media (max-width: 900px){
-
+@media (max-width: 1200px) {
+	.shop-content-left {
+		padding-right: 100px;
+	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 	.shop {
 		&-container {
 			padding-bottom: 40px;
@@ -50,14 +52,19 @@
 					display: none;
 				}
 			}
-			.mobile {
-				&-button-container {
+			&-right {
+				img {
 					width: 100%;
-					text-align: center;
-					padding-top: 40px;
 				}
-				@include button;
-				padding: 0 auto 0 auto;
+			}
+			&-button-mobile {
+				display: block;
+				text-align: center;
+				padding: 20px 0 20px 0;
+				button {
+					width: 100%;
+					@include button;
+				}
 			}
 		}
 	}

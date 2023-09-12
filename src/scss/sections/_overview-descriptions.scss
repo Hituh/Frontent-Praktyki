@@ -1,0 +1,50 @@
+//*Description under overview
+
+.overview-descriptions {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		padding: 0;
+		&-card {
+			max-width: 25%;
+			padding-right: 8%;
+		}
+	}
+}
+
+@media (max-width: 1366px) {
+	.overview-descriptions {
+		&-content {
+
+			&-card {
+				max-width: 25%;
+				padding-right: 8%;
+			}
+		}
+	}
+}
+@media (max-width: 1200px) {
+	.overview-descriptions {
+		&-content {
+			&-card {
+				max-width: 45%;
+				padding-right: 5%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.overview-descriptions {
+		&-content {
+			&-card {
+				width: 100%;
+				max-width: 100%;
+				padding-right: 0;
+				transform: 0;
+			}
+		}
+	}
+}
