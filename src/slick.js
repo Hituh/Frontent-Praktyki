@@ -4,6 +4,7 @@ $('.slider-content').slick({
     centerPadding: '60px',
     slidesToShow: 5,
     arrows: true,
+    dots: true,
     responsive: [
         {
             breakpoint: 1366,

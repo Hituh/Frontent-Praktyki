@@ -22,12 +22,12 @@ function triggerMenu() {
 //*Navbar hiding
 //TODO: If visible, also hide language selection bar
 const langDiv = document.getElementById("menuarrow");
-const langBarcontainer = document.querySelector(".navbar-lang-container");
-const langBar = document.querySelector(".navbar-lang");
+const langBarContainer = document.querySelector(".navbar-upper-center-lang-container");
+const langBarContent = document.querySelector(".navbar-upper-center-lang-content");
 const navbarlower = document.getElementById("navbar-lower");
 const navbarupper = document.getElementById("navbar-upper");
 
-let langclicked = false
+let langActive = false
 let scrollYold = window.scrollY;
 
 window.addEventListener('scroll', handleScroll);
@@ -38,6 +38,10 @@ function handleScroll() {
         navbarlower.style.zIndex = 101;
         navbarlower.style.top = "0px";
         _navbarlowervisible = false;
+        if (langActive) {
+            langBarContainer.classList.remove('active');
+            langActive = false;
+        }
     } else {
         scrollYold = window.scrollY;
         navbarlower.style.zIndex = 99;
@@ -45,6 +49,35 @@ function handleScroll() {
         _navbarlowervisible = true;
     }
 }
+
+
+//*Lang bar
+langDiv.addEventListener('click', (e) => {
+    e.preventDefault();
+    const rect = langDiv.getBoundingClientRect();
+
+    if (!langActive) {
+        langActive = true;
+        const websiteWidth = window.innerWidth;
+        const paddingLeft = rect.left - document.body.getBoundingClientRect().left;
+        const langContWidth = langBarContent.offsetWidth;
+        console.log(websiteWidth)
+        console.log(paddingLeft)
+        console.log(langContWidth)
+        // Calculate the padding-left
+        const adjustedPaddingLeft = websiteWidth - paddingLeft - langContWidth;
+        // Calculate the padding-left
+        langBarContainer.style.right = `${adjustedPaddingLeft}px`;
+
+        langBarContainer.classList.add("active");
+    } else {
+        langActive = false;
+        langBarContainer.classList.remove("active");
+
+        // Reset the padding-left
+    }
+});
+
 
 //* Smooth navigation to correct section from navbar
 //TODO: Fix wrong scrolling. It moves to correct section but a bit too low
@@ -108,37 +141,18 @@ window.addEventListener("scroll", () => {
 
     // Remove the border and font-weight from all links
     navLinks.forEach((link) => {
-        link.style.borderBottom = "4px solid transparent";
-        link.style.fontWeight = "normal";
+        link.classList.remove("active");
     });
 
     // Add the border and font-weight to the currently visible section's link
     if (currentSection) {
         const currentLink = document.querySelector(`.navbar-lower-content a[href="#${currentSection}"]`);
-        currentLink.style.borderBottom = "4px solid #01ffcb";
-        currentLink.style.fontWeight = "bold";
+        currentLink.classList.add("active");
     }
 });
 
 
 
-//*Language selection dropdown bar for desktop
-//TODO: Probably make it also work on mobile
-langDiv.addEventListener('click', (e) => {
-    e.preventDefault();
-    const rect = langDiv.getBoundingClientRect();
-
-    if (!langclicked) {
-        langclicked = true;
-        langBarcontainer.style.top = "60px";
-        langBar.style.paddingLeft = `${rect.left}px`; // Use backticks for template strings
-        langBarcontainer.style.opacity = "1"; // Fade in the language bar
-    } else {
-        langclicked = false;
-        langBarcontainer.style.top = "-80px";
-        langBarcontainer.style.opacity = "0"; // Fade out the language bar
-    }
-});
 
 //*Overview section hand animation
 const handsElement = document.getElementById("hand");
