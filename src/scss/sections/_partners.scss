@@ -1,8 +1,5 @@
-@import "../_variables.scss";
-@import "../_fonts.scss";
-@import "../_common-styles.scss";
-
 //*Partners
+
 .partners {
 	&-container {
 		@include container;
@@ -32,7 +29,8 @@
 				}
 				.row-inside {
 					cursor: pointer;
-					transition: border-bottom 0.5s ease, margin-top 0.5s ease;
+					transition: border-bottom 0.5s ease,
+						margin-top 0.5s ease;
 					&:hover {
 						margin-top: -10px;
 						border-bottom: 2px solid gray;
@@ -44,9 +42,11 @@
 }
 @media (max-width: 900px) {
 	.partners {
-		&-content{
-			&-lower{
-				&-row1,&-row2,&-row3{
+		&-content {
+			&-lower {
+				&-row1,
+				&-row2,
+				&-row3 {
 					padding: 0;
 				}
 			}
@@ -78,18 +78,18 @@
 						font-weight: 100;
 					}
 					.row-inside {
-					cursor: pointer;
-					transition: padding-left 0.5s ease,margin-right 0.5s ease;
-					&:hover {
-						margin-top:0;
-						border-bottom:0;
-						padding-left: 10px;
-						margin-right: -10px;
+						cursor: pointer;
+						transition: padding-left 0.5s ease,
+							margin-right 0.5s ease;
+						&:hover {
+							margin-top: 0;
+							border-bottom: 0;
+							padding-left: 10px;
+							margin-right: -10px;
+						}
 					}
-				}
 				}
 			}
 		}
 	}
 }
-

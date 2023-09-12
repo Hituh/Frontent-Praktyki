@@ -1,9 +1,5 @@
-@import "../_variables.scss";
-@import "../_fonts.scss";
-@import "../_common-styles.scss";
-
 //*Room booking
-//TODO: Fix mobile
+
 .room-booking {
 	&-container {
 		@include container;
@@ -11,21 +7,15 @@
 	&-content {
 		@include content;
 	}
-	&-row1 {
+	&-row1, &-row2 {
 		width: 40%;
 	}
-
-	&-row2 {
-		width: 40%;
-	}
-
 	&-row3 {
 		width: 20%;
 	}
 }
 
-//*Room booking mobile
-//TODO: Fix order of things
+
 @media (max-width: 768px) {
 	.room-booking {
 		&-content {
@@ -49,8 +39,7 @@
 			margin-left: -80px;
 			height: 0;
 			padding-top: 66.64%;
-			position: relative; /* (img-height / img-width * container-width) */
-			/* (853 / 1280 * 100) */
+			position: relative; 
 			&-text {
 				position: absolute;
 				top: 0;

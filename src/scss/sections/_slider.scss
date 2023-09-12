@@ -1,9 +1,4 @@
-@import "../_variables.scss";
-@import "../_fonts.scss";
-@import "../_common-styles.scss";
-
-//*Slider
-//TODO: Make it work desktop + mobile
+//*First slider
 
 .slider {
 	&-container {
@@ -36,6 +31,7 @@
 	}
 }
 
+//Slick dots fix
 .slick-dots {
   width: calc(100% - 50px);
 }

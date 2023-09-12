@@ -1,8 +1,5 @@
-@import "../_variables.scss";
-@import "../_fonts.scss";
-@import "../_common-styles.scss";
-
 //*Contact
+
 .contact {
 	&-container {
 		@include container;
@@ -19,6 +16,7 @@
 	}
 }
 
+//*Bottom border, didn't do coz the same thing in navbar
 #contact-test-active {
 	font-weight: bold;
 	background-position: 0 100%;

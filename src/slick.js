@@ -40,9 +40,8 @@ $('.desc-slick').slick({
             breakpoint: 1200,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 1,
+                slidesToScroll: 2,
                 dots: true,
-                infinite: true,
             }
         },
         {
@@ -51,7 +50,6 @@ $('.desc-slick').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
-                infinite: true,
             }
         },
     ]

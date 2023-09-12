@@ -1,8 +1,6 @@
-@import "../_variables.scss";
-@import "../_fonts.scss";
-@import "../_common-styles.scss";
+
 //*Router thingy
-//TODO: Do it? Mobile.
+
 .router {
 	&-container {
 		@include container;
@@ -21,17 +19,6 @@
 			width: 45%;
 			img {
 				height: 600px;
-			}
-		}
-	}
-}
-
-@media (max-width: 1000px) {
-	.router {
-		&-content {
-			&-left {
-			}
-			&-right {
 			}
 		}
 	}
