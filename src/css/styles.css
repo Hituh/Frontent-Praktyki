@@ -428,19 +428,22 @@ a {
   right: 0;
 }
 .navbar-upper-center-lang-container {
-  position: fixed;
+  position: absolute;
   height: 80px;
   font-family: "Roboto", sans-serif;
   display: flex;
-  width: 100%;
+  opacity: 0;
+  top: 80px;
   background-color: white;
   flex-direction: row;
-  top: -80px;
   z-index: 10000;
-  transition: opacity 1s linear, z-index 0.5s ease;
+  transition: opacity 0.3s ease;
   user-select: none;
 }
-.navbar-upper-center-lang {
+.navbar-upper-center-lang-container.active {
+  opacity: 1;
+}
+.navbar-upper-center-lang-content {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -487,17 +490,18 @@ a {
   margin-right: 20px;
 }
 .navbar-lower-content a {
-  background-position: 100px 100%;
+  background-position: -40px 100%;
   margin-right: 20px;
   text-decoration: none;
   color: #000000;
-  transition: font-weight 0.3s, background-position 0.3s;
+  transition: padding 0.3s ease, font-weight 0.3s, background-position 0.3s;
 }
-.navbar-lower-content a:active {
+.navbar-lower-content a.active {
+  padding-bottom: 3px;
   font-weight: bold;
   background-image: linear-gradient(to left, transparent 50%, #01ffcb 50%);
   background-position: 0 100%;
-  background-size: 10px 3px;
+  background-size: 40px 3px;
   background-repeat: no-repeat;
 }
 
