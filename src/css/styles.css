@@ -1192,6 +1192,7 @@ a {
   }
 }
 .overview-content-image {
+  width: 50vw;
   grid-area: bigimage;
 }
 .overview-content-image-desks {

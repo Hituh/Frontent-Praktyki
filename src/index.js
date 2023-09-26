@@ -190,7 +190,7 @@ function closeAllAccordionItems(accordionItems) {
 }
 
 //*Form auto height adjust
-//TODO: Fix
+//TODO: Fix so that textarea is always the same height
 const textarea = document.getElementById('message');
 
 textarea.addEventListener('input', function () {
