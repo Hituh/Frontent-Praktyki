@@ -1,0 +1,32 @@
+//*Two descriptions under router section
+
+.underrouter {
+	&-container {
+		@include container;
+		padding-top: 0px;
+	}
+	&-content {
+		@include content;
+		justify-content: space-between;
+		&-right,
+		&-left {
+			padding-right: 150px;
+			width: 50%;
+		}
+	}
+}
+
+
+
+@media (max-width: 900px) {
+	.underrouter {
+		&-content {
+			flex-direction: column;
+			&-left,
+			&-right {
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+	}
+}

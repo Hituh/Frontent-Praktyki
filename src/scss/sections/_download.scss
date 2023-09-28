@@ -1,0 +1,76 @@
+//*Download bar
+.download {
+	&-container {
+		background-color: white;
+		margin: 0;
+		width: 100%;
+		padding: 0;
+		box-sizing: border-box;
+		text-align: center;
+	}
+	&-content {
+		background-color: #f7f7f7;
+		max-width: $content-width;
+		width: 100%;
+		height: 60px;
+		margin: 0 auto 0 auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		button {
+			@include button;
+			height: 100%;
+		}
+
+		&-wrapper {
+			display: inherit;
+			flex-direction: inherit;
+			p {
+				border-right: 1px solid rgba(0, 0, 0, 0.1); /* Barely visible border color */
+				padding-right: 20px; /* Adjust the spacing as needed */
+			}
+			.last {
+				border-right: 0px;
+			}
+			&-mobile {
+				padding-left: 20px;
+				display: inherit;
+				flex-direction: inherit;
+				gap: 20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.download-content {
+		padding: 0;
+		height: auto;
+		padding: 40px 0 40px 0;
+		flex-direction: column;
+		&-wrapper {
+			&-mobile {
+				flex-direction: row;
+				justify-content: center;
+			}
+		}
+		.first {
+			border: 0px;
+		}
+		.downloadbutton {
+			height: 60px;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.download-content {
+		.first {
+			text-align: center;
+			max-width: 50vw;
+			width: 50vw;
+		}
+	}
+}

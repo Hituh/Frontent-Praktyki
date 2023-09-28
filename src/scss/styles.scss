@@ -1,0 +1,38 @@
+@import "_variables.scss";
+@import "_fonts.scss";
+@import "_common-styles.scss";
+
+@import "./navbars/hamburger";
+@import "./navbars/navbar";
+
+@import "./sections/accordion";
+@import "./sections/bottom-slider";
+@import "./sections/contact";
+@import "./sections/download";
+@import "./sections/faq";
+@import "./sections/footer";
+@import "./sections/form";
+@import "./sections/image-slider";
+@import "./sections/overview";
+@import "./sections/overview-descriptions";
+@import "./sections/partners";
+@import "./sections/room-booking";
+@import "./sections/room-booking";
+@import "./sections/router";
+@import "./sections/shop";
+@import "./sections/slider";
+@import "./sections/specs";
+@import "./sections/sreq";
+@import "./sections/underrouter";
+
+* {
+	text-align: left;
+}
+
+body {
+	background-color: $background-color;
+	padding: 0 !important;
+	margin: 0 !important;
+	top: 0;
+	left: 0;
+}

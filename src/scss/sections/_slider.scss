@@ -1,0 +1,37 @@
+//*First slider
+
+.slider {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		&-card {
+			background-color: #f7f7f7;
+			padding: 20px;
+			margin: 20px;
+			width: 200px;
+			img {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.slider {
+		&-content {
+			&-card {
+				img {
+					max-width: 100px;
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+//Slick dots fix
+.slick-dots {
+  width: calc(100% - 50px);
+}

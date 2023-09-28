@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/hamburgers.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Zonifero</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar-upper">
+        <div class="navbar-upper-left">
+            <img src="/assets/zonifero_logo_black.ef52f150.png" alt="logo">
+        </div>
+        <div class="navbar-upper-center">
+            <a href="https://zonifero.com/pl/workplace#funkcje">Zonifero products</a>
+            <a href="https://zonifero.com/pl/workplace#funkcje">Store</a>
+            <a href="https://zonifero.com/pl/workplace#funkcje">Blog</a>
+            <div class="navbar-dropdown" id="menuarrow" style="cursor:pointer">
+                <img src="/assets/globe.png" alt="language chocice">
+                <span class="dropdownarrow"></h3>
+            </div>
+            <div class="navbar-upper-center-lang-container">
+                <div class="navbar-upper-center-lang-content">
+                    <p style="font-weight: bold;" href="https://zonifero.com/pl/workplace#funkcje">PL</p>
+                    <p href="https://zonifero.com/pl/workplace#funkcje">EN</p>
+                    <p href="https://zonifero.com/pl/workplace#funkcje">FR</p>
+                </div>
+            </div>
+            <a style="margin-right: 140px;" href="https://zonifero.com/pl/workplace#funkcje">Sign in</a>
+
+        </div>
+        <div class="navbar-upper-right">
+            <button class="button" href="https://zonifero.com/pl/workplace#funkcje" style="color:white">Get the
+                app</button>
+
+        </div>
+    </div>
+
+    <!--Navbar lower-->
+    <div class="navbar-lower-container" id="navbar-lower" sty>
+        <div class="navbar-lower-content">
+            <p style="font-weight: bold;">zonifero WorkPlace:</p>
+            <a href="#overview">Overview</a>
+            <a href="#features">Features</a>
+            <a href="#specs">Specs</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!--Hamburger navbar-->
+    <div class="hamburger-container">
+        <div class="hamburger-content">
+            <div class="hamburger-content-left">
+                <picture>
+                    <source srcset="/assets/zonifero_logo.png" media="(max-width:500px)">
+                    <img src="/assets/zonifero_logo_black.ef52f150.png" alt="logo">
+                </picture>
+            </div>
+            <div class="hamburger-content-right" style="z-index: 1000;">
+                <button class="hamburger hamburger--spin " onClick="triggerMenu()" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--Mobile menu dropdown from hamburger-->
+    <div class="mobile-menu-container">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-content-workplace">
+                <h1 class="headline-text">Zonifero WorkPlace:</h1>
+                <a style="cursor: pointer;">Podsumowanie</a>
+                <a style="cursor: pointer;">Funkcje</a>
+                <a style="cursor: pointer;">Kontakt</a>
+            </div>
+            <div class="mobile-menu-content-links">
+                <a href="https://zonifero.com/pl/workplace#funkcje">Produkty
+                    Zonifero</a>
+                <a href="/blog">Blog</a>
+                <a href="/pl/faq">FAQ</a>
+                <a href="/pl/for-investors">Dla inwestorów</a>
+                <a href="https://zonifero.com/pl/support">Support</a>
+                <a href=" /pl/praca">Praca</a>
+            </div>
+            <div class="mobile-menu-content-lang">
+                <div class="mobile-menu-content-lang-wrapper">
+                    <a href="/en/workplace">EN</a>
+                    <a href="/pl/workplace" style="font-weight: bold;">PL</a>
+                    <a href="/fr/workplace">FR</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu-buttons">
+            <a href="https://portal.zonifero.com/">
+                <div>Logowanie </div>
+            </a>
+            <a href="/pl/contact" style="color:white; background-color: #3126ff;">
+                <div>Dowiedz się więcej!</div>
+            </a>
+        </div>
+    </div>
+
+    <!--First section-->
+    <section id="overview">
+        <div class="overview-container">
+            <div class="overview-content">
+                <div class="title">
+                    <h1 class="big-headline-text">Streamline your workplace</h1>
+                </div>
+                <div class="overview-content-image">
+                    <div class="overview-content-image-desks">
+                        <img src="/assets/desks.png" id="desks" alt="desks bacground">
+
+                    </div>
+                    <div class="overview-content-image-hand">
+                        <img src="/assets/hand.png" id="hand" alt="hand with phone on top of desks bacground">
+                    </div>
+                </div>
+                <div class="description">
+                    <h2>Effectively and quickly from your mobile device. Staying connected has never been easer with
+                        zonifero WorkPlace.</h2>
+                </div>
+                <div class="buttons">
+                    <button class="buttons-left">
+
+                    </button>
+                    <button class="buttons-right">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="overview-descriptions-container">
+            <div class="overview-descriptions-content desc-slick">
+                <div class="overview-descriptions-content-card">
+                    <h2>Management</h2>
+                    <p>Tools for real-time management of all your facilities and people across multiple sites.
+                        Ease,
+                        speed, and effectiveness of facilities communications.</p>
+                </div>
+                <div class="overview-descriptions-content-card">
+                    <h2>Employees</h2>
+                    <p>Improved productivity and satisfaction as your employees stay informed, connected, and
+                        can
+                        feed
+                        requests and updates in real time.</p>
+                </div>
+                <div class="overview-descriptions-content-card">
+                    <h2>Visitors</h2>
+                    <p>A smooth and welcoming visitor experience - easy navigation around your facilities.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Slider-->
+        <div class="slider-container">
+            <div class="slider-content">
+                <div class="slider-content-card" id="card1">
+                    <img src="/assets/desk_icon.png" alt="Desks">
+                    <h3>Use your time and space smarter</h3>
+                    <p>Never again run out of coffee or other supplies. Create an efficient hive for
+                        your busy bees.</p>
+                </div>
+                <div class="slider-content-card" id="card2">
+                    <img src="/assets/desk_icon.png" alt="Desks">
+                    <h3>Never stress about meetings again</h3>
+                    <p>Zonifero will measure how you use the rooms so that you always have enough
+                        rooms
+                        available.</p>
+                </div>
+                <div class="slider-content-card" id="card3">
+                    <img src="/assets/desk_icon.png" alt="Desks">
+                    <h3>Find the right person in a breeze</h3>
+                    <p>Can't keep track of your peers in a large office space? Zonifero can pinpoint
+                        their location.</p>
+                </div>
+                <div class="slider-content-card" id="card4">
+                    <img src="/assets/desk_icon.png" alt="Desks">
+                    <h3>Save your desk and room space</h3>
+                    <p>Zonifero will tell you which desks and rooms are in use and how many and
+                        which of
+                        them are idle.</p>
+                </div>
+                <div class="slider-content-card" id="card5">
+                    <img src="/assets/desk_icon.png" alt="Desks">
+                    <h3>Swiftly introduce new employees</h3>
+                    <p>With built-in maps, Q&A, and notifications, new employees can find their way
+                        around the office.</p>
+                </div>
+                <div class="slider-content-card" id="card4">
+                    <img src="/assets/desk_icon.png" alt="Desks">
+                    <h3>Save your desk and room space</h3>
+                    <p>Zonifero will tell you which desks and rooms are in use and how many and
+                        which of
+                        them are idle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Features section-->
+    <section id="features">
+        <div class="image-slider-container">
+            <div class="image-slider-title">
+                <h2>Features</h2>
+            </div>
+            <div class="image-slider-content">
+                <div class="image-slider-buttons">
+                    <div class="image-slider-buttons-left" onclick="changeBackground('left')">
+                        <span class="image-slider-buttons-arrow left"></span>
+                    </div>
+                    <div class="image-slider-buttons-right" onclick="changeBackground('right')">
+                        <span class="image-slider-buttons-arrow right"></span>
+                    </div>
+                </div>
+                <div class="image-slider-content-image" id="image-slider-content-image">
+
+                </div>
+                <div class="image-slider-content-phone">
+                    <div class="image-slider-content-phone-left">
+                    </div>
+                    <div class="image-slider-content-phone-right">
+                        <div class="image-slider-content-phone-right-image">
+                            <img src="/assets/silver.png" alt="Phone on images">
+                        </div>
+                    </div>
+                </div>
+                <div class="image-slider-content-description-container">
+                    <div class="image-slider-content-description">
+                        <div class="image-slider-content-description-upper">
+                            <div class="image-slider-content-description-upper-left">
+                                <h1 class="headline-text">Hot desk booking.</br>Like a pro</h1>
+                            </div>
+                            <div class="image-slider-content-description-upper-right">
+                                <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                                    poligraficznym. Został po raz pierwszy użyty
+                                    w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                            </div>
+                        </div>
+                        <div class="image-slider-content-description-lower">
+                            <div class="image-slider-content-description-lower-text">
+                                <a href="https://zonifero.com/pl/workplace#funkcje">
+                                    <p>View and download full specs</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Weird room booking-->
+        </div>
+        <div class="room-booking-container">
+            <div class="room-booking-content">
+                <div class="room-booking-row1">
+                    <h2> Room booking </h2>
+                    <p>zonlfero buslss supports mtirg rooms bking-
+                        Reservatlons can be made from t smartpne, tablet
+                        ln front of the room or dlrtly from the calendar in
+                        Office3b5 or G Suite. Room reservatlons can also be
+                        made in companes that are not famillar wkh Office 365
+                        or G Suie services</p>
+                </div>
+                <div class="room-booking-row2">
+
+                    <picture>
+                        <source srcset="/assets/mob_room_booking.png" media="(max-width: 768px)">
+                        <img src="/assets/Space_Gray.png" alt="Mobile phone">
+                    </picture>
+                </div>
+                <div class="room-booking-row3">
+                    <div class="room-booking-row3-text">
+                        <p><strong>unlimited</strong> rooms</p>
+                        <p><strong>unlimited</strong> employees</p>
+                        <p><strong>10</strong> floors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--List-->
+        <div class="accordion-container">
+            <div class="accordion-content">
+                <div class="accordion-item">
+                    <div class="accordion-item-button">
+                        <h3 class="list-item-title">Hot desk booking</h3>
+                        <span class="list-item-title-arrow"></span>
+                    </div>
+                    <div class="list-item-description">
+                        <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                            poligraficznym. Został po raz pierwszy użyty
+                            w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-item-button">
+                        <h3 class="list-item-title">Hot desk booking</h3>
+                        <span class="list-item-title-arrow"></span>
+                    </div>
+                    <div class="list-item-description">
+                        <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                            poligraficznym. Został po raz pierwszy użyty
+                            w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-item-button">
+                        <h3 class="list-item-title">Hot desk booking</h3>
+                        <span class="list-item-title-arrow"></span>
+                    </div>
+                    <div class="list-item-description">
+                        <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                            poligraficznym. Został po raz pierwszy użyty
+                            w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-item-button">
+                        <h3 class="list-item-title">Hot desk booking</h3>
+                        <span class="list-item-title-arrow"></span>
+                    </div>
+                    <div class="list-item-description">
+                        <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                            poligraficznym. Został po raz pierwszy użyty
+                            w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-item-button">
+                        <h3 class="list-item-title">Hot desk booking</h3>
+                        <span class="list-item-title-arrow"></span>
+                    </div>
+                    <div class="list-item-description">
+                        <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                            poligraficznym. Został po raz pierwszy użyty
+                            w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-item-button">
+                        <h3 class="list-item-title">Hot desk booking</h3>
+                        <span class="list-item-title-arrow"></span>
+                    </div>
+                    <div class="list-item-description">
+                        <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                            poligraficznym. Został po raz pierwszy użyty
+                            w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-item-button">
+                        <h3 class="list-item-title">Hot desk booking</h3>
+                        <span class="list-item-title-arrow"></span>
+                    </div>
+                    <div class="list-item-description">
+                        <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                            poligraficznym. Został po raz pierwszy użyty
+                            w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--2 info under lists-->
+        <div class="sreq-container">
+            <div class="sreq-content">
+                <div class="sreq-content-left">
+                    <h2>System requirements</h2>
+                    <p>zonlfero buslss supports meeti rooms bking- Resvatlons can
+                        be made from the smartphone, tablet ln front of the room or dlrectly
+                        from the calendar in Offlce3b5 or G Suite Rm reservations can also
+                        be made in companles that are not famlllar wlth Offlce 3b5 or G Sulte
+                        sewices</p>
+                </div>
+                <div class="sreq-content-right">
+                    <h2>24/7 Supports</h2>
+                    <p>zonlfero buslss supports meeti rooms bking- Resvatlons can
+                        be made from the smartphone, tablet ln front of the room or dlrectly
+                        from the calendar in Offlce3b5 or G Suite Rm reservations can also
+                        be made in companles that are not famlllar wlth Offlce 3b5 or G Sulte
+                        sewices</p>
+                </div>
+            </div>
+        </div>
+        <!--Download line-->
+        <div class="download-container">
+            <div class="download-content">
+                <h4>Download</h4>
+                <div class="download-content-wrapper">
+                    <p class="first">Zonifero workplace brochure and specification</p>
+                    <div class="download-content-wrapper-mobile">
+                        <p>PDF</p>
+                        <p class="last">19.34MB</p>
+                    </div>
+                </div>
+                <button class="downloadbutton">Download</button>
+            </div>
+        </div>
+        <!--Weird router thingy-->
+        <div class="router-container">
+            <div class="router-content">
+                <div class="router-content-left">
+                    <h1 class="headline-text">Bring your building back to 21st century</h1>
+                    <h2>The loT allows your office to be sensed or controlled
+                        remotely across existing network infrasructure. Track and
+                        analyse workplace performance to gain your office
+                        efficiency</h2>
+                </div>
+                <div class="router-content-right">
+                    <img src="/assets/mob_czujka.png" alt="Router czujka">
+                </div>
+            </div>
+        </div>
+        <!--Desc under router-->
+        <div class="underrouter-container">
+            <div class="underrouter-content">
+                <div class="underrouter-content-left">
+                    <h3>Sensors</h3>
+                    <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                        poligraficznym. Został po raz pierwszy użyty
+                        w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                </div>
+                <div class="underrouter-content-right">
+                    <h3>Real time conference room and desk avaiability updates</h3>
+                    <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                        poligraficznym. Został po raz pierwszy użyty
+                        w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                </div>
+            </div>
+        </div>
+        <!--Partners-->
+        <div class="partners-container">
+            <div class="partners-content">
+                <div class="partners-content-upper">
+                    <h1 class="headline-text">Partners</h1>
+                    <h4>We only work with the best. Zonifero buslness supports the booklng of hot-desks, meetlng
+                        and
+                        other rooms. Reservations can be made from the applicatjon on the
+                        tablet ln front of the room or dlrectly from the calendar ln Offlce365 or
+                        G Sule. Room reservalons can also be made for buslnesses tha do
+                        not use Offlce 365 or G Surte,
+                        zonifero buslness also has a calendar feature that can be run on a</h4>
+                </div>
+                <div class="partners-content-lower">
+                    <div class="partners-content-lower-row1">
+                        <div class="row-inside">
+                            <img src="/assets/logo_nsg.png" alt="Partner logo">
+                            <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                                poligraficznym. Został po raz pierwszy użyty
+                                w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                        </div>
+                    </div>
+
+                    <div class="partners-content-lower-row2">
+                        <div class="row-inside">
+                            <img src="/assets/Layer 504.png" alt="Partner logo">
+                            <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                                poligraficznym. Został po raz pierwszy użyty
+                                w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                        </div>
+                    </div>
+                    <div class="partners-content-lower-row3">
+                        <div class="row-inside">
+                            <img src="/assets/logo_nsg.png" alt="Partner logo">
+                            <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                                poligraficznym. Został po raz pierwszy użyty
+                                w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--Specs-->
+    <section id="specs">
+        <div class="specs-container">
+            <div class="specs-content">
+                <div class="specs-content-upper">
+                    <div class="specs-content-upper-text">
+                        <h1 class="headline-text">Zoptymalizuj koszty i ergonomię biura z Zonifero</h1>
+                        <h2>Zarz4dzaj šwiadomie rozwojem biura, optymalizuj koszty
+                            zwi4zane z ustugami i powierzchni4 a takie podnoš
+                            komfort pracy dzieki jednemu systemowi</h2>
+                    </div>
+                    <div class="specs-content-upper-image">
+                        <picture>
+                            <source srcset="/assets/mob_devices copy.png" media="(max-width: 768px)">
+                            <img src="/assets/devices.png" alt="Some devices">
+                        </picture>
+                    </div>
+                </div>
+                <!--Procenty-->
+                <div class="specs-content-lower">
+                    <div class="specs-content-lower-left">
+                        <h1 class="headline-text">523%</h1>
+                        <p>Dlugoterminowe konyci z wdroienie Zonlfero wynoszO co najmnlej
+                            523' w stosunku do wydanej kwoty, Lorem ipsum dolor sit amet,
+                            consectetur adlpiscing elrt. Nunc empor sem slt amet purus maximus,
+                            eu fringille orci rhoncus</p>
+                        <span>* Wyliczenla sO zalezne lokalizacjl blura</span>
+                    </div>
+                    <div class="specs-content-lower-right">
+                        <h1 class="headline-text">320+</h1>
+                        <p>Dlugoterminowe konyci z wdroienie Zonlfero wynoszO co najmnlej
+                            523' w stosunku do wydanej kwoty, Lorem ipsum dolor sit amet,
+                            consectetur adlpiscing elrt. Nunc empor sem slt amet purus maximus,
+                            eu fringille orci rhoncus</p>
+                        <span>* Wyliczenla sO zalezne lokalizacjl blura</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Shop-->
+        <div class="shop-container">
+            <div class="shop-content">
+                <div class="shop-content-left">
+                    <h1 class="headline-text">Shop zonifero accesories</h1>
+                    <p>roienie Zonlfero wynoszO co najmnlej
+                        523' w stosunku do wydanej kwoty, Lorem ipsum dolor sit amet,
+                        consectetur adlpiscing elrt. Nunc empor sem slt amet purus maximus,
+                        eu fringille orci rhoncus</p>
+                    <button class="desktop">Contact us</button>
+                </div>
+                <div class="shop-content-button-mobile">
+                    <button class="mobile">Contact us</button>
+                </div>
+                <div class="shop-content-right">
+                    <img src="/assets/mob_starter_kit.png" alt="Some devices">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq">
+        <div class="faq-container">
+            <div class="faq-content"><!--FAQ-->
+                <div class="faq-content-left">
+                    <h1 class="headline-text">Frequently Aksed Questions</h1>
+                </div>
+                <div class="faq-content-center">
+                    <h4>What is the impact of climate change on polar bears?</h4>
+                    <h4 style="font-weight: bold;">How can I reduce my carbon footprint?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="faq-content-right">
+                    <h4>How do I start a sustainable garden at home?</h4>
+                    <h4>What are the benefits of recycling plastics?</h4>
+                    <h4>How can I conserve water in my daily life?</h4>
+                    <h4>What is the importance of biodiversity conservation?</h4>
+                    <h4>How does renewable energy contribute to a greener future?</h4>
+                    <h4>What are some eco-friendly transportation options?</h4>
+                    <h4>How can I support wildlife conservation efforts?</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact section-->
+    <section id="contact">
+        <!--Upper contact two buttons-->
+        <div class="contact-container">
+            <div class="contact-content">
+                <h4 id="contact-test-active">Contact form</h4>
+                <h4>Call us</h4>
+            </div>
+        </div>
+        <!--Contact form-->
+        <div class="form-container">
+            <div class="form-content">
+                <form action="submit.php" method="post">
+                    <div class="form-content-top">
+                        <div class="form-content-top-left">
+                            <div class="form-div">
+                                <label class="form-label" for="first-name">First Name *</label>
+                                <input class="form-input" type="text" id="first-name" name="first-name" required
+                                    placeholder="John">
+                            </div>
+                            <div class="form-div">
+                                <label class="form-label" for="family-name">Family Name *</label>
+                                <input class="form-input" type="text" id="family-name" name="family-name" required
+                                    placeholder="Wick">
+                            </div>
+                        </div>
+                        <div class="form-content-top-right">
+                            <div class="form-div">
+                                <label class="form-label" for="phone">Your hone</label>
+                                <input class="form-input" type="tel" id="phone" name="phone"
+                                    placeholder="+48 605 708 904">
+                            </div>
+                            <div class="form-div">
+                                <label class="form-label" for="email">Your email *</label>
+                                <input class="form-input" type="email" id="email" name="email" required
+                                    placeholder="johnwick@hollywood.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-content-bottom">
+                        <div class="form-div">
+                            <label class="form-label" for="message">Message *</label>
+                            <textarea class="form-input" id="message" name="message" rows="6" required
+                                placeholder="Hello :D I'm just wondering if you could..."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-content-button">
+                        <button>Send message</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <!--Bottom slider would go here-->
+    </section>
+    <!--Footer-->
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-content-columns">
+                <div class="footer-content-column">
+                    <h4>Products:</h4>
+                    <p>zonifero business</p>
+                    <p>zonifero real estate</p>
+                    <p>zonifero lobby</p>
+                    <p>zonifero services</p>
+                    <p>zonifero tv</p>
+                </div>
+                <div class="footer-content-column">
+                    <h4>Resources:</h4>
+                    <p>Documentation</p>
+                    <p>FAQ</p>
+                    <p>Blog</p>
+                    <p>Media</p>
+                </div>
+                <div class="footer-content-column" style="margin-right: 30%;">
+                    <h4>About:</h4>
+                    <p>About us</p>
+                    <p>Company</p>
+                    <p>Blog</p>
+                </div>
+            </div>
+
+            <div class="footer-content-logo">
+                <img src="/assets/ex_logo.png" alt="EX logo">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <script type="text/javascript" src="./slick.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

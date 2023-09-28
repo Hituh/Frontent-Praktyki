@@ -1,0 +1,43 @@
+//*Common styles file
+
+// Common container mixin
+@mixin container {
+	background-color: white;
+	margin: 0;
+	width: 100%;
+	padding: 10vh 0 0 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+// Common content mixin
+@mixin content {
+	max-width: $content-width;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	@media (max-width: 1421px) {
+		max-width: calc(100% - 50px);
+	}
+}
+
+//Common button mixin
+@mixin button {
+	font-family: "Roboto", sans-serif;
+	font-size: 17px;
+	background-color: $product-color;
+	color: white;
+	width: 200px;
+	height: 65px;
+	border-width: 0;
+	text-align: center;
+	cursor: pointer;
+	transition: border-radius 0.3s ease, background-color 0.3s ease;
+	&:hover{
+		background-color: #5148f2;
+;
+		border-radius: 10px;
+	}
+	
+}

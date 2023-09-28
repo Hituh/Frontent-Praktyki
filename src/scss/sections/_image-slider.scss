@@ -1,0 +1,234 @@
+//*Slider in second section
+
+.image-slider {
+	&-container {
+		@include container;
+	}
+	&-title {
+		@include content;
+	}
+	&-content {
+		max-width: 100vw;
+		overflow: hidden;
+		&-image {
+			width: 100%;
+			height: 510px;
+			background-image: url(/assets/Layer_78.png);
+			background-size: cover;
+			background-position: center center;
+		}
+
+		&-phone {
+			display: flex;
+			flex-direction: row;
+			width: 100vw;
+			height: 0px;
+			&-left {
+				width: 50%;
+			}
+
+			&-right {
+				margin: 0 auto 0 auto;
+				width: 50%;
+				&-image {
+					position: relative;
+					top: -480px;
+					img {
+						height: 600px;
+					}
+				}
+			}
+		}
+		&-description {
+			@include content;
+			display: flex;
+			flex-direction: column;
+			height: 350px;
+
+			&-container {
+				@include container;
+				height: 100%;
+				background-color: $product-color;
+			}
+			&-upper {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				height: 80%;
+				&-left {
+					width: 50%;
+					padding-right: $spacing-unit-x-large;
+					margin-top: 20px;
+					h1 {
+						color: white;
+						font-size: 48px;
+						margin: 0;
+					}
+				}
+				&-right {
+					padding-top: 50px;
+					width: 50%;
+					padding-right: $spacing-unit-x-large;
+					p {
+						color: white;
+						font-size: 16px;
+						font-weight: 100;
+					}
+				}
+			}
+			&-lower {
+				min-height: 20%;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				text-align: center;
+				height: auto;
+				&-text {
+					background-image: linear-gradient(
+						to left,
+						transparent 75%,
+						/* Decreased the transparent percentage */
+							white 100%
+							/* Increased the white percentage */
+					);
+					background-position: 100% 0;
+					background-size: 5px 1px; /* Increased the spacing */
+					background-repeat: repeat-x;
+
+					padding: 5px 70px 5px 70px;
+					p {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	&-buttons {
+		position: relative;
+		transform: translateY(-50%);
+		width: 100%;
+		top: 470px;
+		z-index: 9; /* Adjust the z-index as needed */
+		&-left,
+		&-right {
+			width: 80px;
+			height: 80px;
+			background-color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			position: absolute;
+			transition: background-color 0.3s ease;
+		}
+		&-left {
+			left: 0px;
+		}
+		&-right {
+			right: 0px;
+		}
+
+		&-arrow {
+			width: 12px;
+			height: 12px;
+			display: block;
+			border-style: solid;
+			border-color: black;
+			border-image: initial;
+			border-width: 0px 1px 1px 0px;
+			transform: rotate(45deg);
+			position: relative;
+			transition: transform 0.7s ease, width 0.7s ease,
+				height 0.7s ease, top 0.7s ease;
+			&.left {
+				transform: rotate(135deg);
+			}
+			&.right {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+/* Add fade-out animation */
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Apply the fade-out animation to an element */
+.fade-out {
+	animation-name: fadeOut;
+	animation-duration: 0.3s; /* Adjust the duration as needed (seconds) */
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+}
+
+@media (max-width: 768px) {
+	.image-slider {
+		&-container {
+			@include container;
+		}
+		&-title {
+			@include content;
+		}
+		&-content {
+			max-width: 100vw;
+			overflow: hidden;
+			&-description {
+				height: auto;
+				&-upper {
+					flex-direction: column;
+					&-left,
+					&-right {
+						width: 100%;
+					}
+					&-right {
+						padding-bottom: 20px;
+					}
+				}
+				&-lower {
+					&-text {
+						padding: 0 5vw 0 5vw;
+					}
+				}
+			}
+			&-image {
+				width: 100%;
+				height: 510px;
+				background-size: cover;
+				background-position: center center;
+			}
+			&-phone {
+				&-left {
+					width: 0%;
+				}
+				&-right {
+					width: 100%;
+					&-image {
+						text-align: center;
+						img{
+							margin-left: -65px;
+						}
+					}
+				}
+			}
+		}
+		&-buttons {
+			top: 480px;
+			&-left,
+			&-right {
+				height: 60px;
+				width: 60px;
+			}
+			&-arrow {
+				width: 8px;
+				height: 8px;
+			}
+		}
+	}
+}

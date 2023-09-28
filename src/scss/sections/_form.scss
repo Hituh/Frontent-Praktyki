@@ -1,0 +1,105 @@
+//*Form
+
+.form {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		margin-bottom: 50px;
+		flex-direction: column;
+		&-top {
+			display: flex;
+			flex-direction: row;
+			&-left,
+			&-right {
+				width: 100%;
+			}
+		}
+		&-bottom {
+			textarea {
+				min-height: 38px;
+				height: 38px;
+				resize: none;
+				overflow: hidden;
+			}
+			width: 100%;
+		}
+		&-button{
+				text-align: center;
+				button{
+					@include button;
+				}
+			}
+	}
+	&-div {
+		display: flex;
+		flex-direction: column;
+		padding-right: 200px;
+		padding: 20px;
+	}
+
+	&-label {
+		font-family: "Roboto", sans-serif;
+		font-weight: 100;
+		font-size: 13px;
+		padding-bottom: 10px;
+	}
+
+	&-input {
+		font-size: 1.875rem;
+		color: rgb(0, 0, 0);
+		font-family: Roboto;
+		font-weight: 400;
+		z-index: 2;
+		border: 0px;
+		position: relative;
+		resize: none;
+		height: 38px;
+		line-height: 38px;
+		overflow: hidden;
+		border: none; /* Remove any existing borders */
+
+		background-image: linear-gradient(
+			to left,
+			transparent 75%,
+			/* Decreased the transparent percentage */ #000 100%
+				/* Increased the white percentage */
+		);
+		background-position: 0 100%;
+		background-size: 5px 1px; /* Increased the spacing */
+		background-repeat: repeat-x;
+		outline: none !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.form {
+		&-container {
+			@include container;
+			margin-bottom: 50px;
+		}
+		&-content {
+			form {
+				width: 100%;
+			}
+			@include content;
+			width: 100%;
+			margin: 0;
+			&-top {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			.form-div {
+				padding: 20px 0 20px 0;
+			}
+			&-button{
+				text-align: center;
+				button{
+					@include button;
+				}
+			}
+		}
+	}
+}

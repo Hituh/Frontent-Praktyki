@@ -1,0 +1,26 @@
+//*Contact
+
+.contact {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		justify-content: center;
+		h4 {
+			margin-right: 20px;
+			text-decoration: none;
+			color: #000000;
+			font-weight: 400;
+		}
+	}
+}
+
+//*Bottom border, didn't do coz the same thing in navbar
+#contact-test-active {
+	font-weight: bold;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-size: 50px 3px;
+	background-image: linear-gradient(to left, transparent 50%, #01ffcb 50%);
+}

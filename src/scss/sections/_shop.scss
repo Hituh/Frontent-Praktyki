@@ -1,0 +1,71 @@
+//*Shop
+
+.shop {
+	&-container {
+		@include container;
+		overflow: hidden;
+		background-color: #f7f7f7;
+	}
+	&-content {
+		@include content;
+		padding-bottom: 100px;
+		display: flex;
+		flex-direction: row;
+		&-left {
+			padding-right: 200px;
+			width: 30%;
+			h1 {
+				font-size: 48px;
+			}
+			button {
+				@include button;
+			}
+		}
+		&-right {
+			img {
+				height: 100%;
+			}
+		}
+		&-button-mobile {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.shop-content-left {
+		padding-right: 100px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.shop {
+		&-container {
+			padding-bottom: 40px;
+		}
+		&-content {
+			flex-direction: column;
+			&-left {
+				padding-right: 0;
+				width: 100%;
+				.desktop {
+					display: none;
+				}
+			}
+			&-right {
+				img {
+					width: 100%;
+				}
+			}
+			&-button-mobile {
+				display: block;
+				text-align: center;
+				padding: 20px 0 20px 0;
+				button {
+					width: 100%;
+					@include button;
+				}
+			}
+		}
+	}
+}

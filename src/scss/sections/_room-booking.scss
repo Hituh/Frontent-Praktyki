@@ -1,0 +1,52 @@
+//*Room booking
+
+.room-booking {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+	}
+	&-row1, &-row2 {
+		width: 40%;
+	}
+	&-row3 {
+		width: 20%;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.room-booking {
+		&-content {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-row1 {
+			width: 100%;
+		}
+		&-row2 {
+			width: 100%;
+			display: none;
+		}
+		&-row3 {
+			width: 120%;
+			height: auto;
+			background-image: url(/assets/Space_Gray.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-left: -80px;
+			height: 0;
+			padding-top: 66.64%;
+			position: relative; 
+			&-text {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 40%;
+				right: 0;
+			}
+		}
+	}
+}

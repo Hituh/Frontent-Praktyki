@@ -1,0 +1,38 @@
+//*System requirements section
+
+.sreq {
+	&-container {
+		@include container;
+	}
+
+	&-content {
+		@include content;
+		justify-content: center;
+		gap: 120px;
+		padding-bottom: 60px;
+		&-left,
+		&-right {
+			flex-basis: 50%;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.sreq {
+		&-container {
+			@include container;
+		}
+
+		&-content {
+			@include content;
+			flex-direction: column;
+			gap: 10%;
+
+			&-left,
+			&-right {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+}

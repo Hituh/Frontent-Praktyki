@@ -1,0 +1,60 @@
+//*FAQ
+
+.faq {
+	&-container {
+		@include container;
+	}
+	&-content {
+		@include content;
+		margin: 0 auto 0 auto;
+		&-left,
+		&-center,
+		&-right {
+			width: 33%;
+			padding-right: 100px;
+			h1 {
+				font-size: 48px;
+			}
+			h4 {
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.faq {
+		&-content {
+			flex-direction: column;
+			&-left,
+			&-center,
+			&-right {
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.faq {
+		&-content {
+			flex-direction: column;
+			&-left,
+			&-center,
+			&-right {
+				h4 {
+					font-weight: 400;
+					font-size: 16px;
+				}
+				p {
+					font-weight: 100;
+					font-size: 16px;
+				}
+				margin-top: -24px;
+				width: 100%;
+				padding-right: 0;
+			}
+		}
+	}
+}
